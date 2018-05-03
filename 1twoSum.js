@@ -8,30 +8,27 @@
 //  * @return {number[]}
 //  */
 var twoSum = function(nums, target) {
+  // for(let i = 0; i < nums.length; i++) {
+  //     let anotherNum = target - nums[i];
+  //     if (!nums.slice(i+1).includes(anotherNum)) {
+  //         continue;
+  //     } else {
+  //         return [i, nums.slice(i+1).indexOf(anotherNum)+i+1];
+  //     }
+  // }
+  let hsh = {};
   for(let i = 0; i < nums.length; i++) {
-      let anotherNum = target - nums[i];
-      if (!nums.slice(i+1).includes(anotherNum)) {
-          continue;
-      } else {
-          return [i, nums.slice(i+1).indexOf(anotherNum)+i+1];
-      }
+    let anotherNum = target - nums[i];
+    if(hsh[anotherNum] !== undefined) return [hsh[anotherNum],i];
+    hsh[nums[i]] = i;
   }
-  // let hsh = {};
-  // for(let i = 0; i < nums.length; i++) {
-  //   hsh[nums[i]] = i;
-  // }
-  //
-  // for(let i = 0; i < nums.length; i++) {
-  //   let anotherNum = target - nums[i];
-  //   if(hsh[anotherNum])
-  // }
 
 };
 
 // [2,7,11,15]
 // 9
-// let n1 = [2,7,11,15];
-// let t1 = 9;
-let n1 = [3,3,11,15];
-let t1 = 6;
+let n1 = [2,7,11,15];
+let t1 = 9;
+// let n1 = [3,3,11,15];
+// let t1 = 6;
 console.log(twoSum(n1,t1));
