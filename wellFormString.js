@@ -29,7 +29,7 @@ const wellFormString = function(str) {
   return true;
 };
 
-let res1 = wellFormString("([]){()}"); // truer
+let res1 = wellFormString("([]){()}"); // true
 let res2 = wellFormString("[(]{)}"); // false
 console.log(res1);
 console.log(res2);

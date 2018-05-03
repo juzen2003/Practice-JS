@@ -1,6 +1,6 @@
 // O(logn) time and O(1) space
 // given sorted array
-// each el is in a pair, only one is single
+// each el is in a pair, only one is single, find the single one, return index
 const singleEl = function(arr) {
   if(arr.length < 1) {
     return null;
