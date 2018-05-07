@@ -16,10 +16,12 @@ var twoSum = function(nums, target) {
   //         return [i, nums.slice(i+1).indexOf(anotherNum)+i+1];
   //     }
   // }
+
+  //  Time: O(n)
   let hsh = {};
   for(let i = 0; i < nums.length; i++) {
     let anotherNum = target - nums[i];
-    if(hsh[anotherNum] !== undefined) return [hsh[anotherNum],i];
+    if(hsh[anotherNum] !== undefined) return [hsh[anotherNum], i];
     hsh[nums[i]] = i;
   }
 
