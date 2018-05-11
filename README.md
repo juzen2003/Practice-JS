@@ -1,7 +1,12 @@
-### Object.keys
+### Object.keys/values/entries
 ```js
 const obj = {"a": 2, "b": 4, "c": 6}
-Object.keys(obj) // ["a", "b", "c"]
+Object.keys(obj)
+// ["a", "b", "c"]
+Object.values(obj)
+// [2, 4, 6]
+Object.entries(obj)
+// [ [ 'a', 1 ], [ 'b', 2 ], [ 'c', 3 ] ]
 ```
 ### for...in
 ```js

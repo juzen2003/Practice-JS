@@ -14,7 +14,7 @@ const chooseARecord = function(hsh) {
   let keyArr = Object.keys(hsh);
 
   for(let i = 0; i < keyArr.length; i++) {
-    
+
     if(randomNum < hsh[keyArr[i]]) {
       return keyArr[i];
     }
@@ -31,3 +31,4 @@ const getRandNum = function(max) {
 let hsh = {'a': 1, 'b': 2, 'c': 3};
 let res = chooseARecord(hsh);
 console.log(`FINAL: ${res}`);
+console.log(Object.entries(hsh));
