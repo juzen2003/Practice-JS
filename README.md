@@ -26,3 +26,10 @@ for(let a in hsh) {
 //  Math.random() return 0 to 1 (not included 1)
 Math.floor(Math.random() * 20)
 ```
+### Split string into array
+```js
+"str".split("r")
+// [ 'st', '' ]
+"st r".split(" ")
+// [ 'st', 'r' ]
+```
