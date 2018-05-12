@@ -23,20 +23,18 @@ const connectComponent = function(arr) {
   });
 
   while (Object.keys(hsh).length !== 0) {
-  
+
     let components = [];
     queue = queue.concat(Object.keys(hsh)[0]);
     // console.log(queue);
     while (queue.length !== 0) {
       let comp = queue.shift();
       if (hsh[comp] === undefined) continue;
+
       components = components.concat(comp);
-
       let connected = hsh[comp];
-
       queue = queue.concat(connected);
       delete hsh[comp];
-
     }
     res.push(components);
   }
@@ -47,3 +45,4 @@ const connectComponent = function(arr) {
 let arr = [ "AA BB", "DD FF", "CC EE", "EE DD",];
 let res = connectComponent(arr);
 console.log(res);
+// [ [ 'AA', 'BB' ], [ 'DD', 'FF', 'EE', 'CC' ] ]

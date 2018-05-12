@@ -33,3 +33,11 @@ Math.floor(Math.random() * 20)
 "st r".split(" ")
 // [ 'st', 'r' ]
 ```
+### delete a key value pair in object
+```js
+let hsh = {"a": 1, "b": 2, "c": 3}
+delete hsh["b"]
+// true
+console.log(hsh);
+//{ a: 1, c: 3 }
+```
