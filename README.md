@@ -8,6 +8,11 @@ Object.values(obj)
 Object.entries(obj)
 // [ [ 'a', 1 ], [ 'b', 2 ], [ 'c', 3 ] ]
 ```
+### Check if POJO is empty
+```js
+Object.keys(obj).length === 0 // empty
+Object.keys(obj).length !== 0 // not empty
+```
 ### for...in
 ```js
 let hsh = {'a': 1, 'b': 2};
