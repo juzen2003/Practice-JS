@@ -38,6 +38,12 @@ Math.floor(Math.random() * 20)
 "st r".split(" ")
 // [ 'st', 'r' ]
 ```
+### Join array into string
+```js
+let x = [ 'st', 'r' ]
+x.join("")
+// "str"
+```
 ### delete a key value pair in object
 ```js
 let hsh = {"a": 1, "b": 2, "c": 3}
@@ -57,4 +63,19 @@ arr.concat(3)
 // arr = [1,2,3,4,[5]], arr not change, need to re-assign
 arr = arr.concat(3)
 // arr = [1,2,3,4,[5],3]
+```
+### charCodeAt & fromCharCode
+```js
+console.log("a".charCodeAt(0));
+// 97
+console.log(String.fromCharCode(97));
+// "a"
+```
+### indexOf
+```js
+let a = [1,2,3];
+a.indexOf(1);
+// 0
+a.indexOf(4);
+// -1
 ```
