@@ -46,3 +46,15 @@ delete hsh["b"]
 console.log(hsh);
 //{ a: 1, c: 3 }
 ```
+### concat & push
+```js
+let arr = [1,2,3]
+arr.push(4)
+// arr = [1,2,3,4]
+arr.push([5])
+// arr = [1,2,3,4,[5]]
+arr.concat(3)
+// arr = [1,2,3,4,[5]], arr not change, need to re-assign
+arr = arr.concat(3)
+// arr = [1,2,3,4,[5],3]
+```
