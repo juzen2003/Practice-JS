@@ -1,0 +1,28 @@
+1. explain event delegation
+JS event listeners fire not only on a single DOM element but on all it's children
+
+2. event bubbling
+propagation
+
+3. difference between target and current target
+
+4. immediately invoked function expression (IIFE)
+expression resolves to a value
+
+(function foo(){}) ()
+-> make a statement to an expression when wrapping around ()
+
+5. explain hoisting
+all variables are declared at the top
+
+let & const are blocked scoped and not hoisted
+
+6. null undefined undeclared
+x === undefined
+y === null
+
+7. difference between == and ===
+==: check for equality
+===: check for equality and type
+
+8. event loop
