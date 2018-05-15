@@ -23,3 +23,10 @@ var lengthOfLongestSubstring = function(s) {
 
   return longestSub;
 };
+
+let str = "dvdf";
+let res = lengthOfLongestSubstring(str);
+let str1 = "pwwkew";
+let res1 = lengthOfLongestSubstring(str1);
+console.log(res);
+console.log(res1);

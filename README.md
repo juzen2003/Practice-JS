@@ -84,3 +84,19 @@ a.indexOf(1);
 a.indexOf(4);
 // -1
 ```
+### passed by reference
+```js
+let a = 2;
+let g = a;
+// a: 2, g: 2
+a = 5;
+// a: 5, g: 2
+```
+### slice
+```js
+let a = [1,2,3];
+a.slice(1);
+// [2,3], but a is still [1,2,3]
+a = a.slice(1);
+// a: [2,3]
+```
