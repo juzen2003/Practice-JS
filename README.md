@@ -92,11 +92,19 @@ let g = a;
 a = 5;
 // a: 5, g: 2
 ```
-### slice
+### array slice
 ```js
 let a = [1,2,3];
 a.slice(1);
 // [2,3], but a is still [1,2,3]
 a = a.slice(1);
 // a: [2,3]
+```
+### string slice
+start index included, end index, not included
+```js
+"cbbd".slice(1,2)
+// 'b'
+"cbbd".slice(1,3)
+// 'bb'
 ```
