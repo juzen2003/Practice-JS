@@ -100,6 +100,18 @@ a.slice(1);
 a = a.slice(1);
 // a: [2,3]
 ```
+### array sort
+```js
+let arr = ["aaple","orange","banana"];
+arr.sort();
+// [ 'apple', 'banana', 'orange' ]
+let arr2 = [1,5,3];
+arr2.sort();
+// [1,3,5]
+arr2.sort(function(a,b){return b-a})
+// b > a return 1, b < a return -1, b = a return 0
+// [5,3,1]
+```
 ### string slice
 start index included, end index, not included
 ```js
