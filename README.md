@@ -84,7 +84,7 @@ a.indexOf(1);
 a.indexOf(4);
 // -1
 ```
-### passed by reference
+### passed by value
 ```js
 let a = 2;
 let g = a;
@@ -108,15 +108,26 @@ arr.sort();
 let arr2 = [1,5,3];
 arr2.sort();
 // [1,3,5]
-arr2.sort(function(a,b){return b-a})
+arr2.sort(function(a,b){return b-a});
 // b > a return 1, b < a return -1, b = a return 0
 // [5,3,1]
 ```
 ### string slice
 start index included, end index, not included
 ```js
-"cbbd".slice(1,2)
+"cbbd".slice(1,2);
 // 'b'
-"cbbd".slice(1,3)
+"cbbd".slice(1,3);
 // 'bb'
+```
+### includes
+```js
+"cbbd".includes("d");
+// true
+"cbbd".includes("x");
+// false
+[1,2,3].includes(1);
+// true
+[1,2,3].includes(7);
+// false
 ```
