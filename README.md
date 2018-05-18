@@ -113,7 +113,7 @@ arr2.sort(function(a,b){return b-a});
 // [5,3,1]
 ```
 ### string slice
-start index included, end index, not included
+start index is included, end index is not included
 ```js
 "cbbd".slice(1,2);
 // 'b'
