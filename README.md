@@ -84,13 +84,21 @@ a.indexOf(1);
 a.indexOf(4);
 // -1
 ```
-### passed by value
+### passed by value (primitive type)
 ```js
 let a = 2;
 let g = a;
 // a: 2, g: 2
 a = 5;
 // a: 5, g: 2
+```
+### passed by reference (array, object)
+```js
+let a = [1,2,3];
+let g = a;
+// a: [1,2,3], g: [1,2,3]
+g[1] = 9;
+// a: [1,9,3], g: [1,9,3]
 ```
 ### array slice
 ```js
