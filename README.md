@@ -139,3 +139,16 @@ start index is included, end index is not included
 [1,2,3].includes(7);
 // false
 ```
+### array initialization
+```js
+let arr = new Array(3);
+// initialize arr with length 3
+// [ <3 empty items> ]
+arr.fill("", 0);
+// fill all elements with "", starting from idx 0
+// ["", "", ""]
+arr.fill("x",0,2);
+// value, startIdx, endIdx
+// fill idx 0 up to 2 (not including 2) with "x"
+// ["x", "x", ""]
+```
