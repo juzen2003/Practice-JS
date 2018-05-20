@@ -36,6 +36,11 @@ Math.floor(Math.random() * 20)
 Math.pow(10,2)
 // 100
 ```
+### Math.abs
+```js
+Math.abs(-1)
+// 1
+```
 ### Split string into array
 ```js
 "str".split("r")
@@ -156,6 +161,11 @@ arr.fill("x",0,2);
 ```js
 [] + []
 // ""
+```
+### {} + {}
+```js
+{} + {}
+// NaN
 ```
 ### "2" + 1
 ```js
