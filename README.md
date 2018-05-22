@@ -7,6 +7,10 @@ Object.values(obj)
 // [2, 4, 6]
 Object.entries(obj)
 // [ [ 'a', 1 ], [ 'b', 2 ], [ 'c', 3 ] ]
+obj["a"]
+// 2
+obj["x"]
+// undefined
 ```
 ### Check if POJO is empty
 ```js
@@ -147,6 +151,7 @@ start index is included, end index is not included
 ### array initialization
 ```js
 let arr = new Array(3);
+// let arr = Array(3); would work as well
 // initialize arr with length 3
 // [ <3 empty items> ]
 arr.fill("", 0);
@@ -171,4 +176,27 @@ arr.fill("x",0,2);
 ```js
 "2" + 1
 // "21"
+```
+### trim()
+```js
+"   abc".trim();
+// "abc"
+"   abc     ".trim();
+// "abc"
+```
+### parseInt()
+convert str to integer
+```js
+parseInt("528");
+// 528
+parseInt("f");
+// NaN
+```
+### isNaN()
+the only way to check NaN
+```js
+isNaN(parseInt("528"));
+// false
+isNaN(parseInt("f"));
+// true
 ```
