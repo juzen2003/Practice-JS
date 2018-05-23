@@ -207,3 +207,27 @@ let u = 5 < 7 ? 5 : 7;
 let v = 5 > 7 ? 5 : 7
 // v: 7
 ```
+### typeof
+```js
+let a = [1,3,5];
+let c = 0;
+let d = "str";
+let e;
+typeof a;
+// "object"
+typeof c;
+// "number"
+typeof d;
+// "string"
+typeof e;
+// "undefined"
+```
+### isArray
+```js
+let a = [1,3,5];
+let c = 0;
+Array.isArray(a)
+// true
+Array.isArray(c)
+// false
+```
