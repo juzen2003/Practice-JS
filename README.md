@@ -200,3 +200,10 @@ isNaN(parseInt("528"));
 isNaN(parseInt("f"));
 // true
 ```
+### ternary
+```js
+let u = 5 < 7 ? 5 : 7;
+// u: 5
+let v = 5 > 7 ? 5 : 7
+// v: 7
+```
