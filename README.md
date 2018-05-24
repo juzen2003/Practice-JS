@@ -47,6 +47,8 @@ Math.abs(-1)
 ```
 ### Split string into array
 ```js
+"str".split()
+// [ 'str' ] default separator is " "
 "str".split("r")
 // [ 'st', '' ]
 "st r".split(" ")
@@ -57,6 +59,8 @@ Math.abs(-1)
 let x = [ 'st', 'r' ]
 x.join("")
 // "str"
+x.join()
+// "st,r" default delimiter is ","
 ```
 ### delete a key value pair in object
 ```js
@@ -254,4 +258,18 @@ Array.isArray(c)
 let a = [9,3,1];
 [a[1], a[2]] = [a[2], a[1]]
 // a: [9,1,3]
+```
+### string toUpperCase & toLowerCase
+```js
+"a".toUpperCase()
+// "A"
+"A".toLowerCase()
+// "a"
+```
+### array reverse
+string has no reverse method
+```js
+let a = [9,3,1];
+a.reverse();
+// a: [1,3,9]
 ```
