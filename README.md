@@ -1,4 +1,5 @@
 ### Object.keys/values/entries
+keys of object would always be converted to string
 ```js
 const obj = {"a": 2, "b": 4, "c": 6}
 Object.keys(obj)
@@ -133,7 +134,7 @@ let arr = ["aaple","orange","banana"];
 arr.sort();
 // [ 'apple', 'banana', 'orange' ]
 let arr2 = [1,5,3];
-arr2.sort();
+arr2.sort((a,b) => (a-b));
 // [1,3,5]
 arr2.sort(function(a,b){return b-a});
 // arr2.sort((a,b) => (b-a)); fat arrow
@@ -268,6 +269,12 @@ let a = [9,3,1];
 ```
 ### array reverse
 string has no reverse method
+```js
+let a = [9,3,1];
+a.reverse();
+// a: [1,3,9]
+```
+### string repeat
 ```js
 let a = [9,3,1];
 a.reverse();

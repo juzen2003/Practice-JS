@@ -22,6 +22,7 @@ function test1() {
 // 0 1 2 3 4
 function test2() {
   for(let i = 0; i < 5; i++) {
+    // console.log("test2");
     setTimeout(function(){
       console.log(i);
     }, 1);
