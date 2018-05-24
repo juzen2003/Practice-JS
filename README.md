@@ -143,6 +143,8 @@ start index is included, end index is not included
 // 'b'
 "cbbd".slice(1,3);
 // 'bb'
+"cbbd".slice(1,1);
+// ''
 ```
 ### includes
 ```js
@@ -168,6 +170,12 @@ arr.fill("x",0,2);
 // value, startIdx, endIdx
 // fill idx 0 up to 2 (not including 2) with "x"
 // ["x", "x", ""]
+```
+### array of "a" to "z"
+```js
+let arr = Array(26).fill(1).map((el, idx) => {
+  return String.fromCharCode(96 + el + idx);
+});
 ```
 ### [] + []
 ```js
@@ -240,4 +248,10 @@ Array.isArray(a)
 // true
 Array.isArray(c)
 // false
+```
+### array swapping
+```js
+let a = [9,3,1];
+[a[1], a[2]] = [a[2], a[1]]
+// a: [9,1,3]
 ```
