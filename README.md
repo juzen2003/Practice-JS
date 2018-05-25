@@ -135,7 +135,7 @@ arr.sort();
 // [ 'apple', 'banana', 'orange' ]
 let arr2 = [1,5,3];
 arr2.sort((a,b) => (a-b));
-// [1,3,5]
+// [1,3,5], if element is numbers, make sure to pass in function instead of just sort()
 arr2.sort(function(a,b){return b-a});
 // arr2.sort((a,b) => (b-a)); fat arrow
 // b > a return 1, b < a return -1, b = a return 0
