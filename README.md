@@ -197,6 +197,11 @@ let arr = Array(26).fill(1).map((el, idx) => {
 "2" + 1
 // "21"
 ```
+### undefined + 2
+```js
+undefined + 2
+// NaN
+```
 ### trim()
 ```js
 "   abc".trim();
