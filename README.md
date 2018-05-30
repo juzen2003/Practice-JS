@@ -67,7 +67,7 @@ x.join()
 ```js
 let hsh = {"a": 1, "b": 2, "c": 3}
 delete hsh["b"]
-// true
+// true, same as delete hsh.b
 console.log(hsh);
 //{ a: 1, c: 3 }
 ```
