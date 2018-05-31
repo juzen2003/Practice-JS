@@ -285,3 +285,16 @@ let a = [9,3,1];
 a.reverse();
 // a: [1,3,9]
 ```
+### check if array is empty
+```js
+let a = [];
+console.log(a.length === 0);
+// true
+```
+### check if string includes a substring
+```js
+"str".includes("tr");
+// true
+"str".includes("a");
+// false
+```

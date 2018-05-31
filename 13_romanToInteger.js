@@ -66,13 +66,13 @@ var romanToInt = function(s) {
   let i = 0;
 
   while(i < s.length) {
-      if(keys.includes(s.slice(i, i+2))) {
-          res += hsh[s.slice(i, i+2)];
-          i += 2;
-      } else {
-          res += hsh[s[i]];
-          i += 1;
-      }
+    if(keys.includes(s.slice(i, i+2))) {
+      res += hsh[s.slice(i, i+2)];
+      i += 2;
+    } else {
+      res += hsh[s[i]];
+      i += 1;
+    }
   }
 
   return res;
