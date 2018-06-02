@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Phone Screen, JS Debugging</title>
+  <style>
+    body {
+      background-color: #fff;
+    }
+  </style>
+  <!-- alert would not pop out, instead of putting script tag here -->
+  <!-- <script>
+   function logTodos() {
+     // alert(document.getElementById('target'));
+     document.querySelectorAll('.todo').forEach(function(el) {
+       alert(el.innerText);
+     });
+
+     return 1;
+   }
+
+   logTodos();
+ </script> -->
+</head>
+<body>
+  <ul class="todos">
+    <li class="todo" id="target">1</li>
+  </ul>
+  <!-- put script tag here to have alert pop out -->
+  <script>
+    function logTodos() {
+      //alert(document.getElementById('target'));
+      document.querySelectorAll('.todo').forEach(function(el) {
+        alert(el.innerText);
+      });
+
+      return 1;
+    }
+
+    logTodos();
+  </script>
+</body>
+</html>
+
+<!--If we put script tag at the head, it would not recognize the todo li tag, instead of putting script tag on the head, put the script to the end of the file after all DOM are loaded or use DOMContentloaded -->
+
+
+<!-- data-type="true" set css for it-->
+<!-- set text color, css -->
+<!-- set background color, css, body > *:hover -->
