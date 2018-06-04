@@ -298,3 +298,10 @@ console.log(a.length === 0);
 "str".includes("a");
 // false
 ```
+### check if array is equal
+```js
+let a = [1,-1];
+let b = [1,-1];
+JSON.stringify(a) === JSON.stringify
+//  true
+```

@@ -29,6 +29,7 @@ function test2() {
   }
 }
 
+
 // The value undefined is at index: 4
 // The value undefined is at index: 4
 // The value undefined is at index: 4
@@ -39,7 +40,10 @@ function test3 () {
     setTimeout(function() {
       console.log(`The value ${arr[i]} is at index: ${i}`);
     }, (i+1) * 1000);
+    console.log("In for loop", i);
   }
+
+  console.log("Out of for loop", i);
 }
 
 // The value 10 is at index: 0
@@ -73,6 +77,6 @@ function test5 () {
 // test();
 // test1();
 // test2();
-// test3();
+test3();
 // test4();
-test5();
+// test5();
