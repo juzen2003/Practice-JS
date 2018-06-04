@@ -302,6 +302,11 @@ console.log(a.length === 0);
 ```js
 let a = [1,-1];
 let b = [1,-1];
-JSON.stringify(a) === JSON.stringify
+let aStr = JSON.stringify(a);
+let bStr = JSON.stringify(b);
+console.log(aStr === bStr);
 //  true
+
+JSON.parse(aStr);
+// a
 ```
