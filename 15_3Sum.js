@@ -9,6 +9,7 @@
  * @return {number[][]}
  */
 var threeSum = function(nums) {
+  // sort it first
   nums = nums.sort((a,b) => a-b);
   // console.log(nums);
   let res = [];
