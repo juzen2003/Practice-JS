@@ -32,3 +32,43 @@ function sum2(a, b) {
 }
 
 console.log(" === var, let, const === ");
+// variable is function scope, hoisted
+// let and const (ES6) are block scope, not hoisted
+console.log(" === var === ");
+function greeting() {
+  console.log(s); // undefined, no error due to var hoisted in function scope
+  if(true) {
+    var s = 'Hi';
+  }
+  console.log(s); // 'Hi'
+}
+greeting();
+
+console.log(" === let === ");
+let g1 = 'global 1';
+let g2 = 'global 2';
+function letTest() {   /* Creating a new block scope */
+  g1 = 'new global 1';
+  let g2 = 'local global 2';
+  console.log(g1);   // 'new global 1'
+  console.log(g2);   // 'local global 2'
+  // console.log(g3);   // ReferenceError: g3 is not defined
+  let g3 = 'I am not hoisted';
+}
+console.log(g1);    // 'new global 1'
+console.log(g2);    // 'global 2'
+letTest();
+
+console.log(" === const === ");
+// constant is immutable, can't be re-assigned, but its properties can be changed.
+const tryMe = 'initial assignment';
+// tryMe = 'this has been reassigned';  // TypeError: Assignment to constant variable.
+// You cannot reassign but you can change it…
+const array = ['Ted', 'is', 'awesome!'];
+array[0] = 'Barney';
+array[3] = 'Suit up!';
+console.log(array);     // [“Barney”, “is”, “awesome!”, “Suit up!”]
+const airplane = {};
+airplane.wings = 2;
+airplane.passengers = 200;
+console.log(airplane);   // {passengers: 200, wings: 2}
