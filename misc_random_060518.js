@@ -29,3 +29,15 @@ x();
 console.log('Moe');
 
 // Larry, Moe, Curly
+
+// MISC Check
+
+// 6 primitive type: null, undefined, boolean, number, string, symbol (ES6)
+// object is not primitive type
+console.log(typeof 0);            // number
+console.log(typeof true);          // boolean
+console.log(typeof 'Hello');        // string
+console.log(typeof Math);           // object
+console.log(typeof null);           // object  !!
+console.log(typeof undefined);           // undefined  !!
+console.log(typeof Symbol('Hi'));   // symbol (New ES6)
