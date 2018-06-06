@@ -4,6 +4,7 @@ function toSquare(n){
   return n*n;
 }
 
+// Variables are partially hoisted. var declarations are hoisted but not its assignments.
 const test1 = function() {  /* Original code */
   console.log(i);  // undefined, declaration is hoisted but not the assignment
   var i = 10;

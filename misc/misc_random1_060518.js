@@ -35,3 +35,26 @@ console.log("4" - 2); // 2
 console.log("4px" - 2); // NaN
 console.log(null + 1); // 1
 console.log(undefined + 1); // NaN
+
+// primitive types are passed by values
+// compound values are passed by reference, like array or object
+console.log(" === value & reference === ");
+var a = 2;        // 'a' hold a copy of the value 2.
+var b = a;        // 'b' is always a copy of the value in 'a'
+b++;
+console.log(a);   // 2
+console.log(b);   // 3
+var c = [1,2,3];
+var d = c;        // 'd' is a reference to the shared value
+d.push( 4 );      // Mutates the referenced value (object)
+console.log(c);   // [1,2,3,4]
+console.log(d);   // [1,2,3,4]
+/* Compound values are equal by reference */
+var e = [1,2,3,4];
+console.log(c === d);  // true
+console.log(c === e);  // false
+
+const copy = c.slice();    // 'copy' references to a new value
+console.log(c);           // [1,2,3,4]
+console.log(copy);        // [1,2,3,4]
+console.log(c === copy);  // false
