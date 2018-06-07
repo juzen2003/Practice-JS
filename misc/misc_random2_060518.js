@@ -58,6 +58,8 @@ function letTest() {   /* Creating a new block scope */
 console.log(g1);    // 'new global 1'
 console.log(g2);    // 'global 2'
 letTest();
+console.log(g1);    // 'new global 1'
+console.log(g2);    // 'global 2'
 
 console.log(" === const === ");
 // constant is immutable, can't be re-assigned, but its properties can be changed.
