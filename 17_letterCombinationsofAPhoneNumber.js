@@ -23,7 +23,7 @@ const map = {
     7: "pqrs",
     8: "tuv",
     9: "wxyz"
-}
+};
 
 var letterCombinations = function(digits) {
   // console.log(map[2].split(""));
