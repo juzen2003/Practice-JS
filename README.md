@@ -259,6 +259,15 @@ Array.isArray(a)
 Array.isArray(c)
 // false
 ```
+### instanceof
+```js
+let a = [1,3,5];
+let c = 0;
+console.log(a instanceof Array);
+// true
+console.log(c instanceof Array);
+// false
+```
 ### array swapping
 ```js
 let a = [9,3,1];
