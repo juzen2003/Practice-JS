@@ -38,8 +38,8 @@ for(let k = 0; k < 3; k++) { // let creates new k for each loop
   });
 }
 
-// console.log(k); // Reference erro (since there is no k in global space)
+// console.log(k); // Reference error (since there is no k in global space)
 
 for(var l = 0; l < 3; l++) {
-  console.log(arr2[l]()); // prints 3, 3, and 3
+  console.log(arr2[l]()); // prints 0, 1, and 2
 }
