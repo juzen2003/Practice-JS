@@ -30,7 +30,7 @@ var nextPermutation = function(nums) {
     nums = nums.reverse();
   } else {
 
-    // swap el at tracker with the first el that is larger than it at the right array
+    // swap el at tracker with the first el that is larger than it at the right array (from right, right array is increasing)
     for(let j = nums.length-1; j > tracker; j--) {
       if(nums[j] > nums[tracker]) {
         [nums[tracker], nums[j]] = [nums[j], nums[tracker]];
