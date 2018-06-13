@@ -319,3 +319,11 @@ console.log(aStr === bStr);
 JSON.parse(aStr);
 // a
 ```
+### Array.from
+```js
+let a = "str";
+Array.from(a);
+// ["s", "t", "r"], this works for both iterable and array-like object
+console.log([...a]);
+// ["s", "t", "r"], ... works for iterable
+```
