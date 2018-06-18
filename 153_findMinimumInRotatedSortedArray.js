@@ -12,8 +12,10 @@ var findMin = function(nums) {
 
     let mid = low + Math.floor((high - low) / 2);
     if(nums[mid] > nums[high]) {
+      // we can use mid + 1 because we know last element is smaller than mid
       low = mid + 1;
     } else {
+      // we use mid since it could  still be the smallest one
       high = mid;
     }
   }
