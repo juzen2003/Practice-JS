@@ -1,18 +1,3 @@
-// Input: s = "PAYPALISHIRING", numRows = 3
-// Output: "PAHNAPLSIIGYIR"
-// P   A   H   N
-// A P L S I I G
-// Y   I   R
-
-// Input: s = "PAYPALISHIRING", numRows = 4
-// Output: "PINALSIGYAHRPI"
-// Explanation:
-//
-// P     I    N
-// A   L S  I G
-// Y A   H R
-// P     I
-
 /**
  * @param {string} s
  * @param {number} numRows

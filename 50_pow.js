@@ -1,5 +1,3 @@
-// Implement pow(x, n), which calculates x raised to the power n (x^n).
-
 /**
  * @param {number} x
  * @param {number} n
