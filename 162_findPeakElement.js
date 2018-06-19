@@ -8,10 +8,10 @@ var findPeakElement = function(nums) {
   let low = 0;
   let high = nums.length-1;
 
-  // we use low + 1 < high instead of low < high
-  // because we need to use [low,high] to figure out the peak
-  // otherwise we can't tell if we should compare to low - 1 or low + 1
-  while((low + 1) < high) {
+  // always meet the following requrement:
+  // nums[low - 1] < nums[low] && nums[high] > nums[high + 1]
+
+  while(low < high) {
     let mid = Math.floor((high + low) / 2);
 
     // right part has a peak
@@ -23,10 +23,6 @@ var findPeakElement = function(nums) {
     }
   }
 
-  // when exit out while loop, [low, high]
-  if(nums[low] > nums[high]) {
-    return low;
-  } else {
-    return high;
-  }
+  // when exit out the while loop (low === high), we know that low is the peak because: nums[low - 1] < nums[low] && nums[high] > nums[high + 1]
+  return low;
 };
