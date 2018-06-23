@@ -327,3 +327,13 @@ Array.from(a);
 console.log([...a]);
 // ["s", "t", "r"], ... works for iterable
 ```
+### splice
+```js
+// arr.splice(x, y)
+// remove elements starting at index x with y length
+let a = [1,2,3,4,5]
+a.splice(2,1)
+// a: [1,2,4,5]
+a.splice(1,2)
+// a: [1,5]
+```
