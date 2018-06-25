@@ -216,6 +216,8 @@ parseInt("528");
 // 528
 parseInt("f");
 // NaN
+parseInt((2+3)/2);
+// 2, same as Math.floor((2+3)/2)
 ```
 ### isNaN()
 the only way to check NaN
