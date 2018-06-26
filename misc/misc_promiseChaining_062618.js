@@ -20,6 +20,11 @@ new Promise(function(resolve, reject) {
 
 });
 
+// the value returned by .then is a promise
+// the value returned by the resolved function in .then is the value set for resolved result and would be passed down
+
+//  an asynchronous action should always return a promise.
+
 // 1 -> 2 (1s delay) -> 4 (1s delay)
 // new Promise(function(resolve, reject) {
 //
