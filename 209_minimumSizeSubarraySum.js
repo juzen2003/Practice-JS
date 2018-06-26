@@ -3,7 +3,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-//  O(logn)
+//  O(nlogn)
 var minSubArrayLen = function(s, nums) {
   let sums = [];
   sums[0] = nums[0];
