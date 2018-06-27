@@ -18,7 +18,7 @@ obj["x"]
 Object.keys(obj).length === 0 // empty
 Object.keys(obj).length !== 0 // not empty
 ```
-### for...in
+### for...in of object
 ```js
 let hsh = {'a': 1, 'b': 2};
 for(let a in hsh) {
@@ -29,6 +29,14 @@ for(let a in hsh) {
 // 1
 // b
 // 2
+```
+### for...of of array
+```js
+let a = [1,2,3,4];
+for(let el of a) {
+  console.log(el);
+}
+// 1,2,3,4
 ```
 ### Math.random
 ```js
