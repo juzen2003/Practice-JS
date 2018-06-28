@@ -12,39 +12,32 @@
 var countNodes = function(root) {
   if(root === null) return 0;
 
-  let leftHeight = leftHeightCount(root);
-  let rightHeight = rightHeightCount(root);
-  let total = 0;
+  let leftCount = countLeftHeight(root);
+  let rightCount = countRightHeight(root);
 
-
-  if(leftHeight === rightHeight) {
-    total = Math.pow(2, leftHeight + 1) - 1;
-
+  if(leftCount === rightCount) {
+    return Math.pow(2, leftCount + 1) - 1;
   } else {
-    total = 1 + countNodes(root.left) + countNodes(root.right);
+    return 1 + countNodes(root.left) + countNodes(root.right);
   }
-
-  return total;
 };
 
-const leftHeightCount = function(root) {
-  let leftHeight = 0;
-
+const countLeftHeight = function(root) {
+  let count = 0;
   while(root.left !== null) {
+    count++;
     root = root.left;
-    leftHeight += 1;
   }
 
-  return leftHeight;
+  return count;
 };
 
-const rightHeightCount = function(root) {
-  let rightHeight = 0;
-
+const countRightHeight = function(root) {
+  let count = 0;
   while(root.right !== null) {
+    count++;
     root = root.right;
-    rightHeight += 1;
   }
 
-  return rightHeight;
+  return count;
 };
