@@ -30,10 +30,18 @@ for(let a in hsh) {
 // b
 // 2
 ```
-### for...of of array
+### for...of of collection
 ```js
 let a = [1,2,3,4];
 for(let el of a) {
+  console.log(el);
+}
+// 1,2,3,4
+```
+### for...in(or of) of array
+```js
+let a = [1,2,3,4];
+for(let el in a) {
   console.log(el);
 }
 // 1,2,3,4
@@ -330,6 +338,7 @@ JSON.parse(aStr);
 // a
 ```
 ### Array.from
+create an array from an collection (array like iterable object)
 ```js
 let a = "str";
 Array.from(a);
