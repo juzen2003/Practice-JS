@@ -5,68 +5,68 @@
  */
 //  O(nlogn)
 var minSubArrayLen = function(s, nums) {
-  let sums = [];
-  sums[0] = nums[0];
+  let sum = [];
+  sum[0] = nums[0];
   for(let i = 1; i < nums.length; i++) {
-    sums[i] = sums[i-1] + nums[i];
+    sum[i] = sum[i - 1] + nums[i];
   }
 
-
-  let end = 0;
-  let minLen = nums.length + 1;
-  console.log(sums);
-  for(let j = 0; j < nums.length - 1; j ++) {
-
-    end = bsearch(j, s, sums);
-    // console.log(end);
-    if(end === sums.length) break;
-    if(minLen > end - j + 1) {
-        minLen = end - j + 1;
-    }
-  }
-  if(minLen === nums.length + 1) return 0;
-  return minLen;
-};
-
-const bsearch = function(low, s, sums) {
-  let value = low === 0 ? s : sums[low-1] + s;
-  let high = sums.length - 1;
-
-  while(low <= high) {
-    let mid = parseInt((low + high) / 2); // low + (high - low) / 2
-
-    // look for first location where sum of subarray is > s
-    if(sums[mid] >= value) {
-        high = mid - 1;
-    } else {
-        low = mid + 1;
-    }
-  }
-
-  return low;
-};
-
-// O(n)
-var minSubArrayLen = function(s, nums) {
-  let i = 0;
-  let j = 0;
-  let sum = 0;
   let min = nums.length + 1;
+  for(let j = 0; j < sum.length; j++) {
+    let end = bsearch(j, s, sum);
+    if(end === sum.length) break;
 
-  while(i < nums.length) {
-    sum += nums[i];
-    i++;
-
-    while(sum >= s) {
-      if(min > i - j) {
-        min = i - j;
-      }
-      sum -= nums[j];
-      j++;
+    if(min > end - j + 1) {
+      min = end - j + 1;
     }
   }
 
   if(min === nums.length + 1) return 0;
   return min;
-
 };
+
+const bsearch = function(start, s, sum) {
+  let key = start === 0 ? s : s + sum[start - 1];
+  let end = sum.length - 1;
+
+  while(start <= end) {
+    let mid = parseInt((start + end)/2);
+
+    if(sum[mid] >= key) {
+      end = mid - 1;
+    } else {
+      start = mid + 1;
+    }
+  }
+
+  return start;
+};
+
+
+
+
+
+// O(n)
+// var minSubArrayLen = function(s, nums) {
+//   let i = 0;
+//   let j = 0;
+//   let sum = 0;
+//   let min = nums.length + 1;
+//
+//   while(i < nums.length) {
+//     sum += nums[i];
+//     i++;
+//
+//     while(sum >= s) {
+//       if(min > i - j) {
+//         min = i - j;
+//       }
+//       sum -= nums[j];
+//       j++;
+//     }
+//   }
+//
+//   if(min === nums.length + 1) return 0;
+//   return min;
+//
+// };
