@@ -62,6 +62,13 @@ Math.pow(10,2)
 Math.abs(-1)
 // 1
 ```
+### Math.max & Math.min
+```js
+Math.max(2,3);
+// 3
+Math.min(5,7);
+// 5
+```
 ### Split string into array
 ```js
 "str".split()
