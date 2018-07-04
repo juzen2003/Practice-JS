@@ -3,6 +3,7 @@
  * @return {number}
  */
 // O(nlogn)
+// tails is an array storing the smallest tail of all increasing subsequences with length i+1 in tails[i]
 // (1) if x is larger than all tails, append it, increase the size by 1
 // (2) if tails[i-1] < x <= tails[i], update tails[i]
 var lengthOfLIS = function(nums) {
@@ -13,8 +14,7 @@ var lengthOfLIS = function(nums) {
     let j = 0;
     let k = size;
     let key = nums[i];
-
-    // bsearch to look for the point at tail where that value is less than key
+    // bsearch to look for the first point at tail where that value is less than key
     while(j <= k) {
       let mid = parseInt((j+k)/2);
       if(tail[mid] < key) {
