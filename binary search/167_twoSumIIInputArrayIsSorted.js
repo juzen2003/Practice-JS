@@ -8,7 +8,7 @@ var twoSum = function(numbers, target) {
   let high = numbers.length - 1;
   let res = [];
 
-  while(low <= high) {
+  while(low < high) {
     let num1 = numbers[low];
     let num2 = numbers[high];
 

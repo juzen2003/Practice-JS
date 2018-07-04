@@ -8,7 +8,7 @@ var findDuplicate = function(nums) {
   let low = 1;
   let high = nums.length - 1;
 
-  while(low < high) {
+  while(low <= high) {
     let count = 0;
     let mid = parseInt((low + high)/2);
 
@@ -21,7 +21,7 @@ var findDuplicate = function(nums) {
     if(count <= mid) {
       low = mid + 1;
     } else {
-      high = mid;
+      high = mid - 1;
     }
   }
 
