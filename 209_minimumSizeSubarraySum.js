@@ -25,6 +25,7 @@ var minSubArrayLen = function(s, nums) {
   return min;
 };
 
+// this is used to find the 1st point where value of sum el is larger than key
 const bsearch = function(start, s, sum) {
   let key = start === 0 ? s : s + sum[start - 1];
   let end = sum.length - 1;
