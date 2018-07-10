@@ -12,26 +12,28 @@
 // iterative DFS
 var isSymmetric = function(root) {
   if(root === null) return true;
+
   let stack = [];
 
   if(root.left !== null) {
     if(root.right === null) return false;
     stack.push(root.right);
     stack.push(root.left);
-  } else if (root.right !== null) {
+  } else if(root.right !== null) {
     return false;
   }
 
   while(stack.length !== 0) {
     let left = stack.pop();
     let right = stack.pop();
+
     if(left.val !== right.val) return false;
 
     if(left.left !== null) {
       if(right.right === null) return false;
       stack.push(right.right);
       stack.push(left.left);
-    } else if (right.right !== null) {
+    } else if(right.right !== null) {
       return false;
     }
 
