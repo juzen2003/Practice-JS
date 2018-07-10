@@ -14,7 +14,7 @@ var lengthOfLIS = function(nums) {
     let j = 0;
     let k = size;
     let key = nums[i];
-    // bsearch to look for the first point at tail where that value is less than key
+    // bsearch to look for the last point at tail where that value is less than key
     while(j <= k ) {
       let mid = parseInt((j+k)/2);
       if(tail[mid] < key) {
