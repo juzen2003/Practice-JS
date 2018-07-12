@@ -54,6 +54,7 @@ const bfs_count_by_level = function(treeNode) {
     // console.log(levelCount);
     console.log(count);
 
+    // reset when finishing searching through one level
     if(levelCount === levelSize) {
       levelCount = 0;
       levelSize = nextlevelSize;
@@ -91,7 +92,7 @@ const bfs = function(treeNode) {
     count[currentNode.val] = count[currentNode.val] === undefined ? 1 : count[currentNode.val] += 1;
 
     console.log(currentNode.val);
-    console.log(count);
+    // console.log(count);
 
     if(currentNode.children === null) {
       continue;
@@ -118,7 +119,7 @@ const dfs = function(treeNode) {
     count[currentNode.val] = count[currentNode.val] === undefined ? 1 : count[currentNode.val] += 1;
 
     console.log(currentNode.val);
-    console.log(count);
+    // console.log(count);
 
     if(currentNode.children === null) {
       continue;
