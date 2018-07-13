@@ -14,7 +14,7 @@ var findMin = function(nums) {
 
     if(nums[mid] > nums[mid + 1]) {
       return nums[mid + 1];
-    } else if (nums[mid - 1] > nums[mid]) {
+    } else if (nums[mid] < nums[mid - 1]) {
       return nums[mid];
     } else if (nums[mid] > nums[high]) {
       low = mid + 1;
