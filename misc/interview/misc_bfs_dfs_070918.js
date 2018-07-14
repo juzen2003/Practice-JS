@@ -32,7 +32,8 @@ const bfs_count_by_level = function(treeNode) {
 
   let levelSize = 1;
   let levelCount = 0;
-  let nextlevelSize = treeNode.children.length;
+  // let nextlevelSize = treeNode.children.length;
+  let nextlevelSize = 0;
   let visited = [];
 
   // let visited = [];
@@ -52,25 +53,27 @@ const bfs_count_by_level = function(treeNode) {
     console.log(currentNode.val);
     // console.log(levelSize);
     // console.log(levelCount);
-    console.log(count);
+    // console.log(count);
 
-    // reset when finishing searching through one level
-    if(levelCount === levelSize) {
-      levelCount = 0;
-      levelSize = nextlevelSize;
-      visited = [];
-      nextlevelSize = 0;
-    }
-
-    if(currentNode.children === null) {
-      continue;
-    } else {
+    if(currentNode.children !== null) {
       nextlevelSize += currentNode.children.length;
       // console.log(`next: ${nextlevelSize}`);
 
       for(let i = 0; i < currentNode.children.length; i++) {
         queue.push(currentNode.children[i]);
       }
+    }
+    // console.log(`nextlevelSize: ${nextlevelSize}`);
+    // console.log(`levelCount: ${levelCount}`);
+    // console.log(`levelSize: ${levelSize}`);
+    // console.log(`visited: ${visited}`);
+    console.log(count);
+    // reset when finishing searching through one level
+    if(levelCount === levelSize) {
+      levelCount = 0;
+      levelSize = nextlevelSize;
+      visited = [];
+      nextlevelSize = 0;
     }
 
   }
@@ -94,9 +97,7 @@ const bfs = function(treeNode) {
     console.log(currentNode.val);
     // console.log(count);
 
-    if(currentNode.children === null) {
-      continue;
-    } else {
+    if(currentNode.children !== null) {
       for(let i = 0; i < currentNode.children.length; i++) {
         queue.push(currentNode.children[i]);
       }
@@ -121,9 +122,7 @@ const dfs = function(treeNode) {
     console.log(currentNode.val);
     // console.log(count);
 
-    if(currentNode.children === null) {
-      continue;
-    } else {
+    if(currentNode.children !== null) {
       for(let i = currentNode.children.length - 1; i >= 0; i--) {
         stack.push(currentNode.children[i]);
       }
