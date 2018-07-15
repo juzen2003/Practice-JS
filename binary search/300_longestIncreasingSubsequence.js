@@ -16,7 +16,7 @@ var lengthOfLIS = function(nums) {
     // high, tail.length
     let k = size;
     let key = nums[i];
-    // bsearch to look for the last point at tail where that value is less than key
+    // bsearch to look for the last point at tail where that value is less than key and insert key to the index after it.
     while(j <= k) {
       let mid = parseInt((j+k)/2);
       if(tail[mid] < key) {
