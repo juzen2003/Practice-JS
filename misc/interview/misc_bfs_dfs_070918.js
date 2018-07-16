@@ -102,6 +102,17 @@ const bfs_count_by_level = function(treeNode) {
       }
     }
   }
+
+  let max = 0;
+  let res;
+  for(let el in count) {
+    if(count[el] > max) {
+      max = count[el];
+      res = el;
+    }
+  }
+  console.log(`Node that exists in most levels: ${res}`);
+  return res;
 };
 
 const bfs = function(treeNode) {
