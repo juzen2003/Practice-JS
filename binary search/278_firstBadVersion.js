@@ -24,6 +24,7 @@ var solution = function(isBadVersion) {
     while(low <= high) {
       let mid = parseInt((low + high) / 2);
 
+      // search for 1st bad version
       if(isBadVersion(mid)) {
         high = mid - 1;
       } else {

@@ -9,6 +9,7 @@
  * @param {TreeNode} root
  * @return {number[][]}
  */
+ // BFS
 var zigzagLevelOrder = function(root) {
   if(root === null) return [];
 

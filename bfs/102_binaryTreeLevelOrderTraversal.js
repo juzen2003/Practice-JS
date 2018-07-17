@@ -10,6 +10,7 @@
  * @return {number[][]}
  */
 // Binary tree level order traversal
+// BFS
 var levelOrder = function(root) {
   if(root === null) return [];
   let queue = [];
