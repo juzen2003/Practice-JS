@@ -61,24 +61,22 @@ ORDER BY
 LIMIT
   1;
 
-b. use sql to get a list of age with number of members in that age and then use JavaScript: to parse the data and obtain the info we need
+b. join the same table to get a list of number of members in age range (5 as interval) and display the age range with most members
 SQL code:
 SELECT
-  age_as_integer, COUNT(*)
+  m1.age_as_integer as age1, m2.age_as_integer as age2, COUNT(m2.email) as profile_count
 FROM
-  member
+  member as m1
+JOIN
+  member as m2 ON age1 BETWEEN age2 - 5 AND age2
 GROUP BY
-  age_as_integer
+  m1.age_as_integer
 ORDER BY
-  age_as_integer ASC;
+  profile_count DESC
+LIMIT
+  1;
 
-sample output from SQL code, ex:
-[{"age_as_integer": 20, "count": 200},
- {"age_as_integer": 23, "count": 500},
- ...
-]
 
-JavaScript code:
 
 
 Problem 2: (JavaScript)

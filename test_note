@@ -1,0 +1,5 @@
+SELECT m1.year as yr1, m2.year as yr2, sum(m2.length_minutes) as cal
+FROM movies as m1
+JOIN movies as m2 on yr1 between yr2 - 5 and yr2
+group by yr1
+order by cal desc
