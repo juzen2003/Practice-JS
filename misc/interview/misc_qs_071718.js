@@ -76,10 +76,7 @@ ORDER BY
 LIMIT
   1;
 
-
-
-
-Problem 2: (JavaScript)
+Problem 2:
 const findDup = function(arr) {
   if(arr.length === 0) return [];
   let res = [];
