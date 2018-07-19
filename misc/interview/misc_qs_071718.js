@@ -117,6 +117,33 @@ console.log(findDup([1,3])); // []
 // c. Is there particular block of 5 minutes interval when there is most significant drop in number of visitors (new and repeat combined) from the immediate 5 minutes interval preceding this 5 minutes block of interval
 
 // =================
+// Answer:
+// =================
+We can use relational database with the following data schema: user_name, email_id, latest_visit_time, and previous_visit_time.
+user_name (string): name for each unique visitor.
+email_id (string): unique email id for each visitor.
+latest_visit_time (hh:min:sec, mm-dd-yy): this would store the time when a new data is created or an exisiting data is updated.
+previous_visit_time (hh:min:sec, mm-dd-yy): if the visitor is a 1st time visitor, this column would be null, else it would store the latest_visit_time info from previous update of the data.
+
+a.
+1. Select all the data that has lateset visit time with the date equal to the start date.
+2. For each hour on the targeted date, we can have two queries
+  a. select the first time visitors by setting condition where the previous_visit_time is null or not in the current hourly range.
+  b. select the repeat visitors by setting condition where the previous_visit_time is in the range of current hour.
+3. Apply the above two queries for each hour on the targeted date, and we can get the first time visitors vs repeat visitors in every hour of that date.
+
+b.
+1. Select all the data that has the latest visit time with the same given date from input.
+2. We need to self join the table on which the latest visit time from table 1 (t1) is between lastest visit time from table 2 (t2) - 15 minutes and latest visit time from table 2 (t2). (t1 between t2 - 15mins and t2)
+3. Once we got join table from step 2, we have to group t1 and count the email_id or user_name to get the number of visitors in each 15 minutes block from t1
+4. Order the result from step 3 by the count to get the busiest 15 minutes block.
+
+c.
+1. Use the similar steps from b to get the visitors in each 5 minutes block.
+2. Store the all the number of visitors for each 5 minutes block.
+3. Use the data from step 2 and create a function to find the max difference between two adjacent 5 minutes block to get the max drop.
+
+// =================
 // Q4:
 // =================
 // Please write JavaScript code so that given an array of integers it gives outputs the largest number which is an even number and it is sum of any two numbers in the array. So e.g. if array is (1, 2, 3, 4, 5) then the answer is 8 (sum of 5 and 3)
