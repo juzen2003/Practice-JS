@@ -2,6 +2,7 @@
  * @param {number[]} citations
  * @return {number}
  */
+// If there are several possible values for h, the maximum one is taken as the h-index.
 var hIndex = function(citations) {
   let N = citations.length;
   let low = 0;
@@ -10,13 +11,19 @@ var hIndex = function(citations) {
   while(low <= high) {
     let mid = parseInt((low + high) / 2);
 
-    if(citations[mid] === N - mid) {
-      return N - mid;
-    } else if (citations[mid] > N - mid) {
+    // find the first point (mid) where citations[mid] >= N - mid;
+    if(citations[mid] >= N - mid) {
       high = mid - 1;
     } else {
       low = mid + 1;
     }
+    // if(citations[mid] === N - mid) {
+    //   return N - mid;
+    // } else if (citations[mid] > N - mid) {
+    //   high = mid - 1;
+    // } else {
+    //   low = mid + 1;
+    // }
   }
 
   return N - low;

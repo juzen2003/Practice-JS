@@ -12,6 +12,13 @@ var findMin = function(nums) {
 
     let mid = parseInt((low + high) / 2);
 
+    // move this block here would work as well
+    // if(nums[mid] > nums[mid + 1]) {
+    //   return nums[mid + 1];
+    // } else if(nums[mid] < nums[mid - 1]) {
+    //   return nums[mid];
+    // }
+
     if(nums[low] === nums[high]) {
       high--;
     } else if(nums[mid] > nums[mid + 1]) {
