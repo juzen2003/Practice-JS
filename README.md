@@ -363,3 +363,8 @@ a.splice(2,1)
 a.splice(1,2)
 // a: [1,5]
 ```
+### largest interger
+```js
+// 64 bits, 2^31 - 1;
+a = Number.MAX_SAFE_INTEGER;
+```
