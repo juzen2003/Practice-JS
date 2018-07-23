@@ -19,8 +19,10 @@ var findDuplicate = function(nums) {
     }
 
     if(count <= mid) {
+      // search for value range: mid + 1 to high
       low = mid + 1;
     } else {
+      // search for value range: low to mid - 1
       high = mid - 1;
     }
   }

@@ -12,6 +12,7 @@ var hIndex = function(citations) {
     let mid = parseInt((low + high) / 2);
 
     // find the first point (mid) where citations[mid] >= N - mid;
+    // finding the 1st point is to get the === case
     if(citations[mid] >= N - mid) {
       high = mid - 1;
     } else {
