@@ -5,9 +5,10 @@
  */
  // run bsearch twice to find upperbound and lowerbound
 var searchRange = function(nums, target) {
-    let lowerBound = bsearch(nums, target, true);
-    let upperBound = bsearch(nums, target, false);
-    return [lowerBound, upperBound];
+  let lowerBound = bsearch(nums, target, true);
+  let upperBound = bsearch(nums, target, false);
+
+  return [lowerBound, upperBound];
 };
 
 const bsearch = function(arr, target, findLow) {
@@ -16,10 +17,11 @@ const bsearch = function(arr, target, findLow) {
   let res = -1;
 
   while(low <= high) {
-    let mid = high - Math.floor((high - low) / 2);
+    let mid = parseInt((low + high)/2);
 
     if(arr[mid] === target) {
       res = mid;
+
       if(findLow) {
         high = mid - 1;
       } else {
@@ -27,7 +29,7 @@ const bsearch = function(arr, target, findLow) {
       }
     } else if(arr[mid] > target) {
       high = mid - 1;
-    } else if(arr[mid] < target) {
+    } else {
       low = mid + 1;
     }
   }
