@@ -40,5 +40,6 @@ var minDepth = function(root) {
 //   let right = minDepth(root.right);
 //
 //   let res = (left === 0 || right === 0) ? 1 + left + right : 1 + Math.min(left, right);
+//
 //   return res;
 // };

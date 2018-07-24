@@ -8,7 +8,7 @@
 // cut both nums1 & nums2 to left and right parts using i & j
 // combine left and right parts of nums1 & nums2 such that:
 // 1. length of combined left & right are the same
-// i + j === m - i + n - j + 1 or m - i + n - j
+// i + j === m - i + n - j + 1 (left has one more is it's odd) or m - i + n - j
 // 2. max of combined left is less than min of combined right
 // B[j-1] <= A[i] and A[i-1] <= B[j]
 //       left_part          |        right_part
@@ -16,7 +16,7 @@
 // B[0], B[1], ..., B[j-1]  |  B[j], B[j+1], ..., B[n-1]
 
 // in general, meet the following two conditions:
-// (1) i + j == m - i + n - j (or: m - i + n - j + 1)
+// (1) i + j == m - i + n - j (or: m - i + n - j + 1, left has one more if it's odd)
 //     if n >= m, we just need to set: i = 0 ~ m, j = (m + n + 1)/2 - i
 // (2) B[j-1] <= A[i] and A[i-1] <= B[j]
 var findMedianSortedArrays = function(nums1, nums2) {
@@ -27,7 +27,7 @@ var findMedianSortedArrays = function(nums1, nums2) {
 
   // shorter (a) one would be splitted by i
   // longer (b) one would be splitted by j
-  // we need n > m so that j is not negative
+  // we need n > m so that j is not negative from (m + n + 1)/2 - i
   if(m > n) {
     let tmp = nums1;
     a = nums2;
@@ -63,6 +63,7 @@ var findMedianSortedArrays = function(nums1, nums2) {
         maxLeft = Math.max(a[i-1], b[j-1]);
       }
 
+      // we use j = (m + n + 1)/2 - i, when n + m is odd, the left would have odd elements
       if((m + n) % 2 === 1) return maxLeft;
 
       if(j === n) {
@@ -72,6 +73,9 @@ var findMedianSortedArrays = function(nums1, nums2) {
       } else {
         minRight = Math.min(a[i], b[j]);
       }
+
+      // if we use j = (m + n)/2 - i, when n + m is odd, the right would have odd elements
+      // if((m + n) % 2 === 1) return minRight;
 
       return (maxLeft + minRight)/2;
     }
