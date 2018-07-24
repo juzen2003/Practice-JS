@@ -368,3 +368,15 @@ a.splice(1,2)
 // 64 bits, 2^31 - 1;
 a = Number.MAX_SAFE_INTEGER;
 ```
+### Set, for fast look up
+```js
+let aSet = new Set([1,2,3]); // Set { 1, 2, 3 }
+aSet.add(5); // Set { 1, 2, 3, 5 }
+aSet.has(3); // true
+aSet.has(99); // false
+aSet.delete(3); // true, Set { 1, 2, 5 }
+aSet.delete(23); // false, Set { 1, 2, 5 }
+aSet.size; // 3
+console.log(aSet); // Set { 1, 2, 5 }
+for(let item of aSet) {console.log(item)}; // 1, 2, 5
+```
