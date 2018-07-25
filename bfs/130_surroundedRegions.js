@@ -3,7 +3,7 @@
  * @return {void} Do not return anything, modify board in-place instead.
  */
 // BFS
-// 1. check boarder and if it's "O", change it to "N", visit its neighbor and do the same thing
+// 1. check boarder and if it's "O", change it to "N", visit its neighbor and do the same thing (Use BFS)
 // 2. check all board and change "O" to "X"
 // 3. check all board and change "N" to "O"
 var solve = function(board) {
