@@ -16,11 +16,13 @@ var ladderLength = function(beginWord, endWord, wordList) {
   queue.push(beginWord);
   wordSet.delete(beginWord);
 
-  let dst = 1;
-
+  let dst = 0;
+  // store visited node
+  // let visited = new Set();
   while(queue.length !== 0) {
     let size = queue.length;
     let currentNode;
+    dst++;
 
     for(let i = 0; i < size; i++) {
       currentNode = queue.shift();
@@ -28,17 +30,19 @@ var ladderLength = function(beginWord, endWord, wordList) {
 
       for(let j = 0; j < currentNode.length; j++) {
         for(let k = 0; k < 26; k++) {
-          let word = currentNode.slice(0,j) + String.fromCharCode(k + 97) + currentNode.slice(j+1);
+          let word = currentNode.slice(0, j) + String.fromCharCode(k + 97) + currentNode.slice(j+1);
 
-          if(wordSet.has(word)) {
+          if(wordSet.has(word) && word !== currentNode) {
+            // if(!visited.has(word)) {
+            //   queue.push(word);
+            // }
             queue.push(word);
             wordSet.delete(word);
           }
         }
       }
+      // visited.add(currentNode);
     }
-
-    dst++;
   }
 
   return 0;
