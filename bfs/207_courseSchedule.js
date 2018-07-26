@@ -5,6 +5,7 @@
  */
 
 // BFS, topological sort
+// n: total courses you have to take, labeled from 0 to n-1.
 // each pair: [ready, pre]
 // 1. check classes that is ready, no indegree (indegree[ready] = 0 => no prerequisite needed)
 // 2. put them in queue (can be taken right away)
@@ -32,11 +33,11 @@ var canFinish = function(numCourses, prerequisites) {
 
     for(let k = 0; k < pairs; k++) {
       let otherClass = prerequisites[k][0];
-
+      let otherClassPre = prerequisites[k][1];
       // if currentNode is the prerequisite of other classes
       // update indegree counter
       // queue in classes that can be taken
-      if(prerequisites[k][1] === currentNode) {
+      if(otherClassPre === currentNode) {
         indegree[otherClass]--;
 
         if(indegree[otherClass] === 0) {
