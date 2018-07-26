@@ -1,0 +1,28 @@
+/**
+ * Definition for undirected graph.
+ * function UndirectedGraphNode(label) {
+ *     this.label = label;
+ *     this.neighbors = [];   // Array of UndirectedGraphNode
+ * }
+ */
+
+/**
+ * @param {UndirectedGraphNode} graph
+ * @return {UndirectedGraphNode}
+ */
+var cloneGraph = function(graph) {
+    let map = {};
+    return copy(graph, map);
+};
+
+// each node would only have 1 copy instead of multiple copies, that's why we passed in map to avoid copying same node mutiple times
+const copy = function(node, map) {
+    if(!node) return node;
+
+    if(!map[node.label]) {
+        map[node.label] = new UndirectedGraphNode(node.label);
+        map[node.label].neighbors = node.neighbors.map(el => copy(el, map));
+    }
+
+    return map[node.label];
+};
