@@ -5,6 +5,7 @@
  */
  // BFS, topological sort
  // n: total courses you have to take, labeled from 0 to n-1.
+ // check if it's possible to finish all courses and return the path
  // each pair: [ready, pre]
  // 1. check classes that is ready, no indegree (indegree[ready] = 0 => no prerequisite needed)
  // 2. put them in queue (can be taken right away)
@@ -31,7 +32,7 @@ var findOrder = function(numCourses, prerequisites) {
 
     // put the class that can be taken into final result
     res.push(currentNode);
-    
+
     if(res.length === numCourses) return res;
 
     for(let k = 0; k < pairs; k++) {

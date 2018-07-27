@@ -23,6 +23,7 @@ var rightSideView = function(root) {
 
     for(let i = 0; i < size; i++) {
       currentNode = queue.shift();
+      // record the node value at the most right at each level
       if(i === size - 1) res.push(currentNode.val);
 
       if(currentNode.left) queue.push(currentNode.left);

@@ -8,7 +8,7 @@
 // cut both nums1 & nums2 to left and right parts using i & j
 // combine left and right parts of nums1 & nums2 such that:
 // 1. length of combined left & right are the same
-// i + j === m - i + n - j + 1 (left has one more is it's odd) or m - i + n - j
+// i + j === m - i + n - j + 1 (left has one more when it's odd) or m - i + n - j (right has one more when it's odd)
 // 2. max of combined left is less than min of combined right
 // B[j-1] <= A[i] and A[i-1] <= B[j]
 //       left_part          |        right_part
@@ -36,7 +36,7 @@ var findMedianSortedArrays = function(nums1, nums2) {
     n = b.length;
   }
 
-  // i + j = m - i + n - j + 1
+  // i: from 0 to m, i + j = m - i + n - j + 1
   let low = 0;
   let high = m;
 

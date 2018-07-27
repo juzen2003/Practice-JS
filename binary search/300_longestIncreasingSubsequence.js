@@ -4,6 +4,7 @@
  */
 // O(nlogn)
 // tails is an array storing the smallest tail of all increasing subsequences with length i+1 in tails[i]
+// el in tail would be increasing 
 // (1) if x is larger than all tails, append it, increase the size by 1
 // (2) if tails[i-1] < x <= tails[i], update tails[i]
 var lengthOfLIS = function(nums) {

@@ -17,10 +17,10 @@ var divide = function(dividend, divisor) {
 
   while(dv >= ds) {
     dv -= newDs;
-    newDs += newDs; // keep adding up newDS like newDs * 2
     res += incr;
+    newDs += newDs; // keep adding up newDS like newDs * 2
     incr += incr; // quotient also * 2 if newDs double
-    
+
     // after newDs double, if it's larger than dividend, we use original divisor
     if(dv < newDs) {
       newDs = ds;

@@ -10,18 +10,18 @@ var solve = function(board) {
   if(board.length === 0) return;
 
   let queue = [];
-  let row = board.length;
-  let col = board[0].length;
+  let rowL = board.length;
+  let colL = board[0].length;
   let visited = new Set();
 
-  for(let i = 0; i < row; i++) {
+  for(let i = 0; i < rowL; i++) {
     check(i, 0, queue, board);
-    check(i, col-1, queue, board);
+    check(i, colL-1, queue, board);
   }
 
-  for(let j = 0; j < col; j++) {
+  for(let j = 0; j < colL; j++) {
     check(0, j, queue, board);
-    check(row-1, j, queue, board);
+    check(rowL-1, j, queue, board);
   }
 
   while(queue.length !== 0) {
@@ -31,16 +31,16 @@ var solve = function(board) {
 
     if(!visited.has(currentNode)) {
       if(r-1 >= 0) check(r-1, c, queue, board);
-      if(r+1 < row) check(r+1, c, queue, board);
+      if(r+1 < rowL) check(r+1, c, queue, board);
       if(c-1 >= 0) check(r, c-1, queue, board);
-      if(c+1 < col) check(r, c+1, queue, board);
+      if(c+1 < colL) check(r, c+1, queue, board);
     }
 
     visited.add(currentNode);
   }
 
-  for(let i = 0; i < row; i++) {
-    for(let j = 0; j < col; j++) {
+  for(let i = 0; i < rowL; i++) {
+    for(let j = 0; j < colL; j++) {
       if(board[i][j] === "O") board[i][j] = "X";
       if(board[i][j] === "N") board[i][j] = "O";
     }

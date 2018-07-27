@@ -13,11 +13,15 @@ var hIndex = function(citations) {
 
     // find the first point (mid) where citations[mid] >= N - mid;
     // finding the 1st point is to get the === case
-    if(citations[mid] >= N - mid) {
-      high = mid - 1;
-    } else {
+    // OR
+    // find the last point (mid) where citations[mid] < N - mid;
+    // return low (mid + 1) to get the h-index from N - low
+    if(citations[mid] < N - mid) {
       low = mid + 1;
+    } else {
+      high = mid - 1;
     }
+
     // if(citations[mid] === N - mid) {
     //   return N - mid;
     // } else if (citations[mid] > N - mid) {

@@ -10,6 +10,8 @@
  * @param {UndirectedGraphNode} graph
  * @return {UndirectedGraphNode}
  */
+// input is a UndirectedGraphNode
+// output is a UndirectedGraphNode
 var cloneGraph = function(graph) {
   let map = {};
   return makeAnCopy(graph, map);
@@ -23,7 +25,7 @@ const makeAnCopy = function(node, map) {
     map[node.label] = new UndirectedGraphNode(node.label);
     map[node.label].neighbors = node.neighbors.map(child => {
       return makeAnCopy(child, map);
-    })
+    });
   }
 
   return map[node.label];
