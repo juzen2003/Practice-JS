@@ -9,7 +9,9 @@
  * @param {TreeNode} root
  * @return {boolean}
  */
-// DFS, iterative, in order traversal
+// DFS, iterative, inorder traversal (left, root, right)
+// from output of inorder traversal, previous element has to be less than the next one to have the correct BST
+// left < root, root < right
 var isValidBST = function(root) {
   if(root === null) return true;
 
