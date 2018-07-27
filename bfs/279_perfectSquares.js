@@ -12,6 +12,7 @@ var numSquares = function(n) {
   dp[0] = 0;
 
   for(let i = 1; i*i <= n; i++) {
+    // return 1 if n is a perfect square number
     if(i*i === n) return 1;
     queue.push(i*i);
     sqrNums.push(i*i);
