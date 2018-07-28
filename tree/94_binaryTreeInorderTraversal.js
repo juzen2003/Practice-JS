@@ -10,7 +10,7 @@
  * @return {number[]}
  */
 
-// inorder (left, root, right)
+// inorder (left, root, right), the output would be increasing if it's BST
 // preorder (root, left, right)
 // postorder (left right root)
 // iterative
@@ -26,7 +26,9 @@ var inorderTraversal = function(root) {
     }
 
     root = stack.pop();
+    // normally we do sth here
     res.push(root.val);
+    //
     root = root.right;
   }
 
@@ -44,6 +46,8 @@ var inorderTraversal = function(root) {
 //   if(root === null) return;
 //
 //   inorder(root.left, res);
+//   // normally we do sth here
 //   res.push(root.val);
+//   //
 //   inorder(root.right, res);
 // };
