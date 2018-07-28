@@ -10,6 +10,8 @@
  * @param {number[]} inorder
  * @return {TreeNode}
  */
+// preorder = root, left, right
+// inorder = left, root, right
 var buildTree = function(preorder, inorder) {
   let bTree = build(0, 0, inorder.length-1, preorder, inorder);
   return bTree;
