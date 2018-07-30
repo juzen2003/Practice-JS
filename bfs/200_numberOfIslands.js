@@ -9,7 +9,7 @@ var numIslands = function(grid) {
   let rowL = grid.length;
   let colL = grid[0].length;
 
-  for(let i =0; i < rowL; i++) {
+  for(let i = 0; i < rowL; i++) {
     for(let j = 0; j < colL; j++) {
       if(grid[i][j] === "1") {
         // dfsFill(i, j, grid);

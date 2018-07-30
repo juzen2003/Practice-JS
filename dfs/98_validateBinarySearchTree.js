@@ -35,13 +35,17 @@ var isValidBST = function(root) {
 
 // recursion
 // var isValidBST = function(root) {
-//   return validBST(root, Number.MAX_SAFE_INTEGER, -Number.MAX_SAFE_INTEGER);
+//   return valid(root, Number.MAX_SAFE_INTEGER, -Number.MAX_SAFE_INTEGER);
 // };
 //
-// const validBST = function(root, max, min) {
+// const valid = function(root, max, min) {
 //   if(!root) return true;
 //   if(root.val >= max || root.val <= min) return false;
+//
 //   // left subtree are all smaller than current node value, max = current node value
 //   // right subtree are all larger than current node value, min = current node value
-//   return validBST(root.left, root.val, min) && validBST(root.right, max, root.val);
+//   let leftValid = valid(root.left, root.val, min);
+//   let rightValid = valid(root.right, max, root.val);
+//
+//   return leftValid && rightValid;
 // };

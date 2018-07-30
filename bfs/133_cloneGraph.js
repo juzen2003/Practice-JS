@@ -17,7 +17,7 @@ var cloneGraph = function(graph) {
   return makeAnCopy(graph, map);
 };
 
-// each node would only have 1 copy instead of multiple copies, that's why we passed in map to avoid copying same node mutiple times
+// each node would only have 1 copy instead of multiple copies, that's why we passed in map (for tracking) to avoid copying same node mutiple times
 const makeAnCopy = function(node, map) {
   if(!node) return node;
 

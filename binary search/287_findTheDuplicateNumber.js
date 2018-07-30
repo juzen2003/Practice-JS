@@ -18,7 +18,7 @@ var findDuplicate = function(nums) {
       }
     }
 
-    // find the last value that el <=  to it is not duplicated, return the value + 1
+    // find the last value that el <=  to it (that last value) is not duplicated, return the value + 1
     // this means that value + 1 has duplicated el
     if(count <= mid) {
       // search for value range: mid + 1 to high

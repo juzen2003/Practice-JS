@@ -28,6 +28,7 @@ var ladderLength = function(beginWord, endWord, wordList) {
       currentNode = queue.shift();
       if(currentNode === endWord) return dst;
 
+      // check for next possible transformed words, and make sure we don't revisit them again to get the short path
       for(let j = 0; j < currentNode.length; j++) {
         for(let k = 0; k < 26; k++) {
           let word = currentNode.slice(0, j) + String.fromCharCode(k + 97) + currentNode.slice(j+1);

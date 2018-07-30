@@ -9,7 +9,7 @@
    while(low <= high) {
      let mid = parseInt((low + high) / 2);
 
-     // find the last point (mid) where this condition met, and retur low (mid + 1)
+     // find the last point (mid) where this condition met, and return low (mid + 1)
      if(nums[mid] < nums[mid + 1]) {
        low = mid + 1;
      } else {
