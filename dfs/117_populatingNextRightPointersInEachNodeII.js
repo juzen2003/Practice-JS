@@ -33,7 +33,9 @@ var connect = function(root) {
 
     currentNode = currentNode.next;
     if(!currentNode) {
+      // restore prev to dummy head to store nodes at new level
       prev = head;
+      // get the first node at the next level
       currentNode = head.next;
       head.next = null;
     }

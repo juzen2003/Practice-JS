@@ -10,12 +10,13 @@
  * @return {void} Do not return anything, modify root in-place instead.
  */
 
-// 1. at root, move right subtree to the most right at left subtree
+// 1. at root, move right subtree to the most right end at left subtree
 // 2. move the whole left subtree to the right
 // 3. set left subtree to null
 // 4. continue to root = root.right
 // space should be O(1)
-// time: O(nlogn)
+// time: O(n),
+// currentNode would walk through every node once, but rightMost would at most walked through each node once -> O(n)
 var flatten = function(root) {
   let currentNode = root;
   while(currentNode) {

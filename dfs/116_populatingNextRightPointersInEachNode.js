@@ -33,7 +33,9 @@ var connect = function(root) {
 
     currentNode = currentNode.next;
     if(!currentNode) {
+      // restore prev to dummy head to store nodes at new level
       prev = head;
+      // get the first node at the next level
       currentNode = head.next;
       head.next = null;
     }
@@ -41,6 +43,7 @@ var connect = function(root) {
 };
 
 // use level order but use the parent to update the next level's next
+// works for perfect binary tree only
 // var connect = function(root) {
 //   if(!root) return;
 //
