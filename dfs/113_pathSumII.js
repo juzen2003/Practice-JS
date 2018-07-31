@@ -65,6 +65,6 @@ var pathSum = function(root, sum) {
 //   checkPath(root.left, sum-root.val, path, res);
 //   checkPath(root.right, sum-root.val, path, res);
 //
-//   // backtracking, if previous solutions are wrong we recover the path to the previous state
+//   // backtracking, if solutions are wrong we recover the path to the previous state
 //   path.pop();
 // };
