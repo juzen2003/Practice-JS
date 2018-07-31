@@ -10,11 +10,11 @@
  * @param {TreeLinkNode} root
  * @return {void} Do not return anything, modify tree in-place instead.
  */
-// input would be perfect binary tree
+// input could be skewed binary tree
+// we used a dummy head to keep track next level, and head.next to move from current level to next level
 // space O(1)
 // time O(n)
 // by default .next = null
-// Solution that works for skewed binary tree
 var connect = function(root) {
   let head = new TreeLinkNode(0);
   let prev = head;
@@ -39,24 +39,3 @@ var connect = function(root) {
     }
   }
 };
-
-// use level order but use the parent to update the next level's next
-// var connect = function(root) {
-//   if(!root) return;
-//
-//   let prev = root;
-//   while(prev.left) {
-//     let currentNode = prev;
-//     while(currentNode) {
-//       currentNode.left.next = currentNode.right;
-//
-//       if(currentNode.next) {
-//         currentNode.right.next = currentNode.next.left;
-//       }
-//
-//       currentNode = currentNode.next;
-//     }
-//
-//     prev = prev.left;
-//   }
-// };
