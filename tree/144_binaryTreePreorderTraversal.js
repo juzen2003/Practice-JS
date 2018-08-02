@@ -10,24 +10,45 @@
  * @return {number[]}
  */
 // DFS, preorder: root, left, right
-// iterative
+// iterative I
 var preorderTraversal = function(root) {
   if(!root) return [];
   let stack = [];
   let res = [];
-  stack.push(root);
 
-  while(stack.length !== 0) {
-    let currentNode = stack.pop();
-    // do sth here
-    res.push(currentNode.val);
+  while(root || stack.length !== 0) {
+    while(root) {
+      stack.push(root);
+      // do sth here
+      res.push(root.val);
+      root = root.left;
+    }
 
-    if(currentNode.right) stack.push(currentNode.right);
-    if(currentNode.left) stack.push(currentNode.left);
+    root = stack.pop();
+    root = root.right;
   }
 
   return res;
 };
+
+// iterative II
+// var preorderTraversal = function(root) {
+//   if(!root) return [];
+//   let stack = [];
+//   let res = [];
+//   stack.push(root);
+//
+//   while(stack.length !== 0) {
+//     let currentNode = stack.pop();
+//     // do sth here
+//     res.push(currentNode.val);
+//
+//     if(currentNode.right) stack.push(currentNode.right);
+//     if(currentNode.left) stack.push(currentNode.left);
+//   }
+//
+//   return res;
+// };
 
 // recursion
 // var preorderTraversal = function(root) {
