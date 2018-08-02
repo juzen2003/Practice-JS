@@ -5,7 +5,7 @@
 // BFS
 // 1. check if s is valid by counting "(" & ")"
 // 2. from current node, remove one "(" or remove one ")": generate all possible cases, and queue them in for checking
-// 3. if valid string is founded, no need to generate all possible cases gain based on current node (because we only want to remove minimum parentheses), else continue step 2
+// 3. if valid string is founded, no need to generate all possible cases based on current node (because we only want to remove minimum parentheses), else continue step 2
 var removeInvalidParentheses = function(s) {
   let queue = [];
   let res = [];
@@ -24,6 +24,7 @@ var removeInvalidParentheses = function(s) {
     // this is to stop generating next level possible string if we already found the valid one
     if(found) continue;
 
+    // if we can't find the valid string then we generate next level possible string based on currentNode
     for(let i = 0; i < currentNode.length; i++) {
       if(currentNode[i] !== "(" && currentNode[i] !== ")") continue;
 

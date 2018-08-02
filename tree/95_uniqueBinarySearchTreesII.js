@@ -19,7 +19,7 @@ var generateTrees = function(n) {
   return res;
 };
 
-// generate trees with value from start to end
+// generate all possible trees with value from start to end
 const genTree = function(start, end, dp) {
   if(start > end) return [null];
   if(dp[start][end]) return dp[start][end];

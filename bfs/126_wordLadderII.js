@@ -44,7 +44,7 @@ var findLadders = function(beginWord, endWord, wordList) {
               }
             }
 
-            // put this block here is fine as well, but it's logically better to put it if the word is not yet visited
+            // put this block here is fine as well, but it's logically better to put it up there if the word is not yet visited
             // if(word === endWord) {
             //   dst = currentPath.length + 1;
             //   res.push(currentPath.concat(word));

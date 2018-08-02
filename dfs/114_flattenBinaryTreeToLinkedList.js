@@ -16,7 +16,7 @@
 // 4. continue to root = root.right
 // space should be O(1)
 // time: O(n),
-// currentNode would walk through every node once, but rightMost would at most walked through each node once -> O(n)
+// currentNode would walk through every node once, but rightMost would at most walk through each node once -> O(n)
 var flatten = function(root) {
   let currentNode = root;
   while(currentNode) {

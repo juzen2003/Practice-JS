@@ -14,6 +14,7 @@ var solve = function(board) {
   let colL = board[0].length;
   let visited = new Set();
 
+  // update boarder's "O" to "N"
   for(let i = 0; i < rowL; i++) {
     check(i, 0, queue, board);
     check(i, colL-1, queue, board);
@@ -29,6 +30,7 @@ var solve = function(board) {
     let r = currentNode[0];
     let c = currentNode[1];
 
+    // update boarder's "O"s neighbors to "N"
     if(!visited.has(currentNode)) {
       if(r-1 >= 0) check(r-1, c, queue, board);
       if(r+1 < rowL) check(r+1, c, queue, board);
@@ -39,6 +41,7 @@ var solve = function(board) {
     visited.add(currentNode);
   }
 
+  // Mark the all surrounded "O" to "X", and recover "N" to "O"
   for(let i = 0; i < rowL; i++) {
     for(let j = 0; j < colL; j++) {
       if(board[i][j] === "O") board[i][j] = "X";
