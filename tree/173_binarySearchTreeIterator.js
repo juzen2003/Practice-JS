@@ -11,7 +11,7 @@
  * @param {TreeNode} root - root of the binary search tree
  */
 
-// implement inorder traversal of BST
+// implement inorder traversal of BST, next smallest would be the next value in inorder traversal
 // inorder traversal would be an increasing value of each node
 // Note: next() and hasNext() should run in average O(1) time and uses O(h) memory, where h is the height of the tree.
 // but in our solution, we have

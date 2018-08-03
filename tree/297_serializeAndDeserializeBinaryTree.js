@@ -34,6 +34,7 @@ var serialize = function(root) {
     }
   }
 
+  // remove uneccssary trailing null for last level
   while(res[res.length-1] === null) {
     res.pop();
   }
@@ -48,7 +49,7 @@ var serialize = function(root) {
  * @return {TreeNode}
  */
 var deserialize = function(data) {
-  if(!data) return [];
+  if(!data) return null;
   let input = JSON.parse(data);
 
   let root = new TreeNode(input[0]);

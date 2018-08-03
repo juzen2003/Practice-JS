@@ -20,7 +20,7 @@
 // if currentNode is either p or q, the ancestror is currentNode.
 // else if we found p & q (or common ancestor) at both left & right, then the ancestor is currentNode as well
 
-// if we only found common ancestor at one side of subtree, the it means p & q are at the same side, that common ancestor at that side is the lowest common ancestor.
+// if we only found common ancestor at one side of subtree, then it means p & q are at the same side, that common ancestor at that side is the lowest common ancestor.
 var lowestCommonAncestor = function(root, p, q) {
   if(!root) return null;
   if(root === p || root === q) return root;
