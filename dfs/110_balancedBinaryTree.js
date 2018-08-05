@@ -10,7 +10,7 @@
  * @return {boolean}
  */
 // DFS
-// a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
+// a binary tree in which the depth of the two subtrees of EVERY node never differ by more than 1.
 var isBalanced = function(root) {
   if(!root) return true;
 

@@ -17,7 +17,7 @@ var maxPathSum = function(root) {
   return maxVal[0];
 };
 
-// get the sum from node to leaf and continuously update maxVal[0]
+// get the sum from current node to leaf and continuously update maxVal[0]
 const maxPathDown = function(node, maxVal) {
   if(!node) return 0;
 

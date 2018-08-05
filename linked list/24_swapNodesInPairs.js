@@ -10,6 +10,7 @@
  * @return {ListNode}
  */
 // space: O(1)
+// Time: O(n), walk through all nodes
 var swapPairs = function(head) {
   let dummyHead = new ListNode(null);
   dummyHead.next = head;

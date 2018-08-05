@@ -11,7 +11,7 @@
  * @return {ListNode}
  */
 // space O(1)
-// time O(n) + O(n) => O(n)
+// time O(n) (get length) + O(n) (reverse list one node by one node) => O(n)
 var reverseKGroup = function(head, k) {
   if(k === 1) return head;
 
@@ -21,8 +21,8 @@ var reverseKGroup = function(head, k) {
 
   let len = 0;
   while(current.next) {
-    len++;
     current = current.next;
+    len++;
   }
 
   current = dummyHead;
@@ -39,7 +39,7 @@ var reverseKGroup = function(head, k) {
     }
 
     current = first;
-    len -= k ;
+    len -= k;
   }
 
   return dummyHead.next;
