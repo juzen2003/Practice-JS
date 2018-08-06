@@ -25,6 +25,7 @@ var reverseKGroup = function(head, k) {
     len++;
   }
 
+  // current would be the node before starting node of each group
   current = dummyHead;
 
   while(len >= k) {
