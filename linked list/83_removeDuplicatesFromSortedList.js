@@ -9,12 +9,12 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-// Iterative, remove all duplicated nodes
+// Iterative, delete all duplicates such that each element appear only once
 var deleteDuplicates = function(head) {
   let dummyHead = new ListNode(null);
   dummyHead.next = head;
-  let prev = dummyHead;
   let current = head;
+  let prev = dummyHead;
 
   while(current) {
     while(current.next && current.next.val === current.val) {
@@ -23,11 +23,10 @@ var deleteDuplicates = function(head) {
 
     if(prev.next === current) {
       prev = prev.next;
+      current = current.next;
     } else {
-      prev.next = current.next;
+      prev.next = current;
     }
-
-    current = current.next;
   }
 
   return dummyHead.next;
@@ -37,14 +36,10 @@ var deleteDuplicates = function(head) {
 // var deleteDuplicates = function(head) {
 //   if(!head) return null;
 //
-//   if(head.next && head.next.val === head.val) {
-//     while(head.next && head.next.val === head.val) {
-//       head = head.next;
-//     }
-//     // remove all duplicated nodes
-//     return deleteDuplicates(head.next);
-//   } else {
-//     head.next = deleteDuplicates(head.next);
-//     return head;
+//   while(head.next && head.next.val === head.val) {
+//     head = head.next;
 //   }
+//
+//   head.next = deleteDuplicates(head.next);
+//   return head;
 // };
