@@ -21,7 +21,7 @@ var deleteDuplicates = function(head) {
       current = current.next;
     }
 
-    if(prev.next === current) {
+    if(prev.next = current) {
       prev = prev.next;
       current = current.next;
     } else {
