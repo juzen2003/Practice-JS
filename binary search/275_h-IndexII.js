@@ -3,6 +3,7 @@
  * @return {number}
  */
 // If there are several possible values for h, the maximum one is taken as the h-index.
+// A scientist has index h if h of his/her N papers have at least h citations each, and the other N − h papers have no more than h citations each.
 var hIndex = function(citations) {
   let N = citations.length;
   let low = 0;
@@ -16,6 +17,8 @@ var hIndex = function(citations) {
     // OR
     // find the last point (mid) where citations[mid] < N - mid;
     // return low (mid + 1) to get the h-index from N - low
+    // citations[mid]: number of citations
+    // N - mid : number of papers that has at least citations[mid] citations
     if(citations[mid] < N - mid) {
       low = mid + 1;
     } else {

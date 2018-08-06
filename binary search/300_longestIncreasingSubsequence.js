@@ -35,39 +35,6 @@ var lengthOfLIS = function(nums) {
   return tail.length;
 };
 
-
-// more organized
-// var lengthOfLIS = function(nums) {
-//   let tail = [];
-//   let size = 0;
-//
-//   for(let i = 0; i < nums.length; i++){
-//     let k = 0;
-//     let j = size;
-//     let key = nums[i];
-//
-//     let point = bsearch(k, j, key, tail);
-//     tail[point] = key;
-//     if(point === size) size++;
-//   }
-//
-//   return tail.length;
-// };
-//
-// const bsearch = function(start, end, key, arr) {
-//   while(start <= end) {
-//     let mid = parseInt((start + end)/2);
-//     if(arr[mid] < key) {
-//       start = mid + 1;
-//     } else {
-//       end = mid - 1;
-//     }
-//   }
-//
-//   return start;
-// };
-
-
 // O(n^2)
 // var lengthOfLIS = function(nums) {
 //   if(nums.length === 0) return 0;

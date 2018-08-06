@@ -11,10 +11,15 @@ var findDuplicate = function(nums) {
   while(low <= high) {
     let count = 0;
     let mid = parseInt((low + high)/2);
-
+    let visited = new Set();
     for(let i = 0; i < nums.length; i++) {
       if(nums[i] <= mid) {
-        count++;
+        if(!visited.has(nums[i])) {
+          count++;
+          visited.add(nums[i]);
+        } else {
+          return nums[i];
+        }
       }
     }
 
