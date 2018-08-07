@@ -11,7 +11,7 @@
  * @return {RandomListNode}
  */
 // Make sure different nodes with the same values are copied differently;
-// Nodes might have the same label.
+// Nodes might have the same label, so we use node as key in map instead of node.label
 var copyRandomList = function(head) {
   if(!head) return null;
   let map = new Map();
