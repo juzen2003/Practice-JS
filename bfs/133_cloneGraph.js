@@ -12,6 +12,7 @@
  */
 // input is a UndirectedGraphNode
 // output is a UndirectedGraphNode
+// Nodes are labeled uniquely.
 var cloneGraph = function(graph) {
   let map = {};
   return makeAnCopy(graph, map);

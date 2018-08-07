@@ -380,3 +380,17 @@ aSet.size; // 3
 console.log(aSet); // Set { 1, 2, 5 }
 for(let item of aSet) {console.log(item)}; // 1, 2, 5
 ```
+
+### Map
+```js
+let m = new Map();
+m.set(1, 3);
+m.set(2, [1,2,2]);
+// m: Map {1=>3, 2=>[1,2,2]}
+m.get(5); // undefined
+m.get(1); // 3
+m.get(2); // [1,2,2]
+m.get(2)[1] = 3;
+m.get(2); // [1,3,2]
+m.has(1) // true;
+```
