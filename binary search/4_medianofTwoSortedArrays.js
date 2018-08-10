@@ -41,6 +41,7 @@ var findMedianSortedArrays = function(nums1, nums2) {
   let low = 0;
   let high = m;
 
+  // start bsearch to pick proper i & j
   while(low <= high) {
     let i = parseInt((low + high)/2);
     let j = parseInt((m + n + 1)/2) - i;

@@ -19,6 +19,7 @@ var ladderLength = function(beginWord, endWord, wordList) {
   let dst = 0;
   // store visited node
   let visited = new Set();
+
   while(queue.length !== 0) {
     let size = queue.length;
     let currentNode;
@@ -34,6 +35,7 @@ var ladderLength = function(beginWord, endWord, wordList) {
           let word = currentNode.slice(0, j) + String.fromCharCode(k + 97) + currentNode.slice(j+1);
 
           if(wordSet.has(word) && word !== currentNode) {
+            // make sure we don't revisit the same word 
             if(!visited.has(word)) {
               queue.push(word);
             }

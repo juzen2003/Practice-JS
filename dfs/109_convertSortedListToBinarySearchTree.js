@@ -42,6 +42,7 @@ const build = function(head, low, high) {
   current.next = head;
 
   let mid = parseInt((low + high)/2);
+  // try to mimic arr, i = 0, first node
   for(let i = 0; i <= mid; i++) {
     current = current.next;
   }

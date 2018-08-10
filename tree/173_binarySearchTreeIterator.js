@@ -17,6 +17,7 @@
 // but in our solution, we have
 // hasNext(): time O(1) & space O(h)
 // next(): time O(h) (due to that while loop) & space O(h)
+// Calling next() will return the next smallest number in the BST
 var BSTIterator = function(root) {
   this.root = root;
   this.stack = [];
