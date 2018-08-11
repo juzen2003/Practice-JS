@@ -9,7 +9,8 @@
  * @param {ListNode} head
  * @return {void} Do not return anything, modify head in-place instead.
  */
-// O(n)
+// space: O(1) in place
+// time: O(n)
 // 1. find the middle of the list: O(n)
 // 2. reverse the second half of the list: O(n)
 // 3. re-order one node by one node: O(n)
