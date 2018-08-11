@@ -23,6 +23,7 @@ var reorderList = function(head) {
   // step 1, find the middle ListNode
   let first = dummyHead;
   let second = dummyHead;
+  
   while(first.next && second.next && second.next.next) {
     first = first.next;
     second = second.next.next;

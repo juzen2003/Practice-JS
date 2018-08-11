@@ -29,11 +29,12 @@ var insertionSortList = function(head) {
   while(current) {
     let nextCurrent = current.next;
 
-    // loop through sorted array and inset the current node
+    // loop through sorted array to find the location where next node is larger than current node
     while(sortedCurrent.next && sortedCurrent.next.val < current.val) {
       sortedCurrent = sortedCurrent.next;
     }
 
+    // insert current node
     current.next = sortedCurrent.next;
     sortedCurrent.next = current;
     sortedCurrent = sorted;
