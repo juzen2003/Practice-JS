@@ -26,6 +26,7 @@ var sortList = function(head) {
   dummyHead.next = head;
   let left, right, tail;
 
+  // i: steps to split the original list and merge, split in following steps 1, 2, 4, 8 ...
   for(let i = 1; i < len; i *= 2) {
     current = dummyHead.next;
     tail = dummyHead;
