@@ -29,6 +29,21 @@ var reverseList = function(head) {
   return dummyHead.next;
 };
 
+// another way
+// var reverseList = function(head) {
+//   if(!head || !head.next) return head;
+//
+//   let prev = null;
+//   while(head) {
+//     let next = head.next;
+//     head.next = prev;
+//     prev = head;
+//     head = next;
+//   }
+//
+//   return prev;
+// };
+
 // recursion
 // var reverseList = function(head) {
 //   if(!head || !head.next) return head;
