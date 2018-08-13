@@ -30,17 +30,17 @@ var reverseList = function(head) {
 };
 
 // recursion
-var reverseList = function(head) {
-  if(!head || !head.next) return head;
-
-  let res = reverseList(head.next);
-  let current = res;
-
-  while(current.next) {
-    current = current.next;
-  }
-
-  current.next = head;
-  head.next = null;
-  return res;
-};
+// var reverseList = function(head) {
+//   if(!head || !head.next) return head;
+//
+//   let res = reverseList(head.next);
+//   let current = res;
+//
+//   while(current.next) {
+//     current = current.next;
+//   }
+//
+//   current.next = head;
+//   head.next = null;
+//   return res;
+// };
