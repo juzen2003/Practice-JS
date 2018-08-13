@@ -21,7 +21,7 @@ var isPalindrome = function(head) {
     fast = fast.next.next;
     slow = slow.next;
   }
-  // if it's odd, we move slow to the next of middle node
+  // if it's odd, we move slow to the next node of middle node
   if(fast) {
     slow = slow.next;
   }

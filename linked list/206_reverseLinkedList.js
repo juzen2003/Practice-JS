@@ -10,6 +10,7 @@
  * @return {ListNode}
  */
 // iterative
+// direction head ---> null
 var reverseList = function(head) {
   if(!head || !head.next) return head;
 
@@ -30,6 +31,7 @@ var reverseList = function(head) {
 };
 
 // another way
+// direction null <--- prev
 // var reverseList = function(head) {
 //   if(!head || !head.next) return head;
 //
