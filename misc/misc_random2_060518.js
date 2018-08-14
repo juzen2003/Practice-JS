@@ -32,7 +32,7 @@ function sum2(a, b) {
 }
 
 console.log(" === var, let, const === ");
-// variable is function scope, hoisted
+// variable is function scope, hoisted, declaration is hoisted but not assignment
 // let and const (ES6) are block scope, not hoisted
 console.log(" === var === ");
 function greeting() {
