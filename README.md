@@ -298,6 +298,19 @@ console.log(c instanceof Array);
 let a = [9,3,1];
 [a[1], a[2]] = [a[2], a[1]]
 // a: [9,1,3]
+let x = 1;
+let y = 3;
+[x, y] = [y, x];
+// x = 3, y = 1;
+```
+### object de-structure
+```js
+// Variable assignment.
+const o = { p: 42, q: true };
+const { p, q } = o;
+
+console.log(p); // 42
+console.log(q); // true
 ```
 ### string toUpperCase & toLowerCase
 ```js
