@@ -45,6 +45,7 @@ function sum(a, b, c) {
 }
 
 let curriedSum = curry(sum);
+console.log(curriedSum); // function curried
 
 // still callable normally
 console.log( curriedSum(1, 2, 3) ); // 6

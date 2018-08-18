@@ -42,7 +42,7 @@ const merge = function(l1, l2) {
   }
 };
 
-// O(k * kn)  --> loop through lists O(k) * merge each list one by one O(kn)
+// O(kn)  --> loop through lists & merge each list one by one O(kn)
 // var mergeKLists = function(lists) {
 //   let tmp = null;
 //   for(let i = 0; i < lists.length; i++) {

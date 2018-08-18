@@ -10,6 +10,7 @@
  * @param {number} k
  * @return {ListNode}
  */
+// rotate the list to the right by k places, where k is non-negative
 var rotateRight = function(head, k) {
   let dummyHead = new ListNode(null);
   dummyHead.next = head;

@@ -43,7 +43,7 @@ var sortList = function(head) {
 };
 
 // split a list into two lists, first one with n node
-// return the second one
+// return the head of second one
 const splitList = function(head, n) {
   for(let i = 1; head && i < n; i++) {
     head = head.next;

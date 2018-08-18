@@ -11,8 +11,8 @@
  * @return {ListNode}
  */
 // to detect a cycle, we used two pointer
-// fast: move step by step
-// slow: move two steps at a time
+// fast: move 2 steps at a time
+// slow: move 1 step at a time
 // If cycle exists, fast & slow would meet at some point
 // At this time, we start to move another entry node from head
 // when entry node met slow, that point is the entry point
@@ -23,7 +23,7 @@
 
 // C is defined as the length of the cycle
 
-// n is defined as the travel times of the fast pointer around the cycle When the first encounter of the slow pointer and the fast pointer
+// n is defined as the travel times of the fast pointer around the cycle When the first encounter of the slow pointer and the fast pointer, some value >= 1
 
 // According to the definition of L1, L2 and C, we can obtain:
 
@@ -45,7 +45,8 @@ var detectCycle = function(head) {
   let slow = head;
   let entry = head;
 
-  while(slow && slow.next && fast && fast.next && fast.next.next) {
+  // while(slow && slow.next && fast && fast.next && fast.next.next) {
+  while(fast && fast.next) {
     slow = slow.next;
     fast = fast.next.next;
 

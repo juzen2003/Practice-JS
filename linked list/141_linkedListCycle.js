@@ -11,8 +11,8 @@
  * @return {boolean}
  */
 // to detect a cycle, we used two pointer
-// fast: move step by step
-// slow: move two steps at a time
+// fast: move 2 steps at a time
+// slow: move 1 step at a time
 // If cycle exists, fast & slow would meet at some point
 // algorithm: Tortoise and Hare
 // space: O(1)
@@ -22,7 +22,8 @@ var hasCycle = function(head) {
 
   let fast = head;
   let slow = head;
-  while(slow && fast && slow.next && fast.next && fast.next.next) {
+  // while(slow && fast && slow.next && fast.next && fast.next.next) {
+  while(fast && fast.next) {
     fast = fast.next.next;
     slow = slow.next;
     if(slow === fast) return true;

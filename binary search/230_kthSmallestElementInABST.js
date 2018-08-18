@@ -28,3 +28,25 @@ const countNodes = function(root) {
 
   return 1 + countNodes(root.left) + countNodes(root.right);
 };
+
+
+// do preorder in BST, count up to k to find the kth smallest
+// output of preorder would be increasing
+// var kthSmallest = function(root, k) {
+//   let count = 0;
+//   let stack = [];
+//
+//   while(root || stack.length) {
+//     while(root) {
+//       stack.push(root);
+//       root = root.left;
+//     }
+//
+//     let currentNode = stack.pop();
+//     count++;
+//     if(count === k) {
+//       return currentNode.val;
+//     }
+//     root = currentNode.right;
+//   }
+// };

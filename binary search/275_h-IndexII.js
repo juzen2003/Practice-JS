@@ -24,14 +24,6 @@ var hIndex = function(citations) {
     } else {
       high = mid - 1;
     }
-
-    // if(citations[mid] === N - mid) {
-    //   return N - mid;
-    // } else if (citations[mid] > N - mid) {
-    //   high = mid - 1;
-    // } else {
-    //   low = mid + 1;
-    // }
   }
 
   return N - low;

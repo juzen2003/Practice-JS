@@ -30,6 +30,7 @@ var insertionSortList = function(head) {
     let nextCurrent = current.next;
 
     // loop through sorted array to find the location where next node is larger than current node
+    // find the last location at sorted list where the current val is larger all the previous node in sorted list
     while(sortedCurrent.next && sortedCurrent.next.val < current.val) {
       sortedCurrent = sortedCurrent.next;
     }
