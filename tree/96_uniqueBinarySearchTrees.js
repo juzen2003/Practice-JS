@@ -13,6 +13,7 @@ var numTrees = function(n) {
 // generate number of trees from start to end
 const genTreeCount = function(start, end, dp) {
   if(start > end) return 0;
+  // if(start === end) return 1;
   if(dp[start][end]) return dp[start][end];
   let count = 0;
 

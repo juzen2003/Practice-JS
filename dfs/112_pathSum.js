@@ -46,6 +46,6 @@ var hasPathSum = function(root, sum) {
 //   if(root === null) return false;
 //
 //   let currentSum = root.val;
-//   if(root.left === null & root.right === null && currentSum === sum) return true;
+//   if(root.left === null && root.right === null && currentSum === sum) return true;
 //   return hasPathSum(root.left, sum-currentSum) || hasPathSum(root.right, sum-currentSum);
 // };

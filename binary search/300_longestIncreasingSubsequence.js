@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-// O(nlogn)
+// O(nlogn): loop through all nums (O(n)) + perform bsearch to find the point for insertion (O(logn))
 // tails is an array storing the smallest tail of all increasing subsequences with length i+1 in tails[i]
 // el in tail would be increasing
 // (1) if x is larger than all tails, append it, increase the size by 1
@@ -36,6 +36,7 @@ var lengthOfLIS = function(nums) {
 };
 
 // O(n^2)
+// dp: an array store the longest increasing subarray up to idx i in dp[i]
 // var lengthOfLIS = function(nums) {
 //   if(nums.length === 0) return 0;
 //

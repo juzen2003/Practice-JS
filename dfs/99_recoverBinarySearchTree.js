@@ -10,6 +10,7 @@
  * @return {void} Do not return anything, modify root in-place instead.
  */
 // DFS
+// BST
 // find 2 elements in inorder traversal when previous node is larger than current node (prev.val >= currentNode.val)
 // 1st el is the prev (larger one, too big)
 // 2nd el is the current node (smaller one, too small), find the last one

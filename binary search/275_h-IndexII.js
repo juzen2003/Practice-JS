@@ -7,7 +7,7 @@
 var hIndex = function(citations) {
   let N = citations.length;
   let low = 0;
-  let high = N - 1;
+  let high = N - 1; // citations.length - 1
 
   while(low <= high) {
     let mid = parseInt((low + high) / 2);

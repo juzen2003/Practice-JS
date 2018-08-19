@@ -13,6 +13,7 @@ var findDuplicate = function(nums) {
     let mid = parseInt((low + high)/2);
     let visited = new Set();
     for(let i = 0; i < nums.length; i++) {
+      // if we found duplicated number in visited while counting, just return that number
       if(nums[i] <= mid) {
         if(!visited.has(nums[i])) {
           count++;
@@ -23,9 +24,6 @@ var findDuplicate = function(nums) {
       }
     }
 
-    // find the last value that this condition: (count <= mid) met
-    // it means the last value would still not have duplicated el
-    // return value + 1, and it would have duplicated el
     if(count <= mid) {
       // search for value range: mid + 1 to high
       low = mid + 1;

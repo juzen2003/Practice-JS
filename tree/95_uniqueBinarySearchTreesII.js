@@ -22,6 +22,7 @@ var generateTrees = function(n) {
 // generate all possible trees with value from start to end
 const genTree = function(start, end, dp) {
   if(start > end) return [null];
+  // if(start === end) return [new TreeNode(start)];
   if(dp[start][end]) return dp[start][end];
 
   let res = [];

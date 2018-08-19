@@ -23,6 +23,7 @@ var canFinish = function(numCourses, prerequisites) {
 
   // classes that don't need prerequisites.
   let queue = [];
+  // loop through 0 to n-1
   for(let j = 0; j < numCourses; j++) {
     if(!indegree[j]) queue.push(j);
   }
@@ -34,7 +35,7 @@ var canFinish = function(numCourses, prerequisites) {
   while(queue.length !== 0) {
     let currentNode = queue.shift();
     count++;
-    
+
     for(let k = 0; k < pairs; k++) {
       let otherClass = prerequisites[k][0];
       let otherClassPre = prerequisites[k][1];
