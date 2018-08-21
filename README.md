@@ -22,8 +22,8 @@ Object.keys(obj).length !== 0 // not empty
 ```js
 let hsh = {'a': 1, 'b': 2};
 for(let a in hsh) {
-  console.log(a);
-  console.log(hsh[a]);
+  console.log(a); // key
+  console.log(hsh[a]); // value
 }
 // a
 // 1
@@ -72,7 +72,7 @@ Math.min(5,7);
 ### Split string into array
 ```js
 "str".split()
-// [ 'str' ] default separator is " "
+// [ 'str' ] default separator is ""
 "str".split("r")
 // [ 'st', '' ]
 "st r".split(" ")
@@ -328,9 +328,9 @@ a.reverse();
 ```
 ### string repeat
 ```js
-let a = [9,3,1];
-a.reverse();
-// a: [1,3,9]
+let s = "abc";
+console.log(s.repeat(3)); // repeat 3 times
+// "abcabcabc"
 ```
 ### check if array is empty
 ```js
@@ -380,6 +380,10 @@ a.splice(1,2)
 ```js
 // 64 bits, 2^31 - 1;
 a = Number.MAX_SAFE_INTEGER;
+```
+### smallest interger
+```js
+a = Number.MIN_SAFE_INTEGER;
 ```
 ### Set, for fast look up
 ```js
