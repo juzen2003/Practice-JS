@@ -30,7 +30,7 @@ const countNodes = function(root) {
 };
 
 
-// do inorder in BST, count up to k to find the kth smallest
+// do inorder (left, root, right) in BST, count up to k to find the kth smallest
 // output of inorder would be increasing
 // var kthSmallest = function(root, k) {
 //   let count = 0;

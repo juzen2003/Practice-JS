@@ -4,6 +4,8 @@
  * @return {boolean}
  */
 //  O(m + n)
+// Integers in each row are sorted in ascending from left to right.
+// Integers in each column are sorted in ascending from top to bottom.
 var searchMatrix = function(matrix, target) {
   if(matrix.length === 0) return false;
 

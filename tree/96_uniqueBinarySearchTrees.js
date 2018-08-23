@@ -5,6 +5,7 @@
 var numTrees = function(n) {
   if(!n) return 0;
   // use 2D matrix dp to store the previous calculated result; otherwise memory limited error
+  // dp: store tree count from start to end in dp[start][end]
   let dp = [...new Array(n+1)].map(el => new Array(n+1));
   let count = genTreeCount(1, n, dp);
   return count;

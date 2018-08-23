@@ -3,9 +3,11 @@
  * @param {number} target
  * @return {boolean}
  */
+// Integers in each row are sorted from left to right.
+// The first integer of each row is greater than the last integer of the previous row.
  var searchMatrix = function(matrix, target) {
     if(matrix.length === 0) return false;
-    
+
     let row = 0;
     let col = matrix[0].length - 1;
 

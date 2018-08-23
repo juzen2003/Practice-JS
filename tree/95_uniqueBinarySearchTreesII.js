@@ -14,6 +14,7 @@
 var generateTrees = function(n) {
   if(!n) return [];
   // use 2D matrix dp to store the previous calculated result for better performance
+  // dp: store all possible tree from start to end in dp[start][end]
   let dp = [...new Array(n+1)].map(el => new Array(n+1));
   let res = genTree(1, n, dp);
   return res;

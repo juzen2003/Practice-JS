@@ -409,5 +409,8 @@ m.get(1); // 3
 m.get(2); // [1,2,2]
 m.get(2)[1] = 3;
 m.get(2); // [1,3,2]
-m.has(1) // true;
+m.has(1) // true
+m.delete(5) // false
+m.delete(2)
+// m: Map {1=>3}
 ```
