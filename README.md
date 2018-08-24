@@ -397,7 +397,6 @@ aSet.size; // 3
 console.log(aSet); // Set { 1, 2, 5 }
 for(let item of aSet) {console.log(item)}; // 1, 2, 5
 ```
-
 ### Map
 ```js
 let m = new Map();
