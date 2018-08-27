@@ -3,6 +3,8 @@
 // display
 // position
 
+// how would you convert layout from big screen to mobile screen? draw it out
+
 // what you think about the company's website and how to improve?
 
 // how to merge mutiple css files into one, explain your thinking process
