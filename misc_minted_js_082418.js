@@ -57,9 +57,12 @@ console.log("======= pass by reference =======");
   console.log(color1 === color3);
 })();
 
-// important to know these 
+// important to know these
 console.log("======= coercion =======");
 (function() {
+  // string with + => string concat
+  // string with - => would try to coerce to math
+  // operation from left to right
   console.log(1 + "2"); // "12"
   console.log("" + 1 + 0); // "10"
   console.log("" - 1 + 0); // -1
