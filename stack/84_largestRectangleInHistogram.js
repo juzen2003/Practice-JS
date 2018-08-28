@@ -16,14 +16,14 @@ var largestRectangleArea = function(heights) {
     } else {
       let top = stack.pop();
       let area = heights[top] * (stack.length === 0 ? i : i - 1 - stack[stack.length-1]);
-      max = Math.max(max, area);
+      max = Math.max(area, max);
     }
   }
 
   while(stack.length !== 0) {
     let top = stack.pop();
     let area = heights[top] * (stack.length === 0 ? i : i - 1 - stack[stack.length-1]);
-    max = Math.max(max, area);
+    max = Math.max(area, max);
   }
 
   return max;
