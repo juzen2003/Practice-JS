@@ -28,7 +28,7 @@ var numDecodings = function(s) {
     if(current === 0 && prev === 0 || current === 0 && prev > 2) {
       return 0;
     } else if(prev === 0 || prev * 10 + current > 26) {
-      dp[i+1] = dp[i] + 1;
+      dp[i+1] = dp[i];
     } else if(current === 0) {
       // current === 0 && prev <= 2
       dp[i+1] = dp[i-1];

@@ -10,7 +10,7 @@
 // 2. if length of t is 0, and s is not, the number of subsequence is 1
 // 3. check if current character at s & t are the same:
 // if the current character in S doesn't equal to current character T, then we have the same number of distinct subsequences as we had without the new character in S.
-// if the current character in S equal to the current character T, then the distinct number of subsequences: the number we had before without current character at s + the distinct number of subsequences we had with less longer T and less longer S. (without current character at s & without current character at t)
+// if the current character in S equal to the current character T, then the distinct number of subsequences: the number we had before (without current character at s) + the distinct number of subsequences we had with less longer T and less longer S. (without current character at s & without current character at t)
 
 // Time: O(m * n)
 var numDistinct = function(s, t) {
@@ -20,6 +20,7 @@ var numDistinct = function(s, t) {
   if(m < n) return 0;
 
   let dp = [...Array(m+1)].map(el => Array(n+1).fill(0));
+  // "" has 1 unique subsequnce ""
   dp[0][0] = 1;
 
   // if length of t is 0, and s is not, the number of subsequence is 1
