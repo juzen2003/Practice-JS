@@ -3,6 +3,9 @@
  * @return {number}
  */
 // length of nums: n + 1 and each el is between 1 to n, there must be one duplicated num
+// Assume that there is only one duplicate number, find the duplicate one. (but it could be repeated more than once.)
+// Time: O(logn)
+// Space: O(1)
 var findDuplicate = function(nums) {
   // possible values for each el, 1 to n
   let low = 1;
@@ -11,16 +14,10 @@ var findDuplicate = function(nums) {
   while(low <= high) {
     let count = 0;
     let mid = parseInt((low + high)/2);
-    let visited = new Set();
+
     for(let i = 0; i < nums.length; i++) {
-      // if we found duplicated number in visited while counting, just return that number
       if(nums[i] <= mid) {
-        if(!visited.has(nums[i])) {
-          count++;
-          visited.add(nums[i]);
-        } else {
-          return nums[i];
-        }
+        count++;
       }
     }
 
