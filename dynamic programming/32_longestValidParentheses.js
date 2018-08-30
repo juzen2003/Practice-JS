@@ -32,23 +32,23 @@ var longestValidParentheses = function(s) {
 };
 
 // dp: an array that store the length of longest valid parentheses that ends at index i of s
-// var longestValidParentheses = function(s) {
-//   let dp = [...new Array(s.length)].fill(0);
-//   let max = 0;
-//
-//   for(let i = 0; i < s.length; i++) {
-//     if(s[i] === "(") {
-//       dp[i] = 0;
-//     } else {
-//       if(s[i-1] === "(") {
-//         dp[i] = 2 + ((i-2) >= 0 ? dp[i-2] : 0);
-//         max = Math.max(max, dp[i]);
-//       } else if(s[i-1] === ")" && s[i - dp[i-1] - 1] === "(") {
-//         dp[i] = 2 + dp[i-1] + ((i - dp[i-1] - 2) >= 0 ? dp[i - dp[i-1] - 2] : 0);
-//         max = Math.max(max, dp[i]);
-//       }
-//     }
-//   }
-//
-//   return max;
-// };
+var longestValidParentheses = function(s) {
+  let dp = [...new Array(s.length)].fill(0);
+  let max = 0;
+
+  for(let i = 0; i < s.length; i++) {
+    if(s[i] === "(") {
+      dp[i] = 0;
+    } else { // when s[i] === ")"
+      if(s[i-1] === "(") {
+        dp[i] = 2 + ((i-2) >= 0 ? dp[i-2] : 0);
+        max = Math.max(max, dp[i]);
+      } else if(s[i-1] === ")" && s[i - dp[i-1] - 1] === "(") {
+        dp[i] = 2 + dp[i-1] + ((i - dp[i-1] - 2) >= 0 ? dp[i - dp[i-1] - 2] : 0);
+        max = Math.max(max, dp[i]);
+      }
+    }
+  }
+
+  return max;
+};

@@ -18,10 +18,12 @@ var minDistance = function(word1, word2) {
 
   let dp = [...Array(m+1)].map(el => Array(n+1).fill(0));
 
+  // word2 empty, steps to convert word1 to empty
   for(let i = 1; i <= m; i++) {
     dp[i][0] = i;
   }
 
+  // word1 empty, steps to convert word2 to empty
   for(let j = 1; j <= n; j++) {
     dp[0][j] = j;
   }

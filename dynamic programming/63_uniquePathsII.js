@@ -13,8 +13,8 @@ var uniquePathsWithObstacles = function(obstacleGrid) {
 
   let dp = [...Array(m+1)].map(el => Array(n+1).fill(0));
 
-  for(let i = 1; i < dp.length; i++) {
-    for(let j = 1; j < dp[0].length; j++) {
+  for(let i = 1; i <= m; i++) {
+    for(let j = 1; j <= n; j++) {
       if(obstacleGrid[i-1][j-1] === 1) {
         dp[i][j] = 0;
         // continue;

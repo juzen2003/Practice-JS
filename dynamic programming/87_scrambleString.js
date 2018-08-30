@@ -48,7 +48,7 @@ var isScramble = function(s1, s2) {
  		 *    i         i + q - 1              i + k - 1
 
      * x1: s1.slice(i, i+q)
-     * x2: s1.slice(i+q, k-q)
+     * x2: s1.slice(i+q)
 
  		 * here we have two possibilities:
  		 *
@@ -56,7 +56,7 @@ var isScramble = function(s1, s2) {
  		 *    j         j + q - 1              j + k - 1
 
      * y1: s2.slice(j, j+q)
-     * y2: s2.slice(j+q, k-q)
+     * y2: s2.slice(j+q)
 
  		 * or
  		 *
@@ -64,7 +64,7 @@ var isScramble = function(s1, s2) {
  		 *    j                 j + k - q - 1  j + k - 1
 
      * y1: s2.slice(j, j+k-q)
-     * y2: s2.slice(j+k-q, q)
+     * y2: s2.slice(j+k-q)
 
  		 * which in terms of dp means:
  		 *
@@ -91,6 +91,7 @@ var isScramble = function(s1, s2) {
         if(k === 1) {
           dp[i][j][k] = s1[i] === s2[j];
         } else {
+          // Since each of these substrings is a potential node in the tree, we need to check for all possible cuts (q)
           // condition !dp[i][j][k] is when we found that both substring are scamble then we don't need to keep looping through q
           for(let q = 1; q < k && !dp[i][j][k]; q++) {
             dp[i][j][k] = (dp[i][j][q] && dp[i+q][j+q][k-q]) || (dp[i][j+k-q][q] && dp[i+q][j][k-q]);
