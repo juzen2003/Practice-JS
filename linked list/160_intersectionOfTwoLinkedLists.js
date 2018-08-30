@@ -50,19 +50,19 @@ var getIntersectionNode = function(headA, headB) {
   return currentA;
 };
 
-// tracky and smart way
+// tricky and smart way
 // 1. start moving from both lists
 // 2. when first pointer reach to end, move it to the head of another list (differ from where the pointer start)
 // 3. when second pointer reach to end, move it to the head of another list
 // 4. At this time, both pointers would start from the same place
-// var getIntersectionNode = function(headA, headB) {
-//   let currentA = headA;
-//   let currentB = headB;
-//
-//   while(currentA !== currentB) {
-//     currentA = currentA === null ? headB : currentA.next;
-//     currentB = currentB === null ? headA : currentB.next;
-//   }
-//
-//   return currentA;
-// };
+var getIntersectionNode = function(headA, headB) {
+  let currentA = headA;
+  let currentB = headB;
+
+  while(currentA !== currentB) {
+    currentA = currentA === null ? headB : currentA.next;
+    currentB = currentB === null ? headA : currentB.next;
+  }
+
+  return currentA;
+};

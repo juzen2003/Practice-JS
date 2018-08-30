@@ -23,7 +23,7 @@ var swapPairs = function(head) {
     first.next = second.next;
     second.next = current.next; // first
     current.next = second;
-    current = current.next.next; 
+    current = current.next.next; // current = first
   }
 
   return dummyHead.next;

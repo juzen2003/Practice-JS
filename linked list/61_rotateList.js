@@ -34,33 +34,34 @@ var rotateRight = function(head, k) {
   return head;
 };
 
-// var rotateRight = function(head, k) {
-//   let dummyHead = new ListNode(null);
-//   dummyHead.next = head;
-//   let current = dummyHead;
-//
-//   let len = 0;
-//   while(current.next) {
-//     current = current.next;
-//     len++;
-//   }
-//
-//   k = k % len;
-//
-//   let fast = dummyHead;
-//   let slow = dummyHead;
-//
-//   while(fast.next) {
-//     if(k <= 0) {
-//       slow = slow.next;
-//     }
-//
-//     fast = fast.next;
-//     k--;
-//   }
-//
-//   fast.next = head;
-//   head = slow.next;
-//   slow.next = null;
-//   return head;
-// };
+// move the last k nodes before head
+var rotateRight = function(head, k) {
+  let dummyHead = new ListNode(null);
+  dummyHead.next = head;
+  let current = dummyHead;
+
+  let len = 0;
+  while(current.next) {
+    current = current.next;
+    len++;
+  }
+
+  k = k % len;
+
+  let fast = dummyHead;
+  let slow = dummyHead;
+
+  while(fast.next) {
+    if(k <= 0) {
+      slow = slow.next;
+    }
+
+    fast = fast.next;
+    k--;
+  }
+
+  fast.next = head;
+  head = slow.next;
+  slow.next = null;
+  return head;
+};

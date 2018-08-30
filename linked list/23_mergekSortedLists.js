@@ -43,24 +43,24 @@ const merge = function(l1, l2) {
 };
 
 // O(kn)  --> loop through lists & merge each list one by one O(kn)
-// var mergeKLists = function(lists) {
-//   let tmp = null;
-//   for(let i = 0; i < lists.length; i++) {
-//     tmp = merge(tmp, lists[i]);
-//   }
-//
-//   return tmp;
-// };
-//
-// const merge = function(l1, l2) {
-//   if(!l1) return l2;
-//   if(!l2) return l1;
-//
-//   if(l1.val > l2.val) {
-//     l2.next = merge(l1, l2.next);
-//     return l2;
-//   } else {
-//     l1.next = merge(l1.next, l2);
-//     return l1;
-//   }
-// };
+var mergeKLists = function(lists) {
+  let tmp = null;
+  for(let i = 0; i < lists.length; i++) {
+    tmp = merge(tmp, lists[i]);
+  }
+
+  return tmp;
+};
+
+const merge = function(l1, l2) {
+  if(!l1) return l2;
+  if(!l2) return l1;
+
+  if(l1.val > l2.val) {
+    l2.next = merge(l1, l2.next);
+    return l2;
+  } else {
+    l1.next = merge(l1.next, l2);
+    return l1;
+  }
+};

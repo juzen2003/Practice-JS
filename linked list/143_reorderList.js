@@ -28,7 +28,7 @@ var reorderList = function(head) {
     second = second.next.next;
   }
 
-  // step 2, reverse the 2nd half of the list
+  // step 2, reverse the 2nd half of the list (starting from the node after mid, not mid)
   let mid = first;
   first = mid.next;
   second = first.next;

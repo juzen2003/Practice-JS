@@ -26,15 +26,17 @@ var sortList = function(head) {
   dummyHead.next = head;
   let left, right, tail;
 
-  // i: steps to split the original list and merge, split in following steps 1, 2, 4, 8 ...
+  // i: steps to split the original list (into i steps) and merge, split in following steps 1, 2, 4, 8 ...
   for(let i = 1; i < len; i *= 2) {
     current = dummyHead.next;
     tail = dummyHead;
 
     while(current) {
       left = current;
+      // split into i steps
       right = splitList(left, i);
       current = splitList(right, i);
+      // merge back splitted lists
       tail = merge(left, right, tail);
     }
   }
@@ -85,51 +87,51 @@ const merge = function(l1, l2, tail) {
 // merge sort
 // time: O(nlogn)
 // space: O(logn)
-// var sortList = function(head) {
-//   if(!head || !head.next) return head;
-//
-//   let fast = head;
-//   let slow = head;
-//   let prev;
-//   while(fast && fast.next) {
-//     prev = slow;
-//     slow = slow.next;
-//     fast = fast.next.next;
-//   }
-//
-//   prev.next = null;
-//   let l1 = sortList(head);
-//   let l2 = sortList(slow);
-//
-//   return merge(l1, l2);
-// };
-//
-// const merge = function(l1, l2) {
-//   if(!l1) return l2;
-//   if(!l2) return l1;
-//
-//   let dummyHead = new ListNode(null);
-//   let current = dummyHead;
-//
-//   while(l1 && l2) {
-//     if(l1.val > l2.val) {
-//       current.next = l2;
-//       current = current.next;
-//       l2 = l2.next;
-//     } else {
-//       current.next = l1;
-//       current = current.next;
-//       l1 = l1.next;
-//     }
-//   }
-//
-//   if(l1) {
-//     current.next = l1;
-//   }
-//
-//   if(l2) {
-//     current.next = l2;
-//   }
-//
-//   return dummyHead.next;
-// };
+var sortList = function(head) {
+  if(!head || !head.next) return head;
+
+  let fast = head;
+  let slow = head;
+  let prev;
+  while(fast && fast.next) {
+    prev = slow;
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+
+  prev.next = null;
+  let l1 = sortList(head);
+  let l2 = sortList(slow);
+
+  return merge(l1, l2);
+};
+
+const merge = function(l1, l2) {
+  if(!l1) return l2;
+  if(!l2) return l1;
+
+  let dummyHead = new ListNode(null);
+  let current = dummyHead;
+
+  while(l1 && l2) {
+    if(l1.val > l2.val) {
+      current.next = l2;
+      current = current.next;
+      l2 = l2.next;
+    } else {
+      current.next = l1;
+      current = current.next;
+      l1 = l1.next;
+    }
+  }
+
+  if(l1) {
+    current.next = l1;
+  }
+
+  if(l2) {
+    current.next = l2;
+  }
+
+  return dummyHead.next;
+};

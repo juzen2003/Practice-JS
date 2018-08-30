@@ -11,6 +11,8 @@
  */
 // 1. reverse the 2nd half
 // 2. compare 1st & 2nd half
+// Time: O(n)
+// Space: O(1)
 var isPalindrome = function(head) {
   if(!head || !head.next) return true;
 

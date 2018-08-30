@@ -13,6 +13,7 @@
 var deleteDuplicates = function(head) {
   let dummyHead = new ListNode(null);
   dummyHead.next = head;
+  // prev is the previous node of current
   let current = head;
   let prev = dummyHead;
 
@@ -26,6 +27,9 @@ var deleteDuplicates = function(head) {
       current = current.next;
     } else {
       prev.next = current;
+      // add these two lines here would work as well (help out on logic)
+      // prev = prev.next;
+      // current = current.next;
     }
   }
 
@@ -33,13 +37,13 @@ var deleteDuplicates = function(head) {
 };
 
 // recursion
-// var deleteDuplicates = function(head) {
-//   if(!head) return null;
-//
-//   while(head.next && head.next.val === head.val) {
-//     head = head.next;
-//   }
-//
-//   head.next = deleteDuplicates(head.next);
-//   return head;
-// };
+var deleteDuplicates = function(head) {
+  if(!head) return null;
+
+  while(head.next && head.next.val === head.val) {
+    head = head.next;
+  }
+
+  head.next = deleteDuplicates(head.next);
+  return head;
+};

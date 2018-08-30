@@ -32,32 +32,32 @@ var reverseList = function(head) {
 
 // another way
 // direction null <--- prev
-// var reverseList = function(head) {
-//   if(!head || !head.next) return head;
-//
-//   let prev = null;
-//   while(head) {
-//     let next = head.next;
-//     head.next = prev;
-//     prev = head;
-//     head = next;
-//   }
-//
-//   return prev;
-// };
+var reverseList = function(head) {
+  if(!head || !head.next) return head;
+
+  let prev = null;
+  while(head) {
+    let next = head.next;
+    head.next = prev;
+    prev = head;
+    head = next;
+  }
+
+  return prev;
+};
 
 // recursion
-// var reverseList = function(head) {
-//   if(!head || !head.next) return head;
-//
-//   let res = reverseList(head.next);
-//   let current = res;
-//
-//   while(current.next) {
-//     current = current.next;
-//   }
-//
-//   current.next = head;
-//   head.next = null;
-//   return res;
-// };
+var reverseList = function(head) {
+  if(!head || !head.next) return head;
+
+  let res = reverseList(head.next);
+  let current = res;
+
+  while(current.next) {
+    current = current.next;
+  }
+
+  current.next = head;
+  head.next = null;
+  return res;
+};

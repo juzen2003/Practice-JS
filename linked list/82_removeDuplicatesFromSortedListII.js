@@ -13,6 +13,7 @@
 var deleteDuplicates = function(head) {
   let dummyHead = new ListNode(null);
   dummyHead.next = head;
+  // prev is the previous node of current
   let prev = dummyHead;
   let current = head;
 
@@ -34,17 +35,17 @@ var deleteDuplicates = function(head) {
 };
 
 // recursion
-// var deleteDuplicates = function(head) {
-//   if(!head) return null;
-//
-//   if(head.next && head.next.val === head.val) {
-//     while(head.next && head.next.val === head.val) {
-//       head = head.next;
-//     }
-//     // remove all duplicated nodes
-//     return deleteDuplicates(head.next);
-//   } else {
-//     head.next = deleteDuplicates(head.next);
-//     return head;
-//   }
-// };
+var deleteDuplicates = function(head) {
+  if(!head) return null;
+
+  if(head.next && head.next.val === head.val) {
+    while(head.next && head.next.val === head.val) {
+      head = head.next;
+    }
+    // remove all duplicated nodes
+    return deleteDuplicates(head.next);
+  } else {
+    head.next = deleteDuplicates(head.next);
+    return head;
+  }
+};
