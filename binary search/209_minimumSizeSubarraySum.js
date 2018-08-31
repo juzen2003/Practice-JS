@@ -52,26 +52,26 @@ const bsearch = function(start, s, sum) {
 
 
 // O(n)
-// var minSubArrayLen = function(s, nums) {
-//   let i = 0;
-//   let j = 0;
-//   let sum = 0;
-//   let min = nums.length + 1;
-//
-//   while(i < nums.length) {
-//     sum += nums[i];
-//     i++;
-//
-//     while(sum >= s) {
-//       if(min > i - j) {
-//         min = i - j;
-//       }
-//       sum -= nums[j];
-//       j++;
-//     }
-//   }
-//
-//   if(min === nums.length + 1) return 0;
-//   return min;
-//
-// };
+var minSubArrayLen = function(s, nums) {
+  let i = 0;
+  let j = 0;
+  let sum = 0;
+  let min = nums.length + 1;
+
+  while(i < nums.length) {
+    sum += nums[i];
+    i++;
+
+    while(sum >= s) {
+      if(min > i - j) {
+        min = i - j;
+      }
+      sum -= nums[j];
+      j++;
+    }
+  }
+
+  if(min === nums.length + 1) return 0;
+  return min;
+
+};

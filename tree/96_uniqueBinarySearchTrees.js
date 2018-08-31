@@ -2,6 +2,8 @@
  * @param {number} n
  * @return {number}
  */
+// build BST with node values from 1 to n
+// if we pick i as root, then 1..i-1 would be left subtree & i+1..n would be right subtree
 var numTrees = function(n) {
   if(!n) return 0;
   // use 2D matrix dp to store the previous calculated result; otherwise memory limited error

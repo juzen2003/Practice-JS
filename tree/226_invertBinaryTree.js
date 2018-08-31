@@ -30,15 +30,15 @@ var invertTree = function(root) {
 };
 
 // recursion
-// var invertTree = function(root) {
-//   if(!root) return root;
-//
-//   let tmp = root.left;
-//   root.left = root.right;
-//   root.right = tmp;
-//
-//   invertTree(root.left);
-//   invertTree(root.right);
-//
-//   return root;
-// };
+var invertTree = function(root) {
+  if(!root) return root;
+
+  let tmp = root.left;
+  root.left = root.right;
+  root.right = tmp;
+
+  invertTree(root.left);
+  invertTree(root.right);
+
+  return root;
+};

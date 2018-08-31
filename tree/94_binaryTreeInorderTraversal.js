@@ -36,18 +36,18 @@ var inorderTraversal = function(root) {
 };
 
 // recursion
-// var inorderTraversal = function(root) {
-//   let res = [];
-//   inorder(root, res);
-//   return res;
-// };
-//
-// const inorder = function(root, res) {
-//   if(root === null) return;
-//
-//   inorder(root.left, res);
-//   // normally we do sth here
-//   res.push(root.val);
-//   //
-//   inorder(root.right, res);
-// };
+var inorderTraversal = function(root) {
+  let res = [];
+  inorder(root, res);
+  return res;
+};
+
+const inorder = function(root, res) {
+  if(root === null) return;
+
+  inorder(root.left, res);
+  // normally we do sth here
+  res.push(root.val);
+  //
+  inorder(root.right, res);
+};

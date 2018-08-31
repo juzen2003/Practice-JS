@@ -30,33 +30,33 @@ var postorderTraversal = function(root) {
 };
 
 // iterative II
-// var postorderTraversal = function(root) {
-//   if(!root) return [];
-//   let stack = [];
-//   let res = [];
-//   stack.push(root);
-//
-//   while(stack.length !== 0) {
-//     let currentNode = stack.pop();
-//     res.unshift(currentNode.val);
-//
-//     if(currentNode.left) stack.push(currentNode.left);
-//     if(currentNode.right) stack.push(currentNode.right);
-//   }
-//
-//   return res;
-// };
+var postorderTraversal = function(root) {
+  if(!root) return [];
+  let stack = [];
+  let res = [];
+  stack.push(root);
+
+  while(stack.length !== 0) {
+    let currentNode = stack.pop();
+    res.unshift(currentNode.val);
+
+    if(currentNode.left) stack.push(currentNode.left);
+    if(currentNode.right) stack.push(currentNode.right);
+  }
+
+  return res;
+};
 
 // recursion
-// var postorderTraversal = function(root) {
-//   let res = [];
-//   postorder(root, res);
-//   return res;
-// };
-//
-// const postorder = function(node, res) {
-//   if(!node) return;
-//   postorder(node.left, res);
-//   postorder(node.right, res);
-//   res.push(node.val);
-// };
+var postorderTraversal = function(root) {
+  let res = [];
+  postorder(root, res);
+  return res;
+};
+
+const postorder = function(node, res) {
+  if(!node) return;
+  postorder(node.left, res);
+  postorder(node.right, res);
+  res.push(node.val);
+};
