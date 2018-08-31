@@ -34,12 +34,12 @@ var minDepth = function(root) {
 };
 
 // recursion
-// var minDepth = function(root) {
-//   if(root === null) return 0;
-//   let left = minDepth(root.left);
-//   let right = minDepth(root.right);
-//
-//   let res = (left === 0 || right === 0) ? 1 + left + right : 1 + Math.min(left, right);
-//
-//   return res;
-// };
+var minDepth = function(root) {
+  if(root === null) return 0;
+  let left = minDepth(root.left);
+  let right = minDepth(root.right);
+
+  let res = (left === 0 || right === 0) ? 1 + left + right : 1 + Math.min(left, right);
+
+  return res;
+};

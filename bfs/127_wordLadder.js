@@ -8,6 +8,7 @@
 // perform word transformation at each level and see if it reach to endWord
 // elements in wordList are unique
 // to perform fast look up in wordList, we can use set of wordList to have much faster operations
+// return the shortest transformation sequence
 var ladderLength = function(beginWord, endWord, wordList) {
   let wordSet = new Set(wordList);
   if(!wordSet.has(endWord)) return 0;
@@ -35,12 +36,12 @@ var ladderLength = function(beginWord, endWord, wordList) {
           let word = currentNode.slice(0, j) + String.fromCharCode(k + 97) + currentNode.slice(j+1);
 
           if(wordSet.has(word) && word !== currentNode) {
-            // make sure we don't revisit the same word 
+            // make sure we don't revisit the same word
             if(!visited.has(word)) {
               queue.push(word);
             }
             // queue.push(word);
-            // wordSet.delete(word);
+            // wordSet.delete(word)
           }
         }
       }

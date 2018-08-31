@@ -8,6 +8,7 @@
 var numSquares = function(n) {
   let queue = [];
   let sqrNums = [];
+  // visited check, no need to re-check if visited since we already have the least number
   let dp = new Array(n+1);
   dp[0] = 0;
 
@@ -48,16 +49,16 @@ var numSquares = function(n) {
 
 // dynamic programming
 // dp[i] would store the least number of perfect square numbers that sum to i
-// var numSquares = function(n) {
-//   let max = Number.MAX_SAFE_INTEGER;
-//   let dp = new Array(n+1).fill(max);
-//   dp[0] = 0;
-//
-//   for(let i = 1; i <= n; i++){
-//     for(let j = 1; j*j <= i; j++){
-//       dp[i] = Math.min(dp[i], dp[i-j*j]+1);
-//     }
-//   }
-//
-//   return dp[n];
-// };
+var numSquares = function(n) {
+  let max = Number.MAX_SAFE_INTEGER;
+  let dp = new Array(n+1).fill(max);
+  dp[0] = 0;
+
+  for(let i = 1; i <= n; i++){
+    for(let j = 1; j*j <= i; j++){
+      dp[i] = Math.min(dp[i], dp[i-j*j]+1);
+    }
+  }
+
+  return dp[n];
+};

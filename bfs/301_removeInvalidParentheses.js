@@ -24,7 +24,7 @@ var removeInvalidParentheses = function(s) {
     // this is to stop generating next level possible string if we already found the valid one
     if(found) continue;
 
-    // if we can't find the valid string then we generate next level possible string based on currentNode
+    // if we can't find the valid string then we generate next level possible string based on currentNode by removing one of "(" or ")"
     for(let i = 0; i < currentNode.length; i++) {
       if(currentNode[i] !== "(" && currentNode[i] !== ")") continue;
 

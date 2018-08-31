@@ -12,6 +12,7 @@
 // 2. put them in queue (can be taken right away)
 // 3. check each node in queue, if the node is prerequisite for other classes, indegree[otherClass]--
 // 4. queue in any node that can be taken now (no more indegree after step 3)
+// return weither if we can take all class
 var canFinish = function(numCourses, prerequisites) {
   let indegree = {};
   let pairs = prerequisites.length;

@@ -41,23 +41,24 @@ var binaryTreePaths = function(root) {
 };
 
 // recursion
-// var binaryTreePaths = function(root) {
-//   let res = [];
-//   getPath(root, [], res);
-//   return res;
-// };
-//
-// const getPath = function(node, path, res) {
-//   if(!node) return res;
-//
-//   path.push(node.val);
-//   if(!node.left && !node.right) {
-//     let currentPath = path.slice().join("->");
-//     res.push(currentPath);
-//   }
-//
-//   getPath(node.left, path, res);
-//   getPath(node.right, path, res);
-//
-//   path.pop();
-// };
+var binaryTreePaths = function(root) {
+  let res = [];
+  getPath(root, [], res);
+  return res;
+};
+
+const getPath = function(node, path, res) {
+  if(!node) return res;
+
+  path.push(node.val);
+  if(!node.left && !node.right) {
+    let currentPath = path.slice().join("->");
+    res.push(currentPath);
+  }
+
+  getPath(node.left, path, res);
+  getPath(node.right, path, res);
+
+  // backtracking
+  path.pop();
+};
