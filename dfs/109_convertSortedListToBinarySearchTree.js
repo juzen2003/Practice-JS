@@ -23,11 +23,10 @@
 // a height-balanced binary tree: a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
 var sortedListToBST = function(head) {
   if(!head) return null;
-  let current = new ListNode(null);
-  current.next = head;
+  let current = head;
 
   let len = 0;
-  while(current.next) {
+  while(current) {
     current = current.next;
     len++;
   }
@@ -42,7 +41,7 @@ const build = function(head, low, high) {
   current.next = head;
 
   let mid = parseInt((low + high)/2);
-  // try to mimic arr, i = 0, first node
+  // try to mimic arr, i = 0, first node, i = 2, second...
   for(let i = 0; i <= mid; i++) {
     current = current.next;
   }
@@ -53,33 +52,3 @@ const build = function(head, low, high) {
 
   return root;
 };
-
-// var sortedListToBST = function(head) {
-//   let current = new ListNode(null);
-//   current.next = head;
-//
-//   let len = 0;
-//   while(current.next) {
-//     current = current.next;
-//     len++;
-//   }
-//
-//   let bst = build(head, 0, len-1);
-//   return bst;
-// };
-//
-// const build = function(head, low, high) {
-//   let current = new ListNode(null);
-//   current.next = head;
-//
-//   let mid = parseInt((low + high)/2);
-//   for(let i = 0; i <= mid; i++) {
-//     current = current.next;
-//   }
-//
-//   let root = new ListNode(current.val);
-//   root.left = build(head, 0, mid-1);
-//   root.right = build(head, mid+1, high);
-//
-//   return root;
-// };

@@ -37,20 +37,20 @@ var flatten = function(root) {
 };
 
 // recursion
-// var flatten = function(root) {
-//   if(!root) return;
-//
-//   flatten(root.left);
-//   flatten(root.right);
-//
-//   let right = root.right;
-//   root.right = root.left;
-//   root.left = null;
-//
-//   let currentNode = root;
-//   while(currentNode.right) {
-//     currentNode = currentNode.right;
-//   }
-//
-//   currentNode.right = right;
-// };
+var flatten = function(root) {
+  if(!root) return;
+
+  flatten(root.left);
+  flatten(root.right);
+
+  let right = root.right;
+  root.right = root.left;
+  root.left = null;
+
+  let currentNode = root;
+  while(currentNode.right) {
+    currentNode = currentNode.right;
+  }
+
+  currentNode.right = right;
+};

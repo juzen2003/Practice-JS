@@ -34,18 +34,18 @@ var isValidBST = function(root) {
 };
 
 // recursion
-// var isValidBST = function(root) {
-//   return valid(root, Number.MAX_SAFE_INTEGER, -Number.MAX_SAFE_INTEGER);
-// };
-//
-// const valid = function(root, max, min) {
-//   if(!root) return true;
-//   if(root.val >= max || root.val <= min) return false;
-//
-//   // left subtree are all smaller than current node value, max = current node value
-//   // right subtree are all larger than current node value, min = current node value
-//   let leftValid = valid(root.left, root.val, min);
-//   let rightValid = valid(root.right, max, root.val);
-//
-//   return leftValid && rightValid;
-// };
+var isValidBST = function(root) {
+  return valid(root, Number.MAX_SAFE_INTEGER, -Number.MAX_SAFE_INTEGER);
+};
+
+const valid = function(root, max, min) {
+  if(!root) return true;
+  if(root.val >= max || root.val <= min) return false;
+
+  // left subtree are all smaller than current node value, max = current node value
+  // right subtree are all larger than current node value, min = current node value
+  let leftValid = valid(root.left, root.val, min);
+  let rightValid = valid(root.right, max, root.val);
+
+  return leftValid && rightValid;
+};

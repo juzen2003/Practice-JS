@@ -11,7 +11,7 @@
  * @return {void} Do not return anything, modify tree in-place instead.
  */
 // input could be skewed binary tree
-// we used a dummy head to keep track next level, and head.next to move from current level to next level
+// we used a dummy head to record next, and head.next to move from current level to next level
 // space O(1)
 // time O(n)
 // by default .next = null

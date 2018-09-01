@@ -47,24 +47,24 @@ var pathSum = function(root, sum) {
 };
 
 // recursion
-// var pathSum = function(root, sum) {
-//   let res = [];
-//   checkPath(root, sum, [], res);
-//   return res;
-// };
-//
-// const checkPath = function(root, sum, path, res) {
-//   if(!root) return res;
-//
-//   path.push(root.val);
-//
-//   // we copy the path by path.slice() because arr is passed by reference
-//   // if we just do res.push(path), whenever path is changed, elements in res would also be changed
-//   if(!root.left && !root.right && root.val === sum) res.push(path.slice());
-//
-//   checkPath(root.left, sum-root.val, path, res);
-//   checkPath(root.right, sum-root.val, path, res);
-//
-//   // backtracking, if solutions are wrong we recover the path to the previous state
-//   path.pop();
-// };
+var pathSum = function(root, sum) {
+  let res = [];
+  checkPath(root, sum, [], res);
+  return res;
+};
+
+const checkPath = function(root, sum, path, res) {
+  if(!root) return res;
+
+  path.push(root.val);
+
+  // we copy the path by path.slice() because arr is passed by reference
+  // if we just do res.push(path), whenever path is changed, elements in res would also be changed
+  if(!root.left && !root.right && root.val === sum) res.push(path.slice());
+
+  checkPath(root.left, sum-root.val, path, res);
+  checkPath(root.right, sum-root.val, path, res);
+
+  // backtracking, if solutions are wrong we recover the path to the previous state
+  path.pop();
+};

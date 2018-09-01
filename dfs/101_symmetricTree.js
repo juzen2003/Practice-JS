@@ -50,18 +50,18 @@ var isSymmetric = function(root) {
 };
 
 // recursive
-// var isSymmetric = function(root) {
-//   if(root === null) return true;
-//
-//   return isMirror(root.left, root.right);
-// };
-//
-// const isMirror = function(left, right) {
-//   if(left === null || right === null) return left === right;
-//
-//   if(left.val !== right.val) {
-//     return false;
-//   } else {
-//     return isMirror(left.left, right.right) && isMirror(left.right, right.left);
-//   }
-// };
+var isSymmetric = function(root) {
+  if(root === null) return true;
+
+  return isMirror(root.left, root.right);
+};
+
+const isMirror = function(left, right) {
+  if(left === null || right === null) return left === right;
+
+  if(left.val !== right.val) {
+    return false;
+  } else {
+    return isMirror(left.left, right.right) && isMirror(left.right, right.left);
+  }
+};

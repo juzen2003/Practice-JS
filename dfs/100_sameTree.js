@@ -10,7 +10,7 @@
  * @param {TreeNode} q
  * @return {boolean}
  */
-// DFS, postorder traversal to compare 
+// DFS, postorder traversal to compare
 var isSameTree = function(p, q) {
   if(p === null || q === null) return p === q;
 
@@ -41,12 +41,12 @@ var isSameTree = function(p, q) {
 };
 
 // recursion
-// var isSameTree = function(p, q) {
-//   if(p === null || q === null) return p === q;
-//
-//   if(p.val !== q.val) {
-//     return false;
-//   } else {
-//     return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
-//   }
-// };
+var isSameTree = function(p, q) {
+  if(p === null || q === null) return p === q;
+
+  if(p.val !== q.val) {
+    return false;
+  } else {
+    return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+  }
+};
