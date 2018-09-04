@@ -34,3 +34,26 @@ var maxProfit = function(prices) {
 
   return dp[2][days-1];
 };
+
+// Time: O(kn^2)
+// Space: O(kn)
+// this is direct translation from notes
+var maxProfit = function(prices) {
+  let days = prices.length;
+  if(days === 0) return 0;
+
+  let trans = 2;
+  let dp = [...Array(trans+1)].map(el => Array(days).fill(0));
+
+  for(let k = 1; k <= trans; k++) {
+    let minCost = prices[0];
+    for(let i = 1; i < days; i++) {
+      for(let j = 1; j <= i; j++) {
+        minCost = Math.min(minCost, prices[j] - dp[k-1][j-1]);
+      }
+      dp[k][i] = Math.max(dp[k][i-1], prices[i] - minCost);
+    }
+  }
+
+  return dp[2][days-1];
+};
