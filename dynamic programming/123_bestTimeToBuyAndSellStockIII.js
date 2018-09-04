@@ -17,6 +17,7 @@
 
 // Time: O(kn)
 // Space: O(kn)
+// more simplified version from method 2 
 var maxProfit = function(prices) {
   let days = prices.length;
   if(days === 0) return 0;
