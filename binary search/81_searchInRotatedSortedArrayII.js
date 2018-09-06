@@ -3,7 +3,8 @@
  * @param {number} target
  * @return {boolean}
  */
- // elements might be duplicated
+// elements might be duplicated
+// Time: O(log n)
 var search = function(nums, target) {
   if(nums.length === 0) return false;
 

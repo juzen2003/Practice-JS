@@ -3,7 +3,7 @@
  * @param {number[]} nums2
  * @return {number}
  */
-// log(min(m + n))
+// log(min(m, n))
 // we iterate through 0 ~ m for bsearch, the shorter one to pick i
 
 // cut both nums1 & nums2 to left and right parts using i & j

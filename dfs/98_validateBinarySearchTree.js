@@ -13,6 +13,7 @@
 // from output of inorder traversal, previous element has to be less than the next one to have the correct BST
 // left < root, root < right
 var isValidBST = function(root) {
+  // test case defines that empty tree would return true;
   if(root === null) return true;
 
   let stack = [];

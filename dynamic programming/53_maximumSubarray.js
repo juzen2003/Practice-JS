@@ -3,7 +3,7 @@
  * @return {number}
  */
 // Time: O(n)
-// dp: an array store the max sum up to idx i in nums
+// dp: an array store the max sum up to idx i in nums in dp[i]
 var maxSubArray = function(nums) {
   let dp = [...Array(nums.length)];
   let max = Number.MIN_SAFE_INTEGER;

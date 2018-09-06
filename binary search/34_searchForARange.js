@@ -4,6 +4,7 @@
  * @return {number[]}
  */
  // run bsearch twice to find upperbound and lowerbound
+ // Time: O(log n)
 var searchRange = function(nums, target) {
   let lowerBound = bsearch(nums, target, true);
   let upperBound = bsearch(nums, target, false);

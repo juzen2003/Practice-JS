@@ -14,8 +14,8 @@ var deleteDuplicates = function(head) {
   let dummyHead = new ListNode(null);
   dummyHead.next = head;
   // prev is the previous node of current
-  let current = head;
   let prev = dummyHead;
+  let current = head;
 
   while(current) {
     while(current.next && current.next.val === current.val) {

@@ -5,7 +5,7 @@
  */
 // A subsequence of a string is a new string which is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (ie, "ACE" is a subsequence of "ABCDE" while "AEC" is not).
 
-// dp: a 2D array to store number of unique subsequence of s.slice(0,i) & t.slice(0,j) in dp[i][j]
+// dp: a 2D array to store number of unique subsequence of s.slice(0,i) which is equal to t.slice(0,j) in dp[i][j]
 // 1. if length of s is less than the one of t, return 0
 // 2. if length of t is 0, and s is not, the number of subsequence is 1
 // 3. check if current character at s & t are the same:

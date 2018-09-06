@@ -4,6 +4,7 @@
  * @return {number}
  */
 // elements are not duplicated
+// Time: O(log n)
 var search = function(nums, target) {
   if(nums.length === 0) return -1;
 

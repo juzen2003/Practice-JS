@@ -13,7 +13,8 @@
 // n: average size of each list
 // total data size in the lists: kn
 
-// O(kn * logk)  --> partition the list into half at every level O(logk) * merge each list one by one O(kn)
+// Time: O(kn * logk)  --> partition the list into half at every level O(logk) * merge each list one by one O(kn)
+// Space: O(1)
 var mergeKLists = function(lists) {
   return partitionAndMerge(lists, 0, lists.length-1);
 };
@@ -42,7 +43,8 @@ const merge = function(l1, l2) {
   }
 };
 
-// O(kn)  --> loop through lists & merge each list one by one O(kn)
+// Time: O(kn)  --> loop through lists & merge each list one by one O(kn)
+// Space: O(kn), create tmp which is the size of kn
 var mergeKLists = function(lists) {
   let tmp = null;
   for(let i = 0; i < lists.length; i++) {

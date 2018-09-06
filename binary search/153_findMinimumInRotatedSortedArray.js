@@ -9,6 +9,7 @@ var findMin = function(nums) {
 
   while(low <= high) {
     if(nums[low] < nums[high]) return nums[low];
+    // if(nums[low] <= nums[high]) return nums[low];
 
     let mid = parseInt((low + high) / 2);
 

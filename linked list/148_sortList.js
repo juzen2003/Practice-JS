@@ -32,9 +32,9 @@ var sortList = function(head) {
     tail = dummyHead;
 
     while(current) {
-      left = current;
+      left = current; // cut is done from next line
       // split into i steps
-      right = splitList(left, i);
+      right = splitList(left, i); // cut is done from next line
       current = splitList(right, i);
       // merge back splitted lists
       tail = merge(left, right, tail);

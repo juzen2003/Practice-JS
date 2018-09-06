@@ -11,6 +11,7 @@
  */
 // iterative DFS
 var isSymmetric = function(root) {
+  // test case defines empty tree to return true
   if(root === null) return true;
 
   let stack = [];
