@@ -16,6 +16,7 @@
 // d[3] is True because there is "leet" in the dictionary that ends at 3rd index of "leetcode"
 // d[7] is True because there is "code" in the dictionary that ends at the 7th index of "leetcode" AND d[3] is True
 
+// Time: O(n^2 * m), n = length of s, m = length of wordDict 
 var wordBreak = function(s, wordDict) {
   let len = s.length;
   let dp = [...Array(len)].fill(false);
