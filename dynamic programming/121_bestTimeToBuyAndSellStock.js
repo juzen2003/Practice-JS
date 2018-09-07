@@ -3,7 +3,7 @@
  * @return {number}
  */
 // at most 1 transaction
-// dp: an array to store the profit at (not until) day i (ith element in prices, idx i - 1) in dp[i-1]
+// dp: an array to store the profit at day i (ith element in prices, idx i - 1) in dp[i-1]
 // Time: O(n)
 // Space: O(n), extra dp
 var maxProfit = function(prices) {

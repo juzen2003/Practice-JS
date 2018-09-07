@@ -23,7 +23,7 @@ var isScramble = function(s1, s2) {
     if(count[i] !== 0) return false;
   }
 
-  // cut: i from 1 ~ m to make sure all the slice substring are not empty string
+  // cut: i from 1 ~ m-1 to make sure all the slice substring are not empty string
   for(let i = 1; i < m; i++) {
     if(isScramble(s1.slice(0,i), s2.slice(0,i)) && isScramble(s1.slice(i), s2.slice(i))) {
       return true;

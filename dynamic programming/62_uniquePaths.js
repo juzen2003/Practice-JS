@@ -6,6 +6,7 @@
 // m: column
 // n: row
 // dp: an array to store number of unique paths at (m,n) at dp[m][n], top-left point at (1, 1)
+// can only move either down or right
 // Time: O(m * n)
 var uniquePaths = function(m, n) {
   // dp[0][j] or dp[i][0] are all 0

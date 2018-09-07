@@ -6,6 +6,7 @@
 // m: row
 // n: column
 // dp: an array to store number of unique paths at (m,n) at dp[m][n] (actual position idx at obstacleGrid m-1, n-1)
+// can only move either down or right
 // Time: O(m * n)
 var uniquePathsWithObstacles = function(obstacleGrid) {
   let m = obstacleGrid.length;

@@ -6,7 +6,7 @@
 
 // at most 2 transactions
 
-// dp[k, i] = max(dp[k, i-1], prices[i] - prices[j] + dp[k-1, j-1]), j=[0..i-1]
+// dp[k, i] = max(dp[k, i-1], prices[i] - prices[j] + dp[k-1, j-1]), j=[0..i-1] (when j = 0 => prices[i] - prices[j])
 
 // For k transactions, on i-th day,
 // if we don't trade then the profit is same as previous day dp[k, i-1];
@@ -17,7 +17,7 @@
 
 // Time: O(kn)
 // Space: O(kn)
-// more simplified version from method 2 
+// more simplified version from method 2
 var maxProfit = function(prices) {
   let days = prices.length;
   if(days === 0) return 0;

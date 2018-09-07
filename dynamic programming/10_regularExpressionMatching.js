@@ -6,7 +6,7 @@
 // '.' Matches any single character.
 // '*' Matches zero or more of the preceding element.
 //
-// dp: a 2D array to store the matching result of:
+// dp: a 2D array to store the matching result (boolean) of:
 // s.slice(0, i) (idx: 0 up to i-1) & p.slice(0, j) (idx: 0 up to j-1) in dp[i][j]
 // s.slice(0, i+1) (idx: 0 up to i) & p.slice(0, j+1) (idx: 0 up to j) in dp[i+1][j+1]
 // initialize dp[0][0] = true when there is nothing to check

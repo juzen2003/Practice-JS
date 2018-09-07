@@ -6,6 +6,7 @@
 // m: row
 // n: column
 // dp: an array to store min sum up to idx (m-1,n-1) at dp[m-1][n-1] (actual position idx at grid m-1, n-1)
+// can only move either down or right
 // Time: O(m * n)
 var minPathSum = function(grid) {
   let m = grid.length;

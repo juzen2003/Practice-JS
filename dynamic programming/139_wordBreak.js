@@ -7,7 +7,7 @@
 // You may assume the dictionary does not contain duplicate words.
 
 // dp: an array to store whether if s.slice(0, i+1) can be formed from words in wordDict in dp[i], boolean
-// d[i] is True if there is a word in the dictionary that is the same as a substrng of s that ends at ith index of s AND d is also True at the beginning of the substring
+// dp[i] is True if there is a word in the dictionary that is the same as a substring of s that ends at ith index of s AND dp is also True at the beginning of the substring
 // dp[i] = dp[j-1] && wordDict.includes(s.slice(j,i+1))
 
 // ex:
@@ -16,7 +16,7 @@
 // d[3] is True because there is "leet" in the dictionary that ends at 3rd index of "leetcode"
 // d[7] is True because there is "code" in the dictionary that ends at the 7th index of "leetcode" AND d[3] is True
 
-// Time: O(n^2 * m), n = length of s, m = length of wordDict 
+// Time: O(n^2 * m), n = length of s, m = length of wordDict
 var wordBreak = function(s, wordDict) {
   let len = s.length;
   let dp = [...Array(len)].fill(false);

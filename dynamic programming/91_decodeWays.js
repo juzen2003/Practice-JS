@@ -2,7 +2,7 @@
  * @param {string} s
  * @return {number}
  */
-// dp: an array to store number of ways to decode when string length is i in dp[i+1]
+// dp: an array to store number of ways to decode when string length is i (s.slice(0, i)) in dp[i]
 
 // 1. prev & current are all 0 OR prev > 2 and current = 0: no way to decode
 // => in these case, we return 0

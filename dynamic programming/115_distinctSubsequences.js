@@ -4,6 +4,7 @@
  * @return {number}
  */
 // A subsequence of a string is a new string which is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (ie, "ACE" is a subsequence of "ABCDE" while "AEC" is not).
+// count the number of distinct subsequences of S which equals T
 
 // dp: a 2D array to store number of unique subsequence of s.slice(0,i) which is equal to t.slice(0,j) in dp[i][j]
 // 1. if length of s is less than the one of t, return 0
@@ -29,6 +30,7 @@ var numDistinct = function(s, t) {
   }
 
   for(let i = 1; i <= m; i++) {
+    // condition can be j <= n && j <= i to run faster
     for(let j = 1; j <= n; j++) {
       if(s[i-1] === t[j-1]) {
         dp[i][j] = dp[i-1][j-1] + dp[i-1][j];

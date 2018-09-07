@@ -8,7 +8,7 @@
 //        j-1  |  [j, i] is palindrome
 //    cut(j-1) +  1
 //
-// 1. cut[i] is the minimum of cut[j - 1] + 1 (j <= i), if [j, i] is palindrome
+// 1. cut[i] is the minimum of cut[j - 1] + 1 (where j <= i, we found the minimum cut[j-1] + 1), if [j, i] is palindrome
 // 2. If [j, i] is palindrome, [j + 1, i - 1] is palindrome, and c[j] == c[i]
 
 // cut: an array to store minimum cut to have characters up to idx i having palidrome in cut[i]
@@ -20,7 +20,7 @@ var minCut = function(s) {
   let pal = [...Array(len)].map(el => Array(len));
 
   for(let i = 0; i < len; i++) {
-    // init min to be the largest possible cut (for s.slice(0, i+1)) + 1 => i
+    // init min to be the largest possible cut (for s.slice(0, i+1)) + 1 => i, or init it with any big nums like len would work as well
     let min = i;
     for(let j = 0; j <= i; j++) {
       if(s[j] === s[i] && (j + 1 > i - 1 || pal[j+1][i-1])) {

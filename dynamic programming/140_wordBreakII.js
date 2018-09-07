@@ -6,10 +6,13 @@
 // The same word in the dictionary may be reused multiple times in the segmentation.
 // You may assume the dictionary does not contain duplicate words.
 // Use map to store the array of path corresponding to string s and improve performance (get rid of LTE)
+
+// dfs
+// Time: O(n * m), n = s.length, m = wordDict.length
 var wordBreak = function(s, wordDict) {
-    // map to store array of path for string s
-    let map = new Map();
-    return getPath(s, wordDict, map);
+  // map to store array of path for string s
+  let map = new Map();
+  return getPath(s, wordDict, map);
 };
 
 const getPath = function(s, wordDict, map) {
