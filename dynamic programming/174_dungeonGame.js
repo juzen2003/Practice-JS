@@ -12,6 +12,8 @@
 
 // starting from bottom-right to top-left
 
+// Time: O(n)
+// Space: O(n) 
 var calculateMinimumHP = function(dungeon) {
   let m = dungeon.length;
   let n = dungeon[0].length;
@@ -22,7 +24,7 @@ var calculateMinimumHP = function(dungeon) {
     for(let j = n-1; j >= 0; j--) {
       if(i === m-1) {
         dp[i][j] = Math.max(1, dp[i][j+1] - dungeon[i][j]);
-      } else if(j === n-1) {
+      } else if( j === n-1) {
         dp[i][j] = Math.max(1, dp[i+1][j] - dungeon[i][j]);
       } else {
         let minInit = Math.min(dp[i+1][j], dp[i][j+1]);
