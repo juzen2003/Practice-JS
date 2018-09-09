@@ -19,8 +19,8 @@ var minPathSum = function(grid) {
       if(i === 0 && j === 0) {
         dp[i][j] = grid[i][j];
       } else {
-        let top = (i-1) >= 0 ? dp[i-1][j] : Number.MAX_SAFE_INTEGER;
-        let left = (j-1) >= 0 ? dp[i][j-1] : Number.MAX_SAFE_INTEGER;
+        let left = (i-1) >= 0 ? dp[i-1][j] : Number.MAX_SAFE_INTEGER;
+        let top = (j-1) >= 0 ? dp[i][j-1] : Number.MAX_SAFE_INTEGER;
         dp[i][j] = grid[i][j] + Math.min(left, top);
       }
     }

@@ -14,7 +14,8 @@ var maxProfit = function(k, prices) {
   let days = prices.length;
   if(days === 0) return 0;
 
-  // we need this part to get rid to TLE or MLE
+  // need this to get rid to MLE, when k is larger than half of days, we calculate the max profit directly
+  // since k is larger than half of days, it means we can calculate profit from every gap if they are a plus
   if(k >= parseInt(days/2)) {
     let profit = 0;
     for(let i = 1; i < days; i++) {
