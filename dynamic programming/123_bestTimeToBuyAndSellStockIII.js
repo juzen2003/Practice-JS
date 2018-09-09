@@ -50,6 +50,7 @@ var maxProfit = function(prices) {
     let minCost = prices[0];
     for(let i = 1; i < days; i++) {
       for(let j = 1; j <= i; j++) {
+      // for(let j = 1; j < i; j++) {
         minCost = Math.min(minCost, prices[j] - dp[k-1][j-1]);
       }
       dp[k][i] = Math.max(dp[k][i-1], prices[i] - minCost);

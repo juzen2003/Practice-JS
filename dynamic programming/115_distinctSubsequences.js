@@ -25,6 +25,7 @@ var numDistinct = function(s, t) {
   dp[0][0] = 1;
 
   // if length of t is 0, and s is not, the number of subsequence is 1
+  // "" is a subsequnce of any string
   for(let i = 1; i <= m; i++) {
     dp[i][0] = 1;
   }
