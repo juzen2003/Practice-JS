@@ -5,6 +5,8 @@
 // 1. sort the list
 // 2. loop thorugh each element and see if it can be the first el
 // 3. once we got the 1st el, we do two sum and found all possible two sum
+
+// Time: O(n^2)
 var threeSum = function(nums) {
   nums.sort((a,b) => a-b);
   let res = [];
