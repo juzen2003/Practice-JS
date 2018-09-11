@@ -3,6 +3,7 @@
  * @param {number} target
  * @return {number[]}
  */
+// Time: O(n)
 var twoSum = function(nums, target) {
   let map = new Map();
   for(let i = 0; i < nums.length; i++) {
