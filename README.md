@@ -399,6 +399,7 @@ for(let item of aSet) {console.log(item)}; // 1, 2, 5
 ```
 ### Map
 ```js
+// key to the map would be other type rather than just string
 let m = new Map();
 m.set(1, 3);
 m.set(2, [1,2,2]);
