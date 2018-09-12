@@ -13,6 +13,7 @@ var threeSum = function(nums) {
 
   for(let i = 0; i < nums.length-2; i++) {
     if(nums[i] > 0) break;
+    // avoid duplicated answers
     if(nums[i] === nums[i-1]) continue;
 
     let j = i + 1;

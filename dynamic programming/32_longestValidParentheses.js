@@ -31,6 +31,7 @@ var longestValidParentheses = function(s) {
   return max;
 };
 
+// Time: O(n)
 // dp: an array that store the length of longest valid parentheses that ends at index i of s in dp[i]
 var longestValidParentheses = function(s) {
   let dp = [...new Array(s.length)].fill(0);

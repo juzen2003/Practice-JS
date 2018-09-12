@@ -15,6 +15,7 @@ var wordBreak = function(s, wordDict) {
   return getPath(s, wordDict, map);
 };
 
+// return all possible paths of s with words in wordDict
 const getPath = function(s, wordDict, map) {
   if(map.has(s)) return map.get(s);
   let path = [];

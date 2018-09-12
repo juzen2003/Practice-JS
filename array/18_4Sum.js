@@ -10,11 +10,13 @@ var fourSum = function(nums, target) {
   let res = [];
 
   for(let i = 0; i < nums.length-3; i++) {
+    // avoid duplicated answers
     if(nums[i] === nums[i-1]) continue;
 
     let target1 = target - nums[i];
 
     for(let j = i+1; j < nums.length-2; j++) {
+      // avoid duplicated answers
       if(nums[j] === nums[j-1] && j !== i+1) continue;
 
       let k = j + 1;

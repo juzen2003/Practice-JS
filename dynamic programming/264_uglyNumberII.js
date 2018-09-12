@@ -20,6 +20,7 @@ var nthUglyNumber = function(n) {
   dp[0] = 1;
   let [p2, p3, p5] = [0, 0, 0];
 
+  // keep finding the next smallest ugly number
   for(let i = 1; i < n; i++) {
     dp[i] = Math.min(dp[p2] * 2, dp[p3] * 3, dp[p5] * 5);
     if(dp[i] === dp[p2] * 2) p2++;

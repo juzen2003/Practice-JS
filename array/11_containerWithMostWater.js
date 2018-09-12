@@ -3,6 +3,7 @@
  * @return {number}
  */
 // Time: O(n)
+// use two pointer to solve
 var maxArea = function(height) {
   let max = 0;
   let i = 0;

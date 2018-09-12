@@ -20,7 +20,7 @@ var minCut = function(s) {
   let pal = [...Array(len)].map(el => Array(len));
 
   for(let i = 0; i < len; i++) {
-    // init min to be the largest possible cut (for s.slice(0, i+1)) + 1 => i, or init it with any big nums like len would work as well
+    // init min to be the largest possible cut (for s.slice(0, i+1)) => i, or init it with any big nums like len would work as well
     let min = i;
     for(let j = 0; j <= i; j++) {
       if(s[j] === s[i] && (j + 1 > i - 1 || pal[j+1][i-1])) {
