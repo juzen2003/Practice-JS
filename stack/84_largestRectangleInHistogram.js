@@ -4,6 +4,7 @@
  */
 
 // Time: O(n), iterate through every bar, and every bar is pushed and popped once
+// Space: O(n), stack
 var largestRectangleArea = function(heights) {
   let stack = [];
   let i = 0; // anchor
