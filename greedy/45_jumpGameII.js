@@ -12,6 +12,7 @@
 // Time: O(n)
 
 var jump = function(nums) {
+  if(nums.length === 1) return 0;
   let currentEnd = 0;
   let jumpCount = 0;
   let currentFarthest = 0;
