@@ -15,6 +15,7 @@
 
 // I see someone else use the formula dp[k, i] = max(dp[k, i-1], prices[i] - prices[j] + dp[k-1, j]), where the last one is dp[k-1, j] instead of dp[k-1, j-1]. It's not the direct sense, as if the share was bought on j-th day, then the total profit of previous transactions should be done on (j-1)th day. However, the result based on that formula is also correct, because if the share was sold on j-th day and then bought again, it is the same if we didn't trade on that day.
 
+// k: number of transactions, n: number of days
 // Time: O(kn)
 // Space: O(kn)
 // more simplified version from method 2

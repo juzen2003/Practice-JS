@@ -26,7 +26,7 @@ const backtracking = function(res, tmp, arr, remain, start) {
     for(let i = start; i < arr.length; i++) {
       if(i > start && arr[i] === arr[i-1]) continue; // avoid duplicated combo
       tmp.push(arr[i]);
-      backtracking(res, tmp, arr, remain-arr[i], i+1); // i + 1 don't reuse the same element
+      backtracking(res, tmp, arr, remain-arr[i], i+1); // i + 1: don't reuse the same element
       tmp.pop();
     }
   }

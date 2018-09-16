@@ -2,7 +2,7 @@
  * @param {number[][]} dungeon
  * @return {number}
  */
-// dp: a 2D array to store the min init at location (i, j) in dp[i][j]
+// dp: a 2D array to store the min init health at location (i, j) in dp[i][j]
 
 // It is easy to know that at grid P, since " at any point his health point drops to 0 or below, he dies immediately", the remaining health value should be at least 1, that is, initialHealth + dungeon >= 1, we have initialHealth = max(1, 1 - dungeon[i][j]). (Notice, at any grid, the initial health should be at least 1 (for example, test case [1,0,0] require initial health 1 even though it has positive remaining health at grid[0][1] and grid[0][2])
 
@@ -13,7 +13,7 @@
 // starting from bottom-right to top-left
 
 // Time: O(n)
-// Space: O(n) 
+// Space: O(n)
 var calculateMinimumHP = function(dungeon) {
   let m = dungeon.length;
   let n = dungeon[0].length;

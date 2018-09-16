@@ -3,7 +3,7 @@
  * @return {number}
  */
 // 1. put each positive number at the right place, like: 1 at nums[0], 2 at nums[1], etc
-// 2. if we found the first number at idx i: nums[i] !== i+1, then i+1 is the first missing positive number
+// 2. if we found the first number at idx i: nums[i] !== i+1, then i+1 is the first (smallest) missing positive number
 // 3. if all numbers in nums exists, then the first missing positive number is nums.length + 1
 // Time: O(n)
 // Space: O(1)

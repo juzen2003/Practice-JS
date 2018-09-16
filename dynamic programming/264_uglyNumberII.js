@@ -17,6 +17,7 @@
 
 var nthUglyNumber = function(n) {
   let dp = [...Array(n)];
+  // 1st ugly number is 1
   dp[0] = 1;
   let [p2, p3, p5] = [0, 0, 0];
 
