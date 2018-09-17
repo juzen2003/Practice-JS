@@ -6,6 +6,8 @@
 // input is a set of distinct integers
 // no duplicated subsets
 var subsets = function(nums) {
+  // sorting is not necessary if input elements are not duplicated
+  // nums.sort((a, b) => a-b);
   let res = [];
   backtracking(res, [], nums, 0);
   return res;
