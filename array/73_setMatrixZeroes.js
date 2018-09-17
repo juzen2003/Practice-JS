@@ -2,7 +2,7 @@
  * @param {number[][]} matrix
  * @return {void} Do not return anything, modify matrix in-place instead.
  */
-// space: O(1)
+// Space: O(1), in place
 // Time: O(n)
 
 // store 0 at first row and col if that row & col should be all 0 later
