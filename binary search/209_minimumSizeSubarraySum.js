@@ -13,7 +13,7 @@ var minSubArrayLen = function(s, nums) {
 
   let min = nums.length + 1;
   for(let j = 0; j < sum.length; j++) {
-    // find the 1st point in sum array where sum[end] >= sum[j-1] + s
+    // in sum array, find the 1st point where sum[end] >= sum[j-1] + s
     let end = bsearch(j, s, sum);
 
     // can't find the point, break, no need to check rest of sum el
@@ -49,6 +49,7 @@ const bsearch = function(start, s, sum) {
 
 
 // O(n)
+// Use two pointers
 var minSubArrayLen = function(s, nums) {
   let i = 0;
   let j = 0;

@@ -46,10 +46,12 @@ var findMedianSortedArrays = function(nums1, nums2) {
     let i = parseInt((low + high)/2);
     let j = parseInt((m + n + 1)/2) - i;
 
-    if(i > 0 && j < n && a[i-1] > b[j]) {
+    // (i > 0 && j < n && a[i-1] > b[j])
+    if(a[i-1] > b[j]) {
       // i is too big
       high = i - 1;
-    } else if(i < m && j > 0 && a[i] < b[j-1]) {
+    // (i < m && j > 0 && a[i] < b[j-1])
+    } else if(a[i] < b[j-1]) {
       // i is too small
       low = i + 1;
     } else {

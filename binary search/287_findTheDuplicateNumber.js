@@ -4,7 +4,7 @@
  */
 // length of nums: n + 1 and each el is between 1 to n, there must be one duplicated num
 // Assume that there is only one duplicate number, find the duplicate one. (but it could be repeated more than once.)
-// Time: O(logn)
+// Time: O(n * logn) 
 // Space: O(1)
 var findDuplicate = function(nums) {
   // possible values for each el, 1 to n
@@ -21,6 +21,7 @@ var findDuplicate = function(nums) {
       }
     }
 
+    // if duplicated value is between mid + 1 to high
     if(count <= mid) {
       // search for value range: mid + 1 to high
       low = mid + 1;

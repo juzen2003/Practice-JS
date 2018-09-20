@@ -32,5 +32,5 @@ var findMin = function(nums) {
     }
   }
 
-  return nums[low];
+  return nums[low]; // this is for when nums.length === 1
 };
