@@ -29,9 +29,7 @@ var removeNthFromEnd = function(head, n) {
     n--;
   }
 
-  if(slow.next !== null) {
-    slow.next = slow.next.next;
-  }
+  slow.next = slow.next.next;
 
   return dummyHead.next;
 };

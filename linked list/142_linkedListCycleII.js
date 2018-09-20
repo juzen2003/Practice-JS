@@ -60,5 +60,5 @@ var detectCycle = function(head) {
     }
   }
 
-  return null;
+  return null; // if there is no cycle
 };

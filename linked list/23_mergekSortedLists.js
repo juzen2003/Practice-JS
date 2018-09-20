@@ -43,7 +43,7 @@ const merge = function(l1, l2) {
   }
 };
 
-// Time: O(kn)  --> loop through lists & merge each list one by one O(kn)
+// Time: O(kn * k)  --> loop through lists & merge each list one by one, but previous list would get merge and visited one more time: n * (1 + 2 + ... + k) => n * (1 + k) * k / 2 => O(kn * k)
 // Space: O(kn), create tmp which is the size of kn
 var mergeKLists = function(lists) {
   let tmp = null;

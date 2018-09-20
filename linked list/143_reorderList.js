@@ -15,7 +15,7 @@
 // space: O(1) in place
 // time: O(n)
 // 1. find the middle of the list: O(n)
-// 2. reverse the second half of the list: O(n)
+// 2. reverse the second half of the list (starting from the node after mid): O(n)
 // 3. re-order one node by one node: O(n)
 var reorderList = function(head) {
   if(!head || !head.next || !head.next.next) return;

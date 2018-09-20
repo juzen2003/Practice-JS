@@ -25,7 +25,7 @@ var removeElements = function(head, val) {
 
     prev.next = current;
     prev = prev.next;
-    if(current) current = current.next;
+    if(current) current = current.next; // if is there for the case when current reach to last null
   }
 
   return dummyHead.next;
