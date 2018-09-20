@@ -26,7 +26,7 @@ const backtracking = function(res, tmp, arr, remain, start) {
   } else {
     for(let i = start; i < arr.length; i++) {
       tmp.push(arr[i]);
-      backtracking(res, tmp, arr, remain-arr[i], i); // not i + 1 because we can reuse same elements
+      backtracking(res, tmp, arr, remain-arr[i], i); // use i not i + 1: because we can reuse same elements
       tmp.pop();
     }
   }

@@ -32,6 +32,7 @@ const backtracking = function(visited, board, word, i, j, idx) {
     let top = backtracking(visited, board, word, i-1, j, idx+1);
     let down = backtracking(visited, board, word, i+1, j, idx+1);
     if(left || right || top || down) return true;
+    // else (backtracking) 
     visited[i][j] = false;
   }
 

@@ -5,6 +5,7 @@
  */
 // Time: O(n^2), same trick as 15
 // sort is O(n log n)
+// find all unique solutions
 var threeSumClosest = function(nums, target) {
   nums.sort((a, b) => a-b);
   let res = nums[0] + nums[1] + nums[nums.length-1];

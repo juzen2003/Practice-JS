@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-// dp: array to store first n ugly number in dp[n]
+// dp: array to store first n ugly number in dp[n-1]
 // dp[0] = 1
 
 // k[1] = min( k[0]x2, k[0]x3, k[0]x5). The answer is k[0]x2. So we move 2's pointer to 1. Then we test:

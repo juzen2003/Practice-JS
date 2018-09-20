@@ -2,6 +2,7 @@
  * @param {number[]} digits
  * @return {number[]}
  */
+ // starting from the back of the array
 var plusOne = function(digits) {
   let n = digits.length;
   for(let i = n-1; i >= 0; i--) {

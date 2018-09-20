@@ -41,6 +41,7 @@ var trap = function(height) {
   let maxWater = 0;
 
   while(left < right) {
+    // height[left] < height[right] works as well
     if(height[left] <= height[right]) {
       if(height[left] > leftMax) {
         leftMax = height[left];

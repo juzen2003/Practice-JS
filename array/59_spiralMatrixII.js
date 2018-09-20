@@ -4,6 +4,7 @@
  */
 // Time: O(n);
 // Space: O(n ^ 2)
+// fill in 1 ~ n^2 to res
 var generateMatrix = function(n) {
   let res = [...Array(n)].map(el => Array(n));
 

@@ -23,14 +23,32 @@ const robHouse = function(nums, low, high) {
   let n = high - low + 1;
   let dp = [...Array(n)].fill(0);
 
-  for(let i = low; i <= high; i++) {
-    if(i === low) {
-      dp[i] = nums[low];
+  // first el would be nums[low] and last el would be nums[high]
+  for(let i = 0; i < n; i++) {
+    if(i === 0) {
+      dp[i] = nums[i+low];
     } else {
       let prevMax = (i-2) >= 0 ? dp[i-2] : 0;
-      dp[i] = Math.max(dp[i-1], nums[i] + prevMax);
+      dp[i] = Math.max(dp[i-1], nums[i+low] + prevMax);
     }
   }
 
-  return dp[high];
+  return dp[n-1];
 };
+
+// use the regular linear rob house function to help out
+// const robHouse = function(nums, low, high) {
+//   let n = high - low + 1;
+//   let dp = [...Array(n)].fill(0);
+//
+//   for(let i = low; i <= high; i++) {
+//     if(i === low) {
+//       dp[i] = nums[low];
+//     } else {
+//       let prevMax = (i-2) >= 0 ? dp[i-2] : 0;
+//       dp[i] = Math.max(dp[i-1], nums[i] + prevMax);
+//     }
+//   }
+//
+//   return dp[high];
+// };

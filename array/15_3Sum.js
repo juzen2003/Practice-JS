@@ -6,6 +6,7 @@
 // 2. loop thorugh each element and see if it can be the first el
 // 3. once we got the 1st el, we do two sum and found all possible two sum
 
+// find all unique solutions
 // Time: O(n^2)
 var threeSum = function(nums) {
   nums.sort((a,b) => a-b);

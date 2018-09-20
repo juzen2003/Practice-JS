@@ -9,8 +9,8 @@
 // Replace a character
 //
 // dp: a 2D array to store min steps to convert from first i character in word1 to first j character in word2:
-// from word1.slice(0, i) (idx: 0 to i-1, first i characters)
-// to word2.slice(0, j) (idx: 0 to j-1, first j characters) in dp[i][j]
+// from word1.slice(0, i) (idx: up to i-1, first i characters)
+// to word2.slice(0, j) (idx: up to j-1, first j characters) in dp[i][j]
 // Time: O(n * m)
 var minDistance = function(word1, word2) {
   let m = word1.length;

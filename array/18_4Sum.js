@@ -4,6 +4,7 @@
  * @return {number[][]}
  */
 // Use the same logic as 15 & 16
+// Find all unique quadruplets in the array which gives the sum of target
 // Time: O(n^3)
 var fourSum = function(nums, target) {
   nums.sort((a,b) => a - b);

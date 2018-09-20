@@ -10,7 +10,7 @@
  * @param {TreeNode} q
  * @return {boolean}
  */
-// DFS, postorder traversal to compare
+// DFS, preorder traversal to compare
 var isSameTree = function(p, q) {
   if(p === null || q === null) return p === q;
 
