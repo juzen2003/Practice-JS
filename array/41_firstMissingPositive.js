@@ -11,6 +11,8 @@ var firstMissingPositive = function(nums) {
   let n = nums.length;
 
   for(let i = 0; i < n; i++) {
+    // use while here to make sure nums[i] after swapping would also be swapped & put at the right location
+    // if would not do that
     while(nums[i] > 0 && nums[i] <= n && nums[nums[i] - 1] !== nums[i]) {
       [nums[nums[i] - 1], nums[i]] = [nums[i], nums[nums[i] - 1]];
     }
