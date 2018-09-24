@@ -1,5 +1,18 @@
-const str = 'question';
+// const str = 'question';
+//
+// console.log(str.split('').map(char => char.charCodeAt(0)).reduce((memo, c) => memo + c, 0));
+//
+// console.log(113+117+101+115+116+105+111+110);
 
-console.log(str.split('').map(char => char.charCodeAt(0)).reduce((memo, c) => memo + c, 0));
+let m = new Map();
+m.set(1,3);
+m.set(3,5);
+m.set(7,8);
+for(let [key, value] of m) {
+  console.log(key);
+  console.log(value);
+}
 
-console.log(113+117+101+115+116+105+111+110);
+for(let key of m.keys()) {
+  console.log(key);
+}

@@ -414,3 +414,19 @@ m.delete(5) // false
 m.delete(2)
 // m: Map {1=>3}
 ```
+
+### loop through map
+```js
+let m = new Map();
+m.set(1,3);
+m.set(3,5);
+m.set(7,8);
+for(let [key, value] of m) {
+  console.log(key); // 1, 3, 7
+  console.log(value); // 3, 5, 8
+}
+
+for(let key of m.keys()) {
+  console.log(key); // 1, 3, 7
+}
+```
