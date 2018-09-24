@@ -1,0 +1,43 @@
+body
+{
+  padding: 30px;
+  background-color: #fcfcfc;
+  position: relative;
+  display: block;
+}
+
+.outer-div
+{
+  background-color: #f3f3f3;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+}
+
+.inner-div
+{
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+  border-radius: 3px;
+  position: absolute;
+  /* we want 50px around, so 50 / 300 ~ 0.1667 ~ 16.67% */
+  top: 16.67%;
+  left: 16.67%;
+}
+
+.most-inner-div
+{
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  border-radius: 3px;
+  position: absolute;
+  /* we want 50px around, so 50 / 200 ~ 0.25 ~ 25% */
+  top: 25%;
+  left: 25%;
+}
