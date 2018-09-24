@@ -1,9 +1,9 @@
 body
 {
-  padding: 30px;
   background-color: #fcfcfc;
-  position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .outer-div
@@ -13,9 +13,14 @@ body
   height: 300px;
   margin: auto;
   border: 3px solid black;
-  position: absolute;
-  text-align: center;
+  position: relative;
 }
+
+.outer-div > p {
+  position: absolute;
+  top: 15px;
+}
+
 
 .inner-div
 {
@@ -31,6 +36,11 @@ body
   left: 16.67%;
 }
 
+.inner-div > p {
+  position: absolute;
+  top: 15px;
+}
+
 .most-inner-div
 {
   margin: auto;
@@ -43,4 +53,9 @@ body
   /* we want 50px around, so 50 / 200 ~ 0.25 ~ 25% */
   top: 25%;
   left: 25%;
+}
+
+.most-inner-div > p {
+  position: absolute;
+  top: 15px;
 }
