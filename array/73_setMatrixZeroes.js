@@ -3,7 +3,7 @@
  * @return {void} Do not return anything, modify matrix in-place instead.
  */
 // Space: O(1), in place
-// Time: O(n)
+// Time: O(n) where n is number of grid
 
 // store 0 at first row and col if that row & col should be all 0 later
 // deal with first row and first col later

@@ -3,8 +3,8 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 // one pass, two pointers
-// Space: O(1)
 // Time: O(n)
+// Space: O(1)
 var sortColors = function(nums) {
   let two = nums.length - 1;
   let zero = 0;

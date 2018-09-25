@@ -28,19 +28,21 @@ function solution(S) {
                 break;
             case "DUP":
                 let peek = stack[stack.length-1];
+                if(!peek) return -1;
                 stack.push(peek);
                 break;
             case "+":
                 let num1 = stack.pop();
                 let num2 = stack.pop();
-                if(!num1 || !num2) return -1;
-                stack.push(num1 + num2);
+                let sum = num1 + num2;
+                if(!num1 || !num2 || sum < 0 || sum > Math.pow(2, 20)-1) return -1;
+                stack.push(sum);
                 break;
             case "-":
                 let num3 = stack.pop();
                 let num4 = stack.pop();
                 let minus = num3 - num4;
-                if(!num3 || !num4 || minus < 0) return -1;
+                if(!num3 || !num4 || minus < 0 || minus > Math.pow(2, 20)-1) return -1;
                 stack.push(minus);
                 break;
             default:
@@ -56,10 +58,11 @@ function solution(S) {
 // let res1 = solution("13 DUP 4 POP 5 DUP + DUP + -");
 // let res2 = solution("5 6 + -");
 // let res3 = solution("3 DUP 5 - -");
+// let res4 = solution("1 - 10");
 // console.log(res1);
 // console.log(res2);
 // console.log(res3);
-
+// console.log(res4);
 
 
 

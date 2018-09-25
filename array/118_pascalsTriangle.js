@@ -15,8 +15,8 @@ var generate = function(numRows) {
   let res = [[1]];
 
   for(let i = 1; i < numRows; i++) {
-    let prev = [...res[i-1], 0];
-    let shifted = [0, ...res[i-1]];
+    let shifted = [...res[i-1], 0];
+    let prev = [0, ...res[i-1]];
     let currentRow = prev.map((el, idx) => el + shifted[idx]);
     res.push(currentRow);
   }
