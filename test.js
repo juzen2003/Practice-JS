@@ -17,9 +17,12 @@
 //   console.log(key);
 // }
 
-function test() {
-  console.log(x);
-}
+// function test() {
+//   console.log(x);
+// }
+// test();
+// var x = 5;
 
-test();
-var x = 5;
+let s = new Set();
+console.log(s.add(5));
+console.log(s.add(5));
