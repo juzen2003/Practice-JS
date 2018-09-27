@@ -26,6 +26,7 @@ var threeSum = function(nums) {
         res.push([nums[i], nums[j], nums[k]]);
         j++;
         k--;
+        // avoid duplicated answers
         while(nums[j] === nums[j-1]) j++;
         while(nums[k] === nums[k+1]) k--;
       } else if(nums[j] + nums[k] > target) {

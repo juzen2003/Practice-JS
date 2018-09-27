@@ -34,6 +34,6 @@ const getPath = function(s, wordDict, map) {
     }
   }
 
-  map.set(s, path);
+  map.set(s, path.slice());
   return path;
 };

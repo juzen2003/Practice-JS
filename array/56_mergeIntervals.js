@@ -32,7 +32,7 @@ var merge = function(intervals) {
   for(let i = 0, j = 0; i < n; i++) {
     endMax = Math.max(endMax, end[i]);
     if(endMax < start[i+1] || i === n-1) {
-      res.push([start[j], endMax]);
+      res.push(new Interval(start[j], endMax));
       j = i + 1;
     }
   }
