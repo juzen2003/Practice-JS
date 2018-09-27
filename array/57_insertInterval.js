@@ -32,6 +32,7 @@ var insert = function(intervals, newInterval) {
 
   res.push(newInterval);
 
+  // i < n && intervals[i].start > newInterval.end
   while(i < n) {
     res.push(intervals[i]);
     i++;
