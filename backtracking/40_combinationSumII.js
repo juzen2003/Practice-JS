@@ -9,7 +9,8 @@
 // All numbers (including target) will be positive integers
 // The solution set must not contain duplicate combinations
 // use backtracking
-// Time: O(n ^ n)
+// Time: O(n ^ 3)
+// wc: n * (1 + 2 + ...n-1) => n * n * (n-1) / 2 => n * (n^2) => n ^ 3
 var combinationSum2 = function(candidates, target) {
   candidates.sort((a,b) => a-b);
   let res = [];

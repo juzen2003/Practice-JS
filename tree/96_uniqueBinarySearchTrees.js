@@ -14,6 +14,7 @@ var numTrees = function(n) {
 };
 
 // generate number of trees from start to end
+// Time: O(2^n)
 const genTreeCount = function(start, end, dp) {
   if(start > end) return 0;
   // if(start === end) return 1;

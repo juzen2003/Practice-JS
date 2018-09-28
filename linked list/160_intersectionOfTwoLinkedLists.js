@@ -11,7 +11,7 @@
  * @param {ListNode} headB
  * @return {ListNode}
  */
- // time: O(n)
+ // time: O(n), where n is the largest length of list A & list B
  // space: O(1)
  // 1. get the diff of 2 lists
  // 2. from longer list, move diff steps so that both lists would start moving with the same length
@@ -42,6 +42,7 @@ var getIntersectionNode = function(headA, headB) {
     lenB--;
   }
 
+  // move from the same length, if no intersection, will meet at null
   while(currentA !== currentB) {
     currentA = currentA.next;
     currentB = currentB.next;

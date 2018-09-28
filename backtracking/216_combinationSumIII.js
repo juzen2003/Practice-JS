@@ -7,6 +7,8 @@
 // same number can't be re-used
 // All numbers will be positive integers.
 // The solution set must not contain duplicate combinations.
+// Time: O(n ^ 3)
+// wc: n * (1 + 2 + ...n-1) => n * n * (n-1) / 2 => n * (n^2) => n ^ 3
 var combinationSum3 = function(k, n) {
   let res = [];
   let nums = [...Array(9)].map((el, idx) => idx + 1);

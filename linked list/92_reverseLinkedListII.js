@@ -19,7 +19,7 @@ var reverseBetween = function(head, m, n) {
   dummyHead.next = head;
   let current = dummyHead;
 
-  // reach to the node before m
+  // reach to the node BEFORE m
   for(let i = 1; i < m; i++) {
     current = current.next;
   }

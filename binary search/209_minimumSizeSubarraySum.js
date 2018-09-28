@@ -22,6 +22,7 @@ var minSubArrayLen = function(s, nums) {
     if(min > end - j + 1) {
       min = end - j + 1;
     }
+    // min = Math.min(min, end-j+1);
   }
 
   if(min === nums.length + 1) return 0;
@@ -34,6 +35,8 @@ const bsearch = function(start, s, sum) {
   let key = start === 0 ? s : s + sum[start - 1];
   let end = sum.length - 1;
 
+  // start: low
+  // end: high
   while(start <= end) {
     let mid = parseInt((start + end)/2);
 
@@ -64,6 +67,7 @@ var minSubArrayLen = function(s, nums) {
       if(min > i - j) {
         min = i - j;
       }
+      // min = Math.min(min, i - j);
       sum -= nums[j];
       j++;
     }

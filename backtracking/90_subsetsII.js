@@ -4,7 +4,7 @@
  */
 // Given a collection of integers that might contain duplicates, nums
 // no duplicate subsets.
-// Time: O(2^n)
+// Time: O(2^n), because the total number of subsets would be 2^n where n is the length of nums
 var subsetsWithDup = function(nums) {
   nums.sort((a,b) => a-b);
   let res = [];

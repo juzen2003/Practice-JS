@@ -30,6 +30,7 @@ const partitionAndMerge = function(lists, start, end) {
   return merge(l1, l2);
 };
 
+// Time: O(kn)
 const merge = function(l1, l2) {
   if(!l1) return l2;
   if(!l2) return l1;

@@ -10,6 +10,7 @@
  * @return {TreeNode}
  */
 // BFS, iterative, level order
+// TIme: O(n), visit all nodes
 var invertTree = function(root) {
   if(!root) return root;
 

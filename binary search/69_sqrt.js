@@ -11,7 +11,7 @@ var mySqrt = function(x) {
 
     if(mid > x / mid) {
       high = mid - 1;
-    } else {
+    } else { 
       if((mid + 1) > x / (mid + 1)) {
         return mid;
       } else {

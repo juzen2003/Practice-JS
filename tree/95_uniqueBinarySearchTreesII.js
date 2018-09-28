@@ -21,6 +21,7 @@ var generateTrees = function(n) {
 };
 
 // generate all possible trees with value from start to end
+// Time: O(2^n)
 const genTree = function(start, end, dp) {
   if(start > end) return [null];
   // if(start === end) return [new TreeNode(start)];

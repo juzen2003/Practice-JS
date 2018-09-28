@@ -5,7 +5,7 @@
 // Use backtracking
 // input is a set of distinct integers
 // no duplicated subsets
-// Time: O(2^n)
+// Time: O(n * 2^n), because the total number of subsets would be 2^n where n is the length of nums, and each backtracking is O(n)
 var subsets = function(nums) {
   // sorting is not necessary if input elements are not duplicated
   // nums.sort((a, b) => a-b);

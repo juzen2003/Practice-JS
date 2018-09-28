@@ -17,7 +17,16 @@ var search = function(nums, target) {
 
     if(nums[low] === nums[high]) {
       high--;
-    } else if (nums[mid] >= nums[low]) {
+    } else if (nums[mid] < nums[low]) {
+      // left side is not sorted, right side is sorted
+      // search right if target is at right
+      // else search left
+      if(target <= nums[high] && target > nums[mid]) {
+        low = mid + 1;
+      } else {
+        high = mid - 1;
+      }
+    } else {
       // left side is sorted
       // search left if target is at left
       // else search right
@@ -25,15 +34,6 @@ var search = function(nums, target) {
         high = mid - 1;
       } else {
         low = mid + 1;
-      }
-    } else {
-      // right side is sorted
-      // search right if target is at right
-      // else search left
-      if(target <= nums[high] && target > nums[mid]) {
-        low = mid + 1;
-      } else {
-        high = mid - 1;
       }
     }
   }

@@ -38,6 +38,7 @@ var insertionSortList = function(head) {
     // insert current node
     current.next = sortedCurrent.next;
     sortedCurrent.next = current;
+    // reset sortedCurrent so that we loop from the beginning of sorted list for the next current
     sortedCurrent = sorted;
     current = nextCurrent;
   }

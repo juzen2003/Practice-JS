@@ -83,7 +83,7 @@ const merge = function(l1, l2, tail) {
   return current;
 };
 
-// Our solution has space O(logn n) because the recursion called of sortList
+// Our solution has space O(log n) because the recursion called of sortList
 // merge sort
 // time: O(nlogn)
 // space: O(logn)

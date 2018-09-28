@@ -2,6 +2,7 @@
  * @param {number[]} nums
  * @return {number}
 */
+// Time: O(log n)
 var findPeakElement = function(nums) {
   let low = 0;
   let high = nums.length - 1;

@@ -5,7 +5,7 @@
 // O(nlogn): loop through all nums (O(n)) + perform bsearch to find the point for insertion (O(logn))
 // tails is an array storing the smallest tail of all increasing subsequences with length i+1 in tails[i]
 // el in tail would be increasing
-// (1) if x is larger than all tails, append it, increase the size by 1
+// (1) if x is larger than all tails, append it, increase the size of tails by 1
 // (2) if tails[i-1] < x <= tails[i], update tails[i]
 var lengthOfLIS = function(nums) {
   let tail = [];
@@ -26,6 +26,7 @@ var lengthOfLIS = function(nums) {
         k = mid - 1;
       }
     }
+    // if can't find anything j will be tails.length
     tail[j] = key;
   }
 
