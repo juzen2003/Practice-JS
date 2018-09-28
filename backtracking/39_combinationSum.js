@@ -23,6 +23,7 @@ const backtracking = function(res, tmp, arr, remain, start) {
     return;
   } else if(remain === 0) {
     res.push(tmp.slice());
+    // return;
   } else {
     for(let i = start; i < arr.length; i++) {
       tmp.push(arr[i]);

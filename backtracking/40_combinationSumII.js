@@ -22,9 +22,10 @@ const backtracking = function(res, tmp, arr, remain, start) {
     return;
   } else if(remain === 0) {
     res.push(tmp.slice());
+    // return;
   } else {
     for(let i = start; i < arr.length; i++) {
-      if(i > start && arr[i] === arr[i-1]) continue; // avoid duplicated combo
+      if(i > start && arr[i] === arr[i-1]) continue; // avoid duplicated combo, don't revisited the number that has been visited
       tmp.push(arr[i]);
       backtracking(res, tmp, arr, remain-arr[i], i+1); // i + 1: don't reuse the same element
       tmp.pop();

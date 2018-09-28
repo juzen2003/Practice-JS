@@ -3,7 +3,7 @@
  * @param {number} n
  * @return {number[][]}
  */
-// n: 1 ~ 9
+// only 1 ~ 9 are allowed to form n
 // same number can't be re-used
 // All numbers will be positive integers.
 // The solution set must not contain duplicate combinations.
@@ -19,9 +19,16 @@ const backtracking = function(res, tmp, arr, remain, start, k) {
     return;
   } else if(remain === 0 && tmp.length === k) {
     res.push(tmp.slice());
+    // return can be ignored
     return;
   } else {
     for(let i = start; i < arr.length; i++) {
+      // Using the following would reduce the number of operations
+      // if(tmp.length < k) {
+      //     tmp.push(arr[i]);
+      // } else {
+      //     return;
+      // }
       tmp.push(arr[i]);
       backtracking(res, tmp, arr, remain-arr[i], i+1, k);
       tmp.pop();

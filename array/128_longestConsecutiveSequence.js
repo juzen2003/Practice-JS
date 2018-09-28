@@ -6,7 +6,7 @@
 // 1. put all nums in a set
 // 2. loop through each num in nums
 //   - check left & right of current num and see if they are in set
-//   - if so, increment the length
+//   - if so, increment the length & remove consecutive num from set
 //   - else, go to next num
 // 3. keep updating the max length of consecutive elements
 

@@ -6,6 +6,7 @@
  * @return {void} Do not return anything, modify nums1 in-place instead.
  */
 // nums1 has enough space (size that is greater or equal to m + n)
+// Time: O(n)
 var merge = function(nums1, m, nums2, n) {
   let k = m + n - 1;
   let i = m - 1;

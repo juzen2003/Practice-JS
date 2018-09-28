@@ -40,6 +40,7 @@ var maximalRectangle = function(matrix) {
   return max;
 };
 
+// Time: O(n), where n is the col number
 const maxArea = function(heights) {
   let stack = [];
   let i = 0;
