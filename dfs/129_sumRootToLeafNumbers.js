@@ -60,7 +60,7 @@ const getSum = function(node, sum) {
 };
 
 // Method 3:
-// regular iterative way
+// regular iterative way, preorder
 var sumNumbers = function(root) {
   if(!root) return 0;
   let res = 0;

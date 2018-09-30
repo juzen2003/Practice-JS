@@ -30,7 +30,7 @@ for(let a in hsh) {
 // b
 // 2
 ```
-### for...of of collection
+### for...of of collection, this would be element itself
 ```js
 let a = [1,2,3,4];
 for(let el of a) {
@@ -38,13 +38,13 @@ for(let el of a) {
 }
 // 1,2,3,4
 ```
-### for...in(or of) of array
+### for...in of array, this would be index
 ```js
 let a = [1,2,3,4];
-for(let el in a) {
-  console.log(el);
+for(let idx in a) {
+  console.log(idx);
 }
-// 1,2,3,4
+// 0,1,2,3
 ```
 ### Math.random
 ```js

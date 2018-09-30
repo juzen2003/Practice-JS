@@ -3,6 +3,7 @@
  * @return {number}
  */
 // Both BFS fill or DFS fill would work
+// Time: O(row * col * (row * col)), the inner (row * col) is for dfs/bfs fill
 var numIslands = function(grid) {
   if(grid.length === 0) return 0;
   let count = 0;
