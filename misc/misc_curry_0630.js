@@ -55,3 +55,4 @@ console.log( curriedSum(1)(2,3) ); // 6
 
 // full curried form
 console.log( curriedSum(1)(2)(3) ); // 6
+console.log( curriedSum(1)(2)(3,5) ); // 6

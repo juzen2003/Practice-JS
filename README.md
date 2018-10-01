@@ -72,7 +72,9 @@ Math.min(5,7);
 ### Split string into array
 ```js
 "str".split()
-// [ 'str' ] default separator is ""
+// [ 'str' ] default separator is nothing
+"str".split("")
+// [ 's', 't', 'r' ]
 "str".split("r")
 // [ 'st', '' ]
 "st r".split(" ")
@@ -425,8 +427,19 @@ for(let [key, value] of m) {
   console.log(key); // 1, 3, 7
   console.log(value); // 3, 5, 8
 }
-
 for(let key of m.keys()) {
   console.log(key); // 1, 3, 7
 }
+for(let value of m.values()) {
+  console.log(value); // 3, 5, 8
+}
+```
+
+### array reduce
+```js
+let a = [1,2,3,4];
+a.reduce((acc, sum) => {
+  return acc + sum;
+});
+// return 10
 ```

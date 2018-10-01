@@ -1,5 +1,12 @@
 // what is latency and what is bandwidth?
+
+// Bandwidth refers to how wide the data pipe is, not how fast the data is transferred. The wider the pipe is, the less delay you’ll experience when loading webpages and transferring files. (download speed, and upload speed, in mbs)
+// Latency (pronounced: la·ten·cy) is the amount of time it takes a data packet to travel from point A to point B. Together, bandwidth and latency define the speed and capacity of a network. Latency is usually expressed in milliseconds and can be measured using a ping command from your computer.
+//
+// When you run a ping command, a small packet of data (usually 32 bytes), is sent to another machine whereby the round-trip-time is measured in milliseconds. The ping command measures how long it takes for the data packet to leave the source computer, travel to the destination computer, and return back to the source computer.
+
 // compared to wired network, what's the bandwidth and latency of mobile network?
+// mobile netowrk is slower, lower bandwidth & higher latency
 
 // difference between === & ==
 
@@ -17,6 +24,7 @@ console.log("======= this =======");
   };
 
   // bind only set this, but not execute, to execute a function, we use apply or call
+  displayName.bind(fruit)();
   displayName.call(fruit);
   displayName.apply(fruit);
   fruit.display();
