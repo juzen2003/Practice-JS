@@ -85,3 +85,21 @@ console.log(objAttachedToProt.text);   // prototype property changed
 
 objProt = { text: 'replacing property' };
 console.log(objAttachedToProt.text);   // prototype property changed
+
+console.log("=========== JS not insured the right contructor ===========");
+function Rabbit() {}
+Rabbit.prototype = {
+  jumps: true
+};
+
+let rabbit = new Rabbit();
+console.log(rabbit.constructor === Rabbit); // false
+console.log(Rabbit.prototype.constructor === Rabbit); // false
+
+// to keep the right "constructor" we can choose to add/remove properties to the default "prototype" instead of overwriting it as a whole
+function Rabbit2() {}
+Rabbit2.prototype.jump = true;
+
+let rabbit2 = new Rabbit2();
+console.log(rabbit2.constructor === Rabbit2); // true
+console.log(Rabbit2.prototype.constructor === Rabbit2); // true
