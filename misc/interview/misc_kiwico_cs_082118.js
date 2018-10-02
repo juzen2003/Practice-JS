@@ -21,9 +21,11 @@
 // how would you debug from there? Using google chrome dev tool
 
 // SQL:
-// join => inner join
-// left join => left outer join
-// right join => right outer join
+// join => inner join, Select all records from Table A and Table B, where the join condition is met.
+// left join => left outer join, Select all records from Table A, along with records from Table B for which the join condition is met (if at all).
+// right join => right outer join, Select all records from Table B, along with records from Table A for which the join condition is met (if at all).
+// full (outer) join => Select all records from Table A and Table B, regardless of whether the join condition is met or not.
+
 // JOIN is same as INNER JOIN and means to only show records common to both tables. Whether the records are common is determined by the fields in join clause. For example:
 //
 // FROM t1
