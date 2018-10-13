@@ -24,7 +24,7 @@ var exist = function(board, word) {
 const backtracking = function(visited, board, word, i, j, idx) {
   if(idx === word.length) return true;
 
-  if(i < 0 || j < 0 || i >= board.length || j > board[0].length || word[idx] !== board[i][j] || visited[i][j]) {
+  if(i < 0 || j < 0 || i >= board.length || j >= board[0].length || word[idx] !== board[i][j] || visited[i][j]) {
     return false;
   } else {
     // i > 0 && j > 0 && i <  board.length && j < board[0].length && word[idx] === board[i][j] && !visited[i][j]

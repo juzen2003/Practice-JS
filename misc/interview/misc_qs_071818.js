@@ -64,5 +64,5 @@ function getMovieTitles(substr) {
         console.log(titles);
 
     });
-  };
+  });
 };
