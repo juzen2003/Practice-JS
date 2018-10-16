@@ -23,3 +23,7 @@
 // }
 // test();
 // var x = 5;
+
+console.log("-".charCodeAt(0));
+console.log("b".charCodeAt(0));
+console.log("-ab" > "b-z");

@@ -29,7 +29,7 @@ var isMatch = function(s, p) {
         dp[i+1][j+1] = dp[i][j];
       } else if(p[j] === "*") {
         // dp[i+1][j]: * match empty character
-        // dp[i][j+1]: * match at least one character (previous one)
+        // dp[i][j+1]: * match at least one character (previous one), or multiple characters
         dp[i+1][j+1] = dp[i+1][j] || dp[i][j+1];
       }
     }

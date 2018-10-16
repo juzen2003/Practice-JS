@@ -10,7 +10,7 @@
 //    cut(j-1) +  1
 //
 // 1. cut[i] is the minimum of cut[j - 1] + 1 (where j <= i, we found the minimum cut[j-1] + 1), if [j, i] is palindrome
-// 2. If [j, i] is palindrome, [j + 1, i - 1] is palindrome, and c[j] == c[i]
+// 2. [j, i] is palindrome, if [j + 1, i - 1] is palindrome && c[j] == c[i]
 
 // cut: an array to store minimum cut to have characters up to idx i having palidrome for each substring, cut using j
 // pal: a 2D array to store if s.slice(j, i+1) is a palindrome in pal[j][i] (boolean)
