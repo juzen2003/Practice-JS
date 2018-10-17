@@ -10,6 +10,7 @@ var twoSum = function(nums, target) {
   for(let i = 0; i < nums.length; i++) {
     let anotherNum = target - nums[i];
     if(map.has(anotherNum)) return [map.get(anotherNum), i];
+    // else also work
     map.set(nums[i], i);
   }
 };

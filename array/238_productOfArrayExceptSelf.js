@@ -7,7 +7,7 @@
 // Space: O(1)
 // iterate array twice
 // 1. iterate from front to store the product of all el up to idx - 1 (including idx - 1) in res[idx]
-// 2. iterate from the back to time el from back (from idx + 1 to end) to res[idx]
+// 2. iterate from the back to time el from back (el from idx + 1 to end) to res[idx]
 var productExceptSelf = function(nums) {
   let n = nums.length;
   let res = [];

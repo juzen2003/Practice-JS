@@ -3,6 +3,7 @@
  * @return {number[]}
  */
 // Time: O(n)
+// Space: O(n), extra map
 var majorityElement = function(nums) {
   let map = new Map();
   let res = [];
