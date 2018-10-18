@@ -25,7 +25,7 @@ const backtracking = function(res, tmp, arr, remain, start, k) {
     return;
   } else {
     for(let i = start; i < arr.length; i++) {
-      // Using the following would reduce the number of operations
+      // Using the following would reduce the number of operations (instead of just tmp.push(arr[i]))
       // if(tmp.length < k) {
       //     tmp.push(arr[i]);
       // } else {

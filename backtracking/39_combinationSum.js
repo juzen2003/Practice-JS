@@ -12,7 +12,7 @@
 // Time: O(n ^ 3)
 // wc: n * (1 + 2 + ...n-1) => n * n * (n-1) / 2 => n * (n^2) => n ^ 3
 var combinationSum = function(candidates, target) {
-  // no need to sort if same number can be repeated for multiple times
+  // no need to sort if all elements are unique
   // candidates.sort((a,b) => a-b);
   let res = [];
   backtracking(res, [], candidates, target, 0);
